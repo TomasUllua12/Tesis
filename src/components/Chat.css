@@ -1,0 +1,55 @@
+.chat-bg {
+  width: 30vw;
+  height: 100vh;
+  position: fixed; /* Fija el Chat */
+  top: 0;
+  right: 0;
+  background-color: #ffcf6e;
+}
+
+.cs-message--incoming .cs-message__content {
+  font-family: "Kode Mono" !important;
+  font-weight: 400 !important;
+  font-size: 0.8rem !important;
+  background-color: #ffb218 !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.cs-message--outgoing .cs-message__content {
+  font-family: "Kode Mono" !important;
+  font-weight: 400 !important;
+  font-size: 0.8rem !important;
+  background-color: #ffd788 !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.cs-message-input__tools .cs-button--attachment{
+  display: none !important;
+}
+
+.cs-message-input__content-editor-wrapper {
+  margin-left: 10px !important;
+}
+
+.cs-chat-container .cs-message-input {
+  border-top: rgb(230, 230, 230) 1px solid !important;
+}
+.cs-main-container {
+  background-color: #EC9C00 !important;
+  border-left: rgb(230, 230, 230) 1px solid !important;
+}
+
+.cs-message-input__content-editor-wrapper {
+  background-color: #ffcf6e !important;
+}
+.cs-message-input__content-editor {
+  background-color: #ffcf6e !important;
+  font-family: "Kode Mono" !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.ps__thumb-y {
+  background-color: #EC9C00 !important;
+}

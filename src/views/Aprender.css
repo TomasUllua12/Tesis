@@ -1,0 +1,105 @@
+.color-line {
+  position: absolute;
+  width: 100vw;
+  height: 4px;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgb(255, 115, 0),
+    rgb(255, 208, 0),
+    rgb(255, 115, 0),
+    rgb(255, 208, 0),
+    rgb(255, 115, 0),
+    rgb(255, 208, 0),
+    rgb(255, 115, 0),
+    rgb(255, 208, 0),
+    rgb(255, 115, 0)
+  );
+  background-size: 200% 100%;
+  animation: moveGradient 6s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.general-view {
+  display: flex;
+}
+
+.general-main {
+  width: 37vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  padding-left: 10vw;
+  padding-right: 10vw;
+  overflow-y: auto;
+  margin-left: 13vw;
+}
+/* Scrollbar personalizado para WebKit (Chrome, Safari, Edge) */
+.general-main::-webkit-scrollbar {
+  width: 15px; /* Ancho de la scrollbar */
+  border-radius: 10px; /* Bordes redondeados */
+}
+.general-main::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color del track (fondo del scrollbar) */
+}
+
+.general-main::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Color de la barra */
+  border: 2px solid #f0f0f0; /* Espacio entre la barra y el track */
+}
+
+.general-main::-webkit-scrollbar-thumb:hover {
+  background-color: #ec8e00;
+}
+
+
+
+.general-main-encabezado {
+  position: relative; /* El contenedor debe tener position relative para que los hijos absolutos se posicionen en relación a él */
+  width: 100%;
+  height: 10vh;
+  border-bottom: solid 2px rgb(241, 241, 241);
+  display: flex;
+}
+.general-main-encabezado h2 {
+  position: absolute;
+  font-family: 'Kode Mono';
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px; /* Ajusta el padding según sea necesario */
+}
+.exp-text {
+  color: #ec8e00;
+}
+.general-main-encabezado p {
+  position: absolute;
+  font-family: 'Kode Mono';
+  font-weight: 600;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px; /* Ajusta el padding según sea necesario */
+}
+.gif-span {
+  width: 30px; /* Ajusta el tamaño del GIF si es necesario */
+  height: 30px;
+  vertical-align: -7px; /* Alinea el GIF con el texto */
+}
+
+
+
+
+.general-main-pie {
+  margin-top: 2vh;
+  width: 100%;
+  height: 20vh;
+  border-top: solid 2px rgb(241, 241, 241);
+}

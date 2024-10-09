@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #EC9C00;
+    --secondary-color: #ffcf6e;
+    --third-orange: #f5f5f5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}

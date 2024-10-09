@@ -1,0 +1,125 @@
+.etapa-card {
+  width: calc(100% - 2px);
+  height: calc(25vh - 2px);
+  margin-top: 2vh;
+  background-color: var(--third-orange);
+  border: solid 1px rgb(230, 230, 230);
+  box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
+  transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+  position: relative;
+  display: flex;
+}
+.etapa-card:hover {
+  background-color: #fff6e4;
+  border: solid 1px #ec9c00;
+  box-shadow: 2px 2px 0px 1px #ec9c00;
+}
+
+.etapa-card-izq {
+  width: 50%;
+}
+
+
+
+.etapa-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 136, 0, 0.15); /* Fondo negro transparente */
+  backdrop-filter: blur(2px); /* Efecto de blur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Para asegurarse de que esté sobre los otros elementos */
+}
+
+.etapa-overlay-logo {
+  width: 80px; /* Ajusta el tamaño del logo según prefieras */
+  height: 80px;
+  filter: drop-shadow(0px 6px 5px rgba(0, 0, 0, 0.3)); /* Sombra siguiendo el contorno del PNG */
+}
+
+
+.etapa-detalles {
+  width: auto;
+  height: 2.5vh;
+  padding-top: 2vh;
+  margin-left: 1.5vw;
+  border-radius: 30px 30px 0 0;
+}
+.etapa-detalles a {
+  font-family: "Kode Mono";
+  color: rgb(83, 83, 83);
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+.etapa-detalles a:hover {
+  color: rgb(123, 123, 123);
+}
+
+.etapa-titulo {
+  font-family: "Kode Mono";
+  margin-left: 1.5vw;
+  padding-top: 2vh;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.etapa-boton {
+  font-family: "Kode Mono";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  width: 5vw;
+  height: 3.5vh;
+  margin-left: 1.5vw;
+  margin-top: 3vh;
+  background-color: #ec9c00;
+  color: white;
+  border: solid 1px rgb(240 130 0 / 1);
+  box-shadow: 2px 2px 0px 1px rgb(240 130 0 / 1);
+  transition: background-color 0.1s, border-radius 0.3s; /* Aquí defines la transición */
+}
+
+.etapa-boton:hover {
+  cursor: pointer;
+  background-color: #ec8e00;
+  border: solid 1px rgb(200 100 0 / 1);
+  box-shadow: 2px 2px 0px 1px rgb(200 100 0 / 1);
+}
+
+.etapa-card-der {
+  display: flex; /* Puedes ajustar esto según cómo quieras que se comporte el contenedor */
+  justify-content: center; /* Alineación horizontal */
+  align-items: center; /* Alineación vertical */
+  padding: 10px 40px;
+}
+.etapa-card-der-img {
+  width: 200px; /* Ajusta el tamaño de la imagen según prefieras */
+  height: auto; /* Mantener la proporción de la imagen */
+  filter: drop-shadow(0px 2px 5px rgba(255, 115, 0, 0.6));
+}
+
+
+.blocked-message {
+  position: absolute;
+  font-family: 'Kode Mono';
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 136, 0, 0.5);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 20;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0; /* Empieza oculto */
+  transition: opacity 0.5s ease-in-out; /* Transición suave de 0.5s */
+}
+
+.blocked-message.show {
+  opacity: 1; /* Visible cuando se activa */
+}

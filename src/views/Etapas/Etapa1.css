@@ -1,0 +1,25 @@
+.color-line-etapa1 {
+  position: absolute;
+  width: 100vw;
+  height: 4px;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgb(219, 102, 255),
+    rgb(79, 0, 99),
+    rgb(219, 102, 255),
+    rgb(79, 0, 99),
+    rgb(219, 102, 255),
+    rgb(79, 0, 99),
+    rgb(219, 102, 255),
+    rgb(79, 0, 99),
+    rgb(219, 102, 255)
+  );
+  background-size: 200% 100%;
+  animation: moveGradient 6s linear infinite;
+}
+.main-capitulos {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
