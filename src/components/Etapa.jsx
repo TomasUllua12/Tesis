@@ -30,7 +30,7 @@ export function Etapa(props) {
         )}
         <div className="etapa-card-izq">
           <div className="etapa-detalles">
-            <Link>Ver detalles</Link>
+            <Link to={`/Aprender/${props.details}`}>Ver detalles</Link>
           </div>
           <div className="etapa-titulo">
             <p>{props.titulo}</p>

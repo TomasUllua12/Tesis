@@ -29,18 +29,21 @@ export function Aprender(props) {
           <Etapa
             titulo="Inversiones de Riesgo Bajo"
             url="Etapa2"
+            details="Detalles1"
             state="Block"
             image="/public/Etapa1.png"
           />
           <Etapa
             titulo="Inversiones de Riesgo Medio"
             url="Etapa3"
+            details="Detalles1"
             state="Block"
             image="/public/Etapa1.png"
           />
           <Etapa
             titulo="Inversiones de Riesgo Alto"
             url="Etapa4"
+            details="Detalles1"
             state="Block"
             image="/public/Etapa1.png"
           />
