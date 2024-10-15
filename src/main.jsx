@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Aprender } from "./views/Aprender.jsx";
 import { Etapa1 } from "./views/Etapas/Etapa1.jsx";
-import {Detalles1} from "./views/Etapas/Detalles1.jsx";
+import { Detalles1 } from "./views/Etapas/Detalles1.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
