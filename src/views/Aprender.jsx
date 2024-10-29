@@ -28,21 +28,21 @@ export function Aprender(props) {
             image="/public/Etapa1.png"
           />
           <Etapa
-            titulo="Inversiones de Riesgo Bajo"
+            titulo="Planeación Financiera a Largo Plazo"
             url="Etapa2"
             details="Detalles1"
             state="Block"
             image="/public/Etapa1.png"
           />
           <Etapa
-            titulo="Inversiones de Riesgo Medio"
+            titulo="Protección Financiera y Seguros"
             url="Etapa3"
             details="Detalles1"
             state="Block"
             image="/public/Etapa1.png"
           />
           <Etapa
-            titulo="Inversiones de Riesgo Alto"
+            titulo="El Mercado y los Productos Financieros"
             url="Etapa4"
             details="Detalles1"
             state="Block"

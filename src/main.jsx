@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Aprender } from "./views/Aprender.jsx";
 import { Etapa1 } from "./views/Etapas/Etapa1.jsx";
 import { Detalles1 } from "./views/Etapas/Detalles1.jsx";
+import { Perfil } from "./views/Perfil.jsx";
+import { Desafios } from "./views/Desafios.jsx";
+import { Tienda } from "./views/Tienda.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -15,6 +18,9 @@ const router = createBrowserRouter([
     path: "Aprender/Detalles1",
     element: <Detalles1 />,
   },
+  { path: "Perfil", element: <Perfil /> },
+  { path: "Desafios", element: <Desafios /> },
+  { path: "Tienda", element: <Tienda /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
