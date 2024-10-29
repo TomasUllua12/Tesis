@@ -12,7 +12,7 @@
   font-weight: 400 !important;
   font-size: 0.8rem !important;
   background-color: #ffb218 !important;
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .cs-message--outgoing .cs-message__content {
@@ -20,7 +20,7 @@
   font-weight: 400 !important;
   font-size: 0.8rem !important;
   background-color: #ffd788 !important;
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .cs-message-input__tools .cs-button--attachment{
