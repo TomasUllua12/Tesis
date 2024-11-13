@@ -11,7 +11,7 @@ export function Detalles1(props) {
         <Navbar />
         <div className="general-main">
           <div className="general-main-encabezado">
-            <h2> Detalles Capítulo 1 </h2>
+            <h2> Detalles Módulo 1 </h2>
             <p>
               <span className="exp-text">Exp</span> 5000 - <b></b>
               <span>
