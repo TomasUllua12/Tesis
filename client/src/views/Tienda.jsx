@@ -21,9 +21,9 @@ export function Tienda() {
               234
             </p>
           </div>
-          <div className="content-perfil">
-            <div className="perfil-image"></div>
-            <div className="perfil-name"></div>
+          <div className="content-tienda">
+            <div className="tienda-image"></div>
+            <div className="tienda-name"></div>
           </div>
           <div className="general-main-pie"></div>
         </div>

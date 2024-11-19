@@ -21,9 +21,9 @@ export function Desafios() {
               234
             </p>
           </div>
-          <div className="content-perfil">
-            <div className="perfil-image"></div>
-            <div className="perfil-name"></div>
+          <div className="content-desafio">
+            <div className="desafio-image"></div>
+            <div className="desafio-name"></div>
           </div>
           <div className="general-main-pie"></div>
         </div>

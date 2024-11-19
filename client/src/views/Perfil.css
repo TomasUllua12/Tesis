@@ -1,11 +1,115 @@
 .content-perfil {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .perfil-image {
-    width: 100%;
-    height: 30vh;
-    margin-top: 50px;
-    background-color: #f5f5f5;
+  width: 100%;
+  height: 30vh;
+  margin-top: 50px;
+  background-color: #ffffff;
 }
 
+.perfil-image__1 {
+  width: 15rem;
+  height: 15rem;
+  margin: auto;
+  border-radius: 50%;
+  background-image: url("/ImagenPerfil.png");
+  background-size: cover;
+  background-position: center;
+}
+.perfil-name {
+  margin: auto;
+  padding: 0 2vw;
+  font-family: "Kode Mono";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  width: 8vw;
+  height: 3.5vh;
+  background-color: #ec9c00;
+  color: white;
+  border: solid 1px rgb(240 130 0 / 1);
+  box-shadow: 2px 2px 0px 1px rgb(240 130 0 / 1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-expmon {
+  padding-top: 5vh;
+  width: 100%;
+  height: auto;
+  font-family: "Kode Mono";
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-insignias {
+  padding-top: 10vh;
+  font-family: "Kode Mono";
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.perfil-insignias h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-insignias-obtenidas {
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Ajusta el espacio entre imágenes según prefieras */
+  width: 100%;
+}
+.perfil-insignias-obtenidas img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Opcional, para ajustar cómo se muestra la imagen */
+}
+
+.insignia {
+  position: relative;
+  display: inline-block;
+}
+/* Estilos para el texto del tooltip */
+.tooltip-text {
+  visibility: hidden;
+  width: 120px; /* Ajusta el ancho según necesites */
+  background-color: rgb(255, 202, 152);
+  border: #ec9c00 1px solid;
+  color: #303030;
+  text-align: center;
+  padding: 5px 0;
+
+  /* Posicionamiento */
+  position: absolute;
+  z-index: 1;
+  bottom: 93%; /* Posiciona el tooltip arriba de la imagen */
+  left: 50%;
+  margin-left: -60px; /* Ajusta para centrar el tooltip */
+
+  /* Flecha del tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* En la parte inferior del tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(255, 123, 0) transparent transparent transparent;
+}
+/* Mostrar el tooltip al pasar el mouse */
+.insignia:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
