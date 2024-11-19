@@ -3,6 +3,7 @@ import "./Desafios.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
 import { Navbar } from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 export function Desafios() {
   return (
@@ -25,7 +26,16 @@ export function Desafios() {
             <div className="desafio-image"></div>
             <div className="desafio-name"></div>
           </div>
-          <div className="general-main-pie"></div>
+          <div className="general-main-pie">
+            <img src="/Finverse logo.png" alt="Finverse Logo" />
+            <div className="links-container">
+              <Link to="/Aprender">Aprender</Link>
+              <Link to="/Desafios">Desafíos</Link>
+              <Link to="/Tienda">Tienda</Link>
+              <Link to="/Perfil">Perfil</Link>
+            </div>
+            <p>Copyrights © 2024 Finverse. Todos los derechos reservados.</p>
+          </div>
         </div>
         <Chat />
       </div>

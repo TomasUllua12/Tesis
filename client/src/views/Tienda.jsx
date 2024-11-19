@@ -3,6 +3,7 @@ import "./Tienda.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
 import { Navbar } from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 export function Tienda() {
   return (
@@ -25,7 +26,16 @@ export function Tienda() {
             <div className="tienda-image"></div>
             <div className="tienda-name"></div>
           </div>
-          <div className="general-main-pie"></div>
+          <div className="general-main-pie">
+            <img src="/Finverse logo.png" alt="Finverse Logo" />
+            <div className="links-container">
+              <Link to="/Aprender">Aprender</Link>
+              <Link to="/Desafios">Desafíos</Link>
+              <Link to="/Tienda">Tienda</Link>
+              <Link to="/Perfil">Perfil</Link>
+            </div>
+            <p>Copyrights © 2024 Finverse. Todos los derechos reservados.</p>
+          </div>
         </div>
         <Chat />
       </div>

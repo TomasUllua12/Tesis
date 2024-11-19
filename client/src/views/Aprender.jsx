@@ -3,6 +3,7 @@ import { Navbar } from "../components/Navbar";
 import "./Aprender.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
+import { Link } from "react-router-dom";
 
 export function Aprender(props) {
   return (
@@ -48,7 +49,23 @@ export function Aprender(props) {
             state="Block"
             image="/public/Etapa1.png"
           />
-          <div className="general-main-pie"></div>
+          <Etapa
+            titulo="Criptomonedas"
+            url="Etapa5"
+            details="Detalles1"
+            state="Block"
+            image="/public/Etapa1.png"
+          />
+          <div className="general-main-pie">
+            <img src="/Finverse logo.png" alt="Finverse Logo" />
+            <div className="links-container">
+              <Link to="/Aprender">Aprender</Link>
+              <Link to="/Desafios">Desafíos</Link>
+              <Link to="/Tienda">Tienda</Link>
+              <Link to="/Perfil">Perfil</Link>
+            </div>
+            <p>Copyrights © 2024 Finverse. Todos los derechos reservados.</p>
+          </div>
         </div>
         <Chat />
       </div>
