@@ -33,28 +33,28 @@ export function Aprender(props) {
             url="Etapa2"
             details="Detalles1"
             state="Block"
-            image="/public/Etapa1.png"
+            image="/public/..png"
           />
           <Etapa
             titulo="Protección Financiera y Seguros"
             url="Etapa3"
             details="Detalles1"
             state="Block"
-            image="/public/Etapa1.png"
+            image="/public/..png"
           />
           <Etapa
             titulo="El Mercado y los Productos Financieros"
             url="Etapa4"
             details="Detalles1"
             state="Block"
-            image="/public/Etapa1.png"
+            image="/public/..png"
           />
           <Etapa
             titulo="Criptomonedas"
             url="Etapa5"
             details="Detalles1"
             state="Block"
-            image="/public/Etapa1.png"
+            image="/public/..png"
           />
           <div className="general-main-pie">
             <img src="/Finverse logo.png" alt="Finverse Logo" />
