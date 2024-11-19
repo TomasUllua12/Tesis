@@ -14,6 +14,7 @@
   height: 15rem;
   margin: auto;
   border-radius: 50%;
+  border: #ec9c00 solid 3px;
   background-image: url("/ImagenPerfil.png");
   background-size: cover;
   background-position: center;

@@ -1,0 +1,117 @@
+/* Estilos existentes... */
+
+.desafio-card {
+  width: calc(100% - 2px);
+  height: calc(25vh - 35px);
+  margin-top: 2vh;
+  background-color: var(--third-orange);
+  border: solid 1px rgb(230, 230, 230);
+  box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
+  transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+  position: relative;
+  display: flex;
+}
+
+.desafio-card-izq {
+  width: 80%;
+}
+
+.desafio-titulo {
+  font-family: "Kode Mono";
+  margin-left: 1.5vw;
+  padding-top: 4vh;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.desafio-card-izq .p-barra {
+  font-family: "Kode Mono";
+  margin-left: 1.5vw;
+  padding-top: 2vh;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666666;
+}
+
+/* Estilos para la barra de carga */
+.desafio-progress-bar {
+  width: 80%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 5px 1.5vw 15px 1.5vw;
+}
+
+.desafio-progress-fill {
+  height: 10px;
+  background-color: #ec9c00;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.desafio-boton-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.desafio-boton {
+  font-family: "Kode Mono";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  width: 5vw;
+  height: 3.5vh;
+  margin-top: 1vh;
+  background-color: #ec9c00;
+  color: white;
+  border: solid 1px rgb(240 130 0 / 1);
+  box-shadow: 2px 2px 0px 1px rgb(240 130 0 / 1);
+  transition: background-color 0.1s, border-radius 0.3s;
+  cursor: pointer;
+}
+
+.desafio-boton:hover {
+  background-color: #ec8e00;
+  border: solid 1px rgb(200 100 0 / 1);
+  box-shadow: 2px 2px 0px 1px rgb(200 100 0 / 1);
+}
+
+/* Estilos cuando el botón está en estado bloqueado */
+.desafio-boton.blocked {
+  background-color: #cccccc;
+  border: solid 1px #999999;
+  color: #666666;
+  box-shadow: none;
+}
+
+.desafio-boton.blocked:hover {
+  background-color: #cccccc;
+  border: solid 1px #999999;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.desafio-card-der {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.desafio-card-der-img {
+  width: 180px;
+  height: auto;
+}
+
+/* Filtro blanco y negro para la imagen bloqueada */
+.desafio-card-der-img.blocked {
+  filter: grayscale(100%);
+}
+
+/* Estilos para el mensaje de bloqueo */
+.blocked-message {
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  text-align: center;
+}

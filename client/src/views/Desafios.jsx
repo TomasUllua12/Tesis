@@ -1,7 +1,7 @@
 import React from "react";
 import "./Desafios.css";
 import { Chat } from "../components/Chat";
-import { Etapa } from "../components/Etapa";
+import { Desafio } from "../components/Desafio";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
 
@@ -23,8 +23,38 @@ export function Desafios() {
             </p>
           </div>
           <div className="content-desafio">
-            <div className="desafio-image"></div>
-            <div className="desafio-name"></div>
+            <Desafio
+              titulo="Completa el Módulo 2 de Aprendizaje"
+              url="Etapa1"
+              image="/public/insignias/Insignia3.png"
+              currentStep={1}
+              totalSteps={8}
+              progress={100/8}
+            />
+            <Desafio
+              titulo="Completa el Módulo 1 de Aprendizaje"
+              url="Etapa1"
+              image="/public/insignias/Insignia1.png"
+              currentStep={8}
+              totalSteps={8}
+              progress={100}
+            />
+            <Desafio
+              titulo="Completa el Módulo 3 de Aprendizaje"
+              url="Etapa1"
+              image="/public/insignias/Insignia5.png"
+              currentStep={1}
+              totalSteps={8}
+              progress={100/8}
+            />
+            <Desafio
+              titulo="Completa el Módulo 4 de Aprendizaje"
+              url="Etapa1"
+              image="/public/insignias/Insignia3.png"
+              currentStep={1}
+              totalSteps={8}
+              progress={100/8}
+            />
           </div>
           <div className="general-main-pie">
             <img src="/Finverse logo.png" alt="Finverse Logo" />

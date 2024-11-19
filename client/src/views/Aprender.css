@@ -108,7 +108,6 @@
 .general-main-pie img {
   width: 5vw;
   height: auto;
-  filter: grayscale(100%);
 }
 .general-main-pie p {
   padding: 3vh 0 2vh 0;
