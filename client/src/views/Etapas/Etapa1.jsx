@@ -8,15 +8,34 @@ import { Link } from "react-router-dom";
 export function Etapa1(props) {
   // Definimos los capítulos con su estado
   const capitulos = [
-    { number: 1, title: "María y su Herencia", state: "Active" },
-    { number: 2, title: "Jorge y la Proyección de su Jubilación", state: "Block" },
-    { number: 3, title: "Martín, Julia y su Viaje Soñado", state: "Block" },
-    { number: 4, title: "Carla y la Expanción de su Empresa", state: "Block" },
-    { number: 5, title: "-", state: "Block" },
-    { number: 6, title: "-", state: "Block" },
-    { number: 7, title: "-", state: "Block" },
-    { number: 8, title: "-", state: "Block" },
-    // Agrega más capítulos según sea necesario
+    {
+      number: 1,
+      title: "María y su Herencia",
+      state: "Active",
+      path: "/Capitulo1",
+    },
+    {
+      number: 2,
+      title: "Jorge y la Proyección de su Jubilación",
+      state: "Block",
+      path: "/Capitulo2",
+    },
+    {
+      number: 3,
+      title: "Martín, Julia y su Viaje Soñado",
+      state: "Block",
+      path: "/Capitulo3",
+    },
+    {
+      number: 4,
+      title: "Carla y la Expanción de su Empresa",
+      state: "Block",
+      path: "/Capitulo4",
+    },
+    { number: 5, title: "-", state: "Block", path: "#" },
+    { number: 6, title: "-", state: "Block", path: "#" },
+    { number: 7, title: "-", state: "Block", path: "#" },
+    { number: 8, title: "-", state: "Block", path: "#" },
   ];
 
   return (
@@ -39,7 +58,13 @@ export function Etapa1(props) {
             {capitulos.map((capitulo, index) => (
               <React.Fragment key={index}>
                 <div className="capitulo">
-                  <ImageButton state={capitulo.state} />
+                  {capitulo.state === "Active" ? (
+                    <Link to={capitulo.path}>
+                      <ImageButton state={capitulo.state} />
+                    </Link>
+                  ) : (
+                    <ImageButton state={capitulo.state} />
+                  )}
                   <div
                     className={`titulo-capitulo ${
                       capitulo.state === "Block" ? "blocked" : ""
