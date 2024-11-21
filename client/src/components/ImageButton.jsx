@@ -33,6 +33,7 @@ export function ImageButton({ state }) {
           width: "100px",
           height: "auto",
           filter: state === "Block" ? "grayscale(100%)" : "none",
+          cursor: state === "Block" ? "not-allowed" : "pointer"
         }}
       />
     </button>

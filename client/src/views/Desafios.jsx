@@ -24,36 +24,36 @@ export function Desafios() {
           </div>
           <div className="content-desafio">
             <Desafio
-              titulo="Completa el Módulo 2 de Aprendizaje"
+              titulo="Interactua con Finvy!"
               url="Etapa1"
               image="/public/insignias/Insignia3.png"
               currentStep={1}
-              totalSteps={8}
-              progress={100/8}
+              totalSteps={1}
+              progress={100}
             />
             <Desafio
               titulo="Completa el Módulo 1 de Aprendizaje"
               url="Etapa1"
               image="/public/insignias/Insignia1.png"
-              currentStep={8}
+              currentStep={1}
               totalSteps={8}
-              progress={100}
+              progress={100/8}
+            />
+            <Desafio
+              titulo="Completa el Módulo 2 de Aprendizaje"
+              url="Etapa1"
+              image="/public/insignias/Insignia5.png"
+              currentStep={0}
+              totalSteps={8}
+              progress={0}
             />
             <Desafio
               titulo="Completa el Módulo 3 de Aprendizaje"
               url="Etapa1"
-              image="/public/insignias/Insignia5.png"
-              currentStep={1}
-              totalSteps={8}
-              progress={100/8}
-            />
-            <Desafio
-              titulo="Completa el Módulo 4 de Aprendizaje"
-              url="Etapa1"
               image="/public/insignias/Insignia3.png"
-              currentStep={1}
+              currentStep={0}
               totalSteps={8}
-              progress={100/8}
+              progress={0}
             />
           </div>
           <div className="general-main-pie">
