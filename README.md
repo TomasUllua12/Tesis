@@ -25,14 +25,16 @@ Asegúrate de tener instalado en tu máquina:
 
 Instala las dependencias del proyecto:
 
-bash
-Copiar código
-# Para el backend
+### Para el backend
 cd server
+
 npm install
+
 cd ..
 
-# Para el frontend
+### Para el frontend
 cd client
+
 npm install
+
 cd ..
