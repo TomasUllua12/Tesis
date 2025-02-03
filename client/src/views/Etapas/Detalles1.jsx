@@ -2,6 +2,7 @@ import React from "react";
 import "./Detalles1.css";
 import { Navbar } from "../../components/Navbar";
 import { Chat } from "../../components/Chat";
+import { MainHeader } from "../../components/MainHeader";
 
 export function Detalles1(props) {
   return (
@@ -10,16 +11,8 @@ export function Detalles1(props) {
       <div className="general-view">
         <Navbar />
         <div className="general-main">
-          <div className="general-main-encabezado">
-            <h2> Detalles Módulo 1 </h2>
-            <p>
-              <span className="exp-text">Exp</span> 5000 - <b></b>
-              <span>
-                <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
-              </span>
-              234
-            </p>
-          </div>
+          <MainHeader title="Detalles Módulo 1" />
+
           <div className="card-detalles"></div>
           <div className="general-main-pie"></div>
         </div>

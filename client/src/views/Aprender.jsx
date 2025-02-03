@@ -1,9 +1,11 @@
+// Client/views/Aprender.jsx
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import "./Aprender.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
 import { Link } from "react-router-dom";
+import { MainHeader } from "../components/MainHeader";
 
 export function Aprender(props) {
   return (
@@ -12,16 +14,9 @@ export function Aprender(props) {
       <div className="general-view">
         <Navbar />
         <div className="general-main">
-          <div className="general-main-encabezado">
-            <h2>Aprender</h2>
-            <p>
-              <span className="exp-text">Exp</span> 5000 - <b></b>
-              <span>
-                <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
-              </span>
-              234
-            </p>
-          </div>
+          {/* Reutilizamos el MainHeader pasándole el título deseado */}
+          <MainHeader title="Aprender" />
+
           <Etapa
             titulo="Principios de las Finanzas Personales"
             url="Etapa1"

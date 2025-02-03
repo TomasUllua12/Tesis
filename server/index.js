@@ -38,17 +38,30 @@ app.post('/api/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    // Insertar nuevo usuario
+    // Insertar nuevo usuario (se utilizarán los valores predeterminados para coins y experience: 0)
     const [result] = await pool.query(
       'INSERT INTO users (nombre, email, password) VALUES (?, ?, ?)', 
       [nombre, email, hashedPassword]
     );
-
     const userId = result.insertId;
+
+    // Obtener el usuario recién insertado para extraer coins y experience
+    const [rows2] = await pool.query('SELECT * FROM users WHERE id = ?', [userId]);
+    const newUser = rows2[0];
 
     // Crear token JWT
     const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: '1d' });
-    res.status(201).json({ token, user: { id: userId, nombre, email } });
+    
+    res.status(201).json({ 
+      token, 
+      user: { 
+        id: newUser.id, 
+        nombre: newUser.nombre, 
+        email: newUser.email, 
+        coins: newUser.coins, 
+        experience: newUser.experience 
+      } 
+    });
   } catch (error) {
     console.error('Error en /api/register:', error);
     res.status(500).json({ message: 'Error al registrar el usuario' });
@@ -74,7 +87,16 @@ app.post('/api/login', async (req, res) => {
 
     // Crear token JWT
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
-    res.status(200).json({ token, user: { id: user.id, nombre: user.nombre, email } });
+    res.status(200).json({ 
+      token, 
+      user: { 
+        id: user.id, 
+        nombre: user.nombre, 
+        email: user.email, 
+        coins: user.coins, 
+        experience: user.experience 
+      } 
+    });
   } catch (error) {
     console.error('Error en /api/login:', error);
     res.status(500).json({ message: 'Error al iniciar sesión' });
@@ -83,7 +105,7 @@ app.post('/api/login', async (req, res) => {
 
 // Ruta de prueba
 app.get('/', (req, res) => {
-  res.send('Listening...');
+  res.send('¡Hola, mundo!');
 });
 
 app.listen(PORT, () => {

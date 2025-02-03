@@ -1,4 +1,5 @@
-import React from "react";
+// Client/views/Perfil.jsx
+import React, { useEffect, useState } from "react";
 import "./Perfil.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
@@ -6,6 +7,15 @@ import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 export function Perfil() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
   return (
     <div>
       <div className="color-line"></div>
@@ -19,10 +29,12 @@ export function Perfil() {
             <div className="perfil-image">
               <div className="perfil-image__1"></div>
             </div>
-            <div className="perfil-name">Juan Pérez</div>
+            <div className="perfil-name">
+              {user ? user.nombre : "Cargando..."}
+            </div>
             <div className="perfil-expmon">
               <p>
-                <span className="exp-text">Exp</span> 5000 - <b></b>
+                <span className="exp-text">Exp</span> {user ? user.experience : 0} - <b></b>
                 <span>
                   <img
                     src="/public/Coin.gif"
@@ -30,7 +42,7 @@ export function Perfil() {
                     className="gif-span"
                   />
                 </span>
-                234
+                {user ? user.coins : 0}
               </p>
             </div>
             <div className="perfil-insignias">

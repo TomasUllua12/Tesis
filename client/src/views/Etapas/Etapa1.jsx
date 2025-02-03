@@ -4,6 +4,7 @@ import { Navbar } from "../../components/Navbar";
 import { Chat } from "../../components/Chat";
 import { ImageButton } from "../../components/ImageButton";
 import { Link } from "react-router-dom";
+import { MainHeader } from "../../components/MainHeader";
 
 export function Etapa1(props) {
   // Definimos los capítulos con su estado
@@ -44,16 +45,8 @@ export function Etapa1(props) {
       <div className="general-view">
         <Navbar />
         <div className="general-main">
-          <div className="general-main-encabezado">
-            <h2>Módulo 1</h2>
-            <p>
-              <span className="exp-text">Exp</span> 5000 - <b></b>
-              <span>
-                <img src="/Coin.gif" alt="Coins" className="gif-span" />
-              </span>
-              234
-            </p>
-          </div>
+          <MainHeader title="Módulo 1" />
+
           <div className="main-capitulos">
             {capitulos.map((capitulo, index) => (
               <React.Fragment key={index}>

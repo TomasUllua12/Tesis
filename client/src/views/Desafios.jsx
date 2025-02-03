@@ -4,6 +4,7 @@ import { Chat } from "../components/Chat";
 import { Desafio } from "../components/Desafio";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { MainHeader } from "../components/MainHeader";
 
 export function Desafios() {
   return (
@@ -12,16 +13,8 @@ export function Desafios() {
       <div className="general-view">
         <Navbar />
         <div className="general-main">
-          <div className="general-main-encabezado">
-            <h2>Desafíos</h2>
-            <p>
-              <span className="exp-text">Exp</span> 5000 - <b></b>
-              <span>
-                <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
-              </span>
-              234
-            </p>
-          </div>
+          <MainHeader title="Desafíos" />
+          
           <div className="content-desafio">
             <Desafio
               titulo="Interactua con Finvy!"

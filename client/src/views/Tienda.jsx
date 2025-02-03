@@ -5,6 +5,7 @@ import { Etapa } from "../components/Etapa";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { Mejora } from "../components/Mejora";
+import { MainHeader } from "../components/MainHeader";
 
 export function Tienda() {
   return (
@@ -13,16 +14,8 @@ export function Tienda() {
       <div className="general-view">
         <Navbar />
         <div className="general-main">
-          <div className="general-main-encabezado">
-            <h2>Tienda</h2>
-            <p>
-              <span className="exp-text">Exp</span> 5000 - <b></b>
-              <span>
-                <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
-              </span>
-              234
-            </p>
-          </div>
+          <MainHeader title="Tienda" />
+
           <div className="content-tienda">
             <Mejora
               titulo="Modo Oscuro"
