@@ -105,7 +105,7 @@ app.post('/api/login', async (req, res) => {
 
 // Ruta de prueba
 app.get('/', (req, res) => {
-  res.send('¡Hola, mundo!');
+  res.send('Listening...');
 });
 
 app.listen(PORT, () => {

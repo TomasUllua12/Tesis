@@ -1,75 +1,103 @@
 .navbar-bg {
-    width: 13vw;
-    height: 100vh;
-    background-color: #ffffff;
-    position: fixed; /* Fija el Navbar */
-    top: 0;
-    left: 0;
-    border-right:rgb(230, 230, 230) 2px solid;
+  width: 13vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed; /* Fija el Navbar */
+  top: 0;
+  left: 0;
+  border-right: rgb(230, 230, 230) 2px solid;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-logo {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
+
 .navbar-logo-finverse {
-    width: 80%;
-    height: 35%;
-    background-image: url("../../public/Finverse\ logo.png");
-    background-size: contain; /* Asegura que la imagen mantenga sus proporciones */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el contenedor */
+  width: 80%;
+  height: 35%;
+  background-image: url("../../public/Finverse\ logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navbar-opciones {
-    font-family: "Kode Mono";
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+  font-family: "Kode Mono";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  width: 100%;
+  /* Ajustamos la altura para que el contenedor no se expanda demasiado */
+  /* O bien podemos dejarlo sin altura fija y que ocupe lo necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
-
 .link-icon {
-    width: 1vw; /* Ajusta el tamaño del ícono */
-    height: auto;
-    margin-right: 0.5vw; /* Espacio entre el ícono y el texto */
+  width: 1vw;
+  height: auto;
+  margin-right: 0.5vw;
 }
 
 .navbar-opciones li {
-    width: 10vw;
-    padding: 1vh 0px;
-    margin: 1vh 0;
-    font-size: 0.9rem;
-    list-style: none;
-    border: solid 1px rgb(230, 230, 230);
-    box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
-    transition: background-color 0.2s, border-color 0.2s, border-radius 0.2s; /* Aquí defines la transición */
+  width: 10vw;
+  padding: 1vh 0;
+  margin: 1vh 0;
+  font-size: 0.9rem;
+  list-style: none;
+  border: solid 1px rgb(230, 230, 230);
+  box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
+  transition: background-color 0.2s, border-color 0.2s, border-radius 0.2s;
 }
 
 .navbar-opciones a {
-    text-decoration: none;
-    color: #000000;
-    padding-left: 1vw;
-    display: flex; /* Alinea el texto e imagen en línea */
-    align-items: center;
-    transition: color 0.2s; /* Aquí defines la transición */
+  text-decoration: none;
+  color: #000;
+  padding-left: 1vw;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
 }
 
 .navbar-opciones li:hover {
-    background-color: #fff6e4;
-    border: solid 1px #EC9C00;
-    box-shadow: 2px 2px 0px 1px #EC9C00;
+  background-color: #fff6e4;
+  border: solid 1px #ec9c00;
+  box-shadow: 2px 2px 0px 1px #ec9c00;
 }
 
 .navbar-opciones a:hover {
-    color: rgb(82, 82, 82);
+  color: rgb(82, 82, 82);
 }
 
+/* Ajustamos el contenedor del botón para que se empuje al fondo */
+.navbar-logout {
+  margin-top: auto;
+  margin-bottom: 2rem; /* Opcional, para dejar un espacio desde el fondo */
+  text-align: center;
+}
+
+.logout-button {
+  font-family: "Kode Mono";
+  background-color: #e53935;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  font-size: 0.8rem;
+  background-color: #ffffff;
+  border: solid 1px rgb(230, 230, 230);
+  box-shadow: 2px 2px 0px 1px rgb(230, 230, 230);
+}
+
+.logout-button:hover {
+  border: solid 1px #c62828;
+  background-color: #ffd4d4;
+  box-shadow: 2px 2px 0px 1px #c62828;
+}
