@@ -10,9 +10,11 @@ import { Perfil } from "./views/Perfil.jsx";
 import { Desafios } from "./views/Desafios.jsx";
 import { Tienda } from "./views/Tienda.jsx";
 import Capitulo1 from "./views/Etapas/Capitulo1.jsx";
+import { Login } from "./views/Login.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
+  { path: "Login", element: <Login /> },
   { path: "Aprender", element: <Aprender /> },
   { path: "Aprender/Etapa1", element: <Etapa1 /> },
   {

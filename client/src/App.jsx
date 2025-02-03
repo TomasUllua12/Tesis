@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <Link to="Aprender"><h2>Aprender</h2></Link>
+      <Link to="Login"><h2>Login</h2></Link>
     </>
   )
 }
