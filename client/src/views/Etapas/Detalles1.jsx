@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Detalles1.css";
+import { useTextToSpeech } from "../../hooks/useTextToSpeech";
 import { Navbar } from "../../components/Navbar";
 import { Chat } from "../../components/Chat";
 import { MainHeader } from "../../components/MainHeader";
 
 export function Detalles1() {
+  // Creamos una referencia para apuntar al contenido que será leído
+  const detailsRef = useRef(null);
 
-  // Función para manejar el click del botón y redirigir a la pantalla de "Aprender"
+  // Usamos el hook para reproducir la voz al presionar Espacio
+  // Retorna el texto extraído desde 'detailsRef'
+  useTextToSpeech(() => detailsRef.current?.innerText || "");
+
+  // Función para volver a la pantalla de "Aprender" (puedes cambiar la ruta)
   const handleVolverAprender = () => {
     window.location.href = "/aprender";
   };
@@ -18,7 +25,8 @@ export function Detalles1() {
         <Navbar />
         <div className="general-main">
           <MainHeader title="Detalles del Módulo 1" />
-          <div className="details-1">
+
+          <div className="details-1" ref={detailsRef}>
             <img
               src="../../public/Detalles1tesis.png"
               className="imagen-detail"
