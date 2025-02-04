@@ -24,30 +24,23 @@ export function Aprender(props) {
             image="/public/Etapa1.png"
           />
           <Etapa
-            titulo="Planeación Financiera a Largo Plazo"
+            titulo="Construcción y Crecimiento del Patrimonio"
             url="Etapa2"
-            details="Detalles1"
+            details="Detalles2"
             state="Block"
             image="/public/..png"
           />
           <Etapa
-            titulo="Protección Financiera y Seguros"
+            titulo="Estrategias Avanzadas y Protección Financiera"
             url="Etapa3"
-            details="Detalles1"
+            details="Detalles3"
             state="Block"
             image="/public/..png"
           />
           <Etapa
-            titulo="El Mercado y los Productos Financieros"
+            titulo="Innovación, Emprendimiento y Visión a Futuro"
             url="Etapa4"
-            details="Detalles1"
-            state="Block"
-            image="/public/..png"
-          />
-          <Etapa
-            titulo="Criptomonedas"
-            url="Etapa5"
-            details="Detalles1"
+            details="Detalles4"
             state="Block"
             image="/public/..png"
           />

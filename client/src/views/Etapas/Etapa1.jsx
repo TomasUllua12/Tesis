@@ -11,32 +11,52 @@ export function Etapa1(props) {
   const capitulos = [
     {
       number: 1,
-      title: "María y su Herencia",
+      title: "María y su herencia",
       state: "Active",
       path: "/Capitulo1",
     },
     {
       number: 2,
-      title: "Jorge y la Proyección de su Jubilación",
+      title: "Julio y su objetivo de comprar una moto",
       state: "Block",
       path: "/Capitulo2",
     },
     {
       number: 3,
-      title: "Martín, Julia y su Viaje Soñado",
+      title: "Lucía y su presupuesto familiar",
       state: "Block",
       path: "/Capitulo3",
     },
     {
       number: 4,
-      title: "Carla y la Expanción de su Empresa",
+      title: "Ramón y su reto de ahorrar cada mes",
       state: "Block",
       path: "/Capitulo4",
     },
-    { number: 5, title: "-", state: "Block", path: "#" },
-    { number: 6, title: "-", state: "Block", path: "#" },
-    { number: 7, title: "-", state: "Block", path: "#" },
-    { number: 8, title: "-", state: "Block", path: "#" },
+    {
+      number: 5,
+      title: "Paola y su primera tarjeta de crédito",
+      state: "Block",
+      path: "#",
+    },
+    {
+      number: 6,
+      title: "David y las tasas de interés",
+      state: "Block",
+      path: "#",
+    },
+    {
+      number: 7,
+      title: "Laura y su primera inversión a plazo fijo",
+      state: "Block",
+      path: "#",
+    },
+    {
+      number: 8,
+      title: "La familia Torres y sus hábitos financieros",
+      state: "Block",
+      path: "#",
+    },
   ];
 
   return (
