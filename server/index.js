@@ -39,6 +39,8 @@ app.post('/api/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // Insertar nuevo usuario (se utilizarán los valores predeterminados para coins y experience: 0)
+    // NOTA: En esta opción no se define un valor DEFAULT para la columna JSON en la BD,
+    // por lo que en el INSERT no se incluye purchased_improvements; en este caso, el campo quedará como NULL.
     const [result] = await pool.query(
       'INSERT INTO users (nombre, email, password) VALUES (?, ?, ?)', 
       [nombre, email, hashedPassword]
@@ -87,6 +89,19 @@ app.post('/api/login', async (req, res) => {
 
     // Crear token JWT
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
+
+    // Procesar purchased_improvements solo si es de tipo string
+    let purchasedImprovements;
+    if (user.purchased_improvements) {
+      if (typeof user.purchased_improvements === "string") {
+        purchasedImprovements = JSON.parse(user.purchased_improvements);
+      } else {
+        purchasedImprovements = user.purchased_improvements;
+      }
+    } else {
+      purchasedImprovements = [];
+    }
+
     res.status(200).json({ 
       token, 
       user: { 
@@ -94,7 +109,8 @@ app.post('/api/login', async (req, res) => {
         nombre: user.nombre, 
         email: user.email, 
         coins: user.coins, 
-        experience: user.experience 
+        experience: user.experience,
+        purchased_improvements: purchasedImprovements
       } 
     });
   } catch (error) {
@@ -102,6 +118,80 @@ app.post('/api/login', async (req, res) => {
     res.status(500).json({ message: 'Error al iniciar sesión' });
   }
 });
+
+// Endpoint para comprar una mejora
+app.post('/api/buy-improvement', async (req, res) => {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ message: "No se proporcionó token" });
+  }
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const userId = decoded.id;
+    const { improvementKey, price } = req.body;
+    if (!improvementKey || !price) {
+      return res.status(400).json({ message: "Datos incompletos" });
+    }
+
+    // Obtener datos actuales del usuario
+    const [rows] = await pool.query(
+      "SELECT coins, purchased_improvements FROM users WHERE id = ?",
+      [userId]
+    );
+    if (rows.length === 0) {
+      return res.status(404).json({ message: "Usuario no encontrado" });
+    }
+    const user = rows[0];
+
+    // Procesar purchased_improvements
+    let purchasedImprovements;
+    if (!user.purchased_improvements) {
+      purchasedImprovements = [];
+    } else {
+      if (typeof user.purchased_improvements === "string") {
+        purchasedImprovements = JSON.parse(user.purchased_improvements);
+      } else {
+        purchasedImprovements = user.purchased_improvements;
+      }
+    }
+
+    // Verificar que la mejora aún no se haya comprado
+    if (purchasedImprovements.includes(improvementKey)) {
+      return res.status(400).json({ message: "Mejora ya adquirida" });
+    }
+
+    // Verificar que el usuario tenga suficientes monedas
+    if (user.coins < price) {
+      return res.status(400).json({ message: "No tienes suficientes monedas" });
+    }
+
+    // Actualizar: descontar monedas y agregar la mejora
+    const newCoins = user.coins - price;
+    purchasedImprovements.push(improvementKey);
+    const purchasedImprovementsStr = JSON.stringify(purchasedImprovements);
+
+    await pool.query(
+      "UPDATE users SET coins = ?, purchased_improvements = ? WHERE id = ?",
+      [newCoins, purchasedImprovementsStr, userId]
+    );
+
+    // Obtener usuario actualizado
+    const [updatedRows] = await pool.query("SELECT * FROM users WHERE id = ?", [userId]);
+    let updatedUser = updatedRows[0];
+    if (updatedUser.purchased_improvements) {
+      if (typeof updatedUser.purchased_improvements === "string") {
+        updatedUser.purchased_improvements = JSON.parse(updatedUser.purchased_improvements);
+      }
+    } else {
+      updatedUser.purchased_improvements = [];
+    }
+    return res.json({ message: "Mejora adquirida", user: updatedUser });
+  } catch (error) {
+    console.error("Error en /api/buy-improvement:", error);
+    return res.status(500).json({ message: "Error en el servidor" });
+  }
+});
+
 
 // Ruta de prueba
 app.get('/', (req, res) => {

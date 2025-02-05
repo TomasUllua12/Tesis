@@ -1,13 +1,34 @@
-import React from "react";
+// Client/views/Tienda.jsx
+import React, { useEffect, useState } from "react";
 import "./Tienda.css";
 import { Chat } from "../components/Chat";
-import { Etapa } from "../components/Etapa";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { Mejora } from "../components/Mejora";
 import { MainHeader } from "../components/MainHeader";
 
 export function Tienda() {
+  const [user, setUser] = useState(null);
+
+  // Función para actualizar el usuario leyendo del localStorage
+  const updateUser = () => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  };
+
+  useEffect(() => {
+    updateUser();
+  }, []);
+
+  // Función para verificar si el usuario ha comprado una mejora
+  const hasPurchased = (key) => {
+    return user &&
+           user.purchased_improvements &&
+           user.purchased_improvements.includes(key);
+  };
+
   return (
     <div>
       <div className="color-line"></div>
@@ -21,31 +42,49 @@ export function Tienda() {
               titulo="Modo Oscuro"
               image="/public/Mejoras/ModoOscuro.png"
               price={1000}
+              improvementKey="dark_mode"
+              purchased={hasPurchased("dark_mode")}
+              updateUser={updateUser}
             />
             <Mejora
               titulo="Mejora 1"
               image="/public/Mejoras/MejoraAux.png"
               price={350}
+              improvementKey="mejora_1"
+              purchased={hasPurchased("mejora_1")}
+              updateUser={updateUser}
             />
             <Mejora
               titulo="Mejora 2"
               image="/public/Mejoras/MejoraAux.png"
               price={100}
+              improvementKey="mejora_2"
+              purchased={hasPurchased("mejora_2")}
+              updateUser={updateUser}
             />
             <Mejora
               titulo="Mejora 3"
               image="/public/Mejoras/MejoraAux.png"
               price={450}
+              improvementKey="mejora_3"
+              purchased={hasPurchased("mejora_3")}
+              updateUser={updateUser}
             />
             <Mejora
               titulo="Mejora 4"
               image="/public/Mejoras/MejoraAux.png"
               price={700}
+              improvementKey="mejora_4"
+              purchased={hasPurchased("mejora_4")}
+              updateUser={updateUser}
             />
             <Mejora
               titulo="Mejora 5"
               image="/public/Mejoras/MejoraAux.png"
               price={150}
+              improvementKey="mejora_5"
+              purchased={hasPurchased("mejora_5")}
+              updateUser={updateUser}
             />
           </div>
           <div className="general-main-pie">
