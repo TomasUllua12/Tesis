@@ -114,6 +114,26 @@
   font-weight: 500;
 }
 
+.general-main-pie-dark {
+  margin-top: 2vh;
+  width: 100%;
+  height: auto;
+  border-top: solid 2px rgb(75, 75, 75);
+  padding-top: 3vh;
+  text-align: center;
+}
+.general-main-pie-dark img {
+  width: 5vw;
+  height: auto;
+}
+.general-main-pie-dark p {
+  padding: 3vh 0 2vh 0;
+  color: rgb(153, 153, 153);
+  font-family: 'Kode Mono';
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
 .links-container {
   display: grid;
   grid-template-columns: repeat(4, auto);

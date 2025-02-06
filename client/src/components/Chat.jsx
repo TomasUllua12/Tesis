@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Chat.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
@@ -10,6 +10,7 @@ import {
   MessageInput,
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const API_KEY = "sk-proj-FyZ5iGRF8EdKScbms0zgT3BlbkFJFt2JtutpFIULJCp3h85I";
 
@@ -21,6 +22,9 @@ const systemMessage = {
 };
 
 export function Chat(props) {
+
+  const { darkMode } = useContext(DarkModeContext);
+
   const [messages, setMessages] = useState([
     {
       message:
@@ -92,7 +96,7 @@ export function Chat(props) {
 
   return (
     <>
-      <div className="chat-bg">
+      <div className={darkMode ? "chat-bg-dark" : "chat-bg"}>
         <div style={{ position: "relative", height: "100%", width: "100%" }}>
           <MainContainer>
             <ChatContainer>
@@ -129,7 +133,7 @@ export function Chat(props) {
                 })}
               </MessageList>
               <MessageInput
-                placeholder="Type message here"
+                placeholder="Escribe tu mensaje aquí"
                 onSend={handleSend}
                 className="message-input"
               />

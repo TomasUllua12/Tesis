@@ -7,7 +7,6 @@ import { DarkModeContext } from "../context/DarkModeContext";
 export function Navbar(props) {
   const navigate = useNavigate();
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
-
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -79,11 +78,17 @@ export function Navbar(props) {
         </ul>
       </div>
 
+      <div className={darkMode ? "modo-oscuro-label-dark" : "modo-oscuro-label"}><p>Modo Oscuro</p></div>
       {darkModePurchased && (
         <div className="navbar-darkmode-toggle">
-          <button className="darkmode-button" onClick={toggleDarkMode}>
-            {darkMode ? "Modo Claro" : "Modo Oscuro"}
-          </button>
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+            <span className="slider round"></span>
+          </label>
         </div>
       )}
 

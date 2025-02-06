@@ -1,11 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import "./Detalles1.css";
 import { useTextToSpeech } from "../../hooks/useTextToSpeech";
 import { Navbar } from "../../components/Navbar";
 import { Chat } from "../../components/Chat";
 import { MainHeader } from "../../components/MainHeader";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 export function Detalles1() {
+
+  const { darkMode } = useContext(DarkModeContext);
+
   // Creamos una referencia para apuntar al contenido que será leído
   const detailsRef = useRef(null);
 
@@ -23,7 +27,7 @@ export function Detalles1() {
       <div className="color-line"></div>
       <div className="general-view">
         <Navbar />
-        <div className="general-main">
+        <div className={darkMode ? "general-main-dark" : "general-main"}>
           <MainHeader title="Detalles del Módulo 1" />
 
           <div className="details-1" ref={detailsRef}>
@@ -107,7 +111,7 @@ export function Detalles1() {
             </p>
 
             {/* Botón para volver a la pantalla de "Aprender" */}
-            <button className="btn-regresar" onClick={handleVolverAprender}>
+            <button className={darkMode ? "btn-regresar-dark" : "btn-regresar"} onClick={handleVolverAprender}>
               Volver
             </button>
           </div>

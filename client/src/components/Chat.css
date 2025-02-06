@@ -7,6 +7,21 @@
   background-color: #ffcf6e;
 }
 
+.chat-bg-dark {
+  width: 30vw;
+  height: 100vh;
+  position: fixed; /* Fija el Chat */
+  top: 0;
+  right: 0;
+  background-color: #ffcf6e;
+}
+
+.chat-bg-dark .cs-message-list {
+  background-color: #333 !important;
+
+}
+
+
 .cs-message--incoming .cs-message__content {
   font-family: "Kode Mono" !important;
   font-weight: 400 !important;
@@ -23,6 +38,7 @@
   color: rgb(255, 255, 255) !important;
 }
 
+
 .cs-message-input__tools .cs-button--attachment{
   display: none !important;
 }
@@ -34,6 +50,20 @@
 .cs-chat-container .cs-message-input {
   border-top: rgb(230, 230, 230) 1px solid !important;
 }
+
+.chat-bg-dark .cs-chat-container .cs-message-input {
+  border-top: rgb(75, 75, 75) 1px solid !important;
+  background-color: #333 !important;
+}
+.chat-bg-dark .cs-main-container {
+  background-color: #EC9C00 !important;
+  border: rgb(75, 75, 75) 1px solid !important;
+}
+
+.chat-bg-dark .cs-typing-indicator {
+  background-color: #333 !important;
+}
+
 .cs-main-container {
   background-color: #EC9C00 !important;
   border-left: rgb(230, 230, 230) 1px solid !important;
