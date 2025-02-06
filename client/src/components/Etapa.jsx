@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Etapa.css";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Etapa(props) {
   const isBlocked = props.state === "Block";
   const [showMessage, setShowMessage] = useState(false);
+  const { darkMode } = useContext(DarkModeContext);
 
   const handleBlockedClick = () => {
     if (isBlocked) {
@@ -17,7 +19,7 @@ export function Etapa(props) {
 
   return (
     <>
-      <div className="etapa-card" onClick={handleBlockedClick}>
+      <div className={darkMode ? "etapa-card-dark" : "etapa-card"} onClick={handleBlockedClick}>
         {/* Si la etapa está bloqueada, se renderiza el overlay */}
         {isBlocked && (
           <div className="etapa-overlay">

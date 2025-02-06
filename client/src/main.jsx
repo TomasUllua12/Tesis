@@ -1,3 +1,4 @@
+// Client/main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -11,16 +12,14 @@ import { Desafios } from "./views/Desafios.jsx";
 import { Tienda } from "./views/Tienda.jsx";
 import Capitulo1 from "./views/Etapas/Capitulo1.jsx";
 import { Login } from "./views/Login.jsx";
+import { DarkModeProvider } from "./context/DarkModeContext"; // Importa el proveedor
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "Login", element: <Login /> },
   { path: "Aprender", element: <Aprender /> },
   { path: "Aprender/Etapa1", element: <Etapa1 /> },
-  {
-    path: "Aprender/Detalles1",
-    element: <Detalles1 />,
-  },
+  { path: "Aprender/Detalles1", element: <Detalles1 /> },
   { path: "Perfil", element: <Perfil /> },
   { path: "Desafios", element: <Desafios /> },
   { path: "Tienda", element: <Tienda /> },
@@ -29,6 +28,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <DarkModeProvider>
+      <RouterProvider router={router} />
+    </DarkModeProvider>
   </React.StrictMode>
 );

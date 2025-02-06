@@ -60,6 +60,38 @@
 }
 
 
+.general-main-dark {
+  width: 37vw;
+  height: 100vh;
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding-left: 10vw;
+  padding-right: 10vw;
+  overflow-y: auto;
+  margin-left: 13vw;
+}
+
+.general-main-dark::-webkit-scrollbar {
+  width: 15px; /* Ancho de la scrollbar */
+  border-radius: 10px; /* Bordes redondeados */
+}
+/* Estilos para el scrollbar en modo oscuro */
+.general-main-dark::-webkit-scrollbar-track {
+  background: #585858;
+}
+
+.general-main-dark::-webkit-scrollbar-thumb {
+  background-color: #ec8e00;
+  border: 2px solid #585858;
+}
+
+.general-main-dark::-webkit-scrollbar-thumb:hover {
+  background-color: #f5a623;
+}
+
+
+
+
 
 
 .general-main-pie {

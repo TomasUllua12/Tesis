@@ -1,20 +1,22 @@
 // Client/views/Aprender.jsx
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar } from "../components/Navbar";
 import "./Aprender.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
 import { Link } from "react-router-dom";
 import { MainHeader } from "../components/MainHeader";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Aprender(props) {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <>
       <div className="color-line"></div>
       <div className="general-view">
         <Navbar />
-        <div className="general-main">
-          {/* Reutilizamos el MainHeader pasándole el título deseado */}
+        <div className={darkMode ? "general-main-dark" : "general-main"}>
           <MainHeader title="Aprender" />
 
           <Etapa
