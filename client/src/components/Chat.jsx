@@ -96,7 +96,7 @@ export function Chat(props) {
 
   return (
     <>
-      <div className={darkMode ? "chat-bg-dark" : "chat-bg"}>
+      <div className="chat-bg">
         <div style={{ position: "relative", height: "100%", width: "100%" }}>
           <MainContainer>
             <ChatContainer>

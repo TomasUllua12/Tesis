@@ -1,23 +1,11 @@
 .navbar-bg {
   width: 13vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--third-color);
   position: fixed; /* Fija el Navbar */
   top: 0;
   left: 0;
-  border-right: rgb(230, 230, 230) 2px solid;
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar-bg-dark {
-  width: 13vw;
-  height: 100vh;
-  background-color: #333;
-  position: fixed; /* Fija el Navbar */
-  top: 0;
-  left: 0;
-  border-right: rgb(75, 75, 75) 2px solid;
+  border-right: var(--primary-color) 2px solid;
   display: flex;
   flex-direction: column;
 }
@@ -33,7 +21,7 @@
 .navbar-logo-finverse {
   width: 80%;
   height: 35%;
-  background-image: url("../../public/Finverse\ logo.png");
+  background-image: var(--logo);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -64,14 +52,14 @@
   margin: 1vh 0;
   font-size: 0.9rem;
   list-style: none;
-  border: solid 1px rgb(230, 230, 230);
-  box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
+  border: solid 1px var(--secondary-color);
+  box-shadow: 2px 2px 0px 1px var(--secondary-color);
   transition: background-color 0.2s, border-color 0.2s, border-radius 0.2s;
 }
 
 .navbar-opciones a {
   text-decoration: none;
-  color: #000;
+  color: var(--primary-text);
   padding-left: 1vw;
   display: flex;
   align-items: center;
@@ -79,13 +67,13 @@
 }
 
 .navbar-opciones li:hover {
-  background-color: #fff6e4;
-  border: solid 1px #ec9c00;
-  box-shadow: 2px 2px 0px 1px #ec9c00;
+  background-color: var(--third-orange);
+  border: solid 1px var(--primary-orange);
+  box-shadow: 2px 2px 0px 1px var(--primary-orange);
 }
 
 .navbar-opciones a:hover {
-  color: rgb(82, 82, 82);
+  color: var(--secondary-text);
 }
 
 /* Ajustamos el contenedor del botón para que se empuje al fondo */
@@ -98,17 +86,18 @@
 .logout-button {
   font-family: "Kode Mono";
   background-color: #e53935;
-  color: #000000;
+  color: var(--primary-text);
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.1s ease;
   font-size: 0.8rem;
-  background-color: #ffffff;
-  border: solid 1px rgb(230, 230, 230);
-  box-shadow: 2px 2px 0px 1px rgb(230, 230, 230);
+  background-color: var(--third-color);
+  border: solid 1px var(--secondary-color);
+  box-shadow: 2px 2px 0px 1px var(--secondary-color);
 }
 
 .logout-button:hover {
+  color: black;
   border: solid 1px #c62828;
   background-color: #ffd4d4;
   box-shadow: 2px 2px 0px 1px #c62828;
@@ -120,35 +109,13 @@
   margin: 1rem 0;
 }
 
-.darkmode-button {
-  font-family: "Kode Mono";
-  background-color: #ec9c00;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.darkmode-button:hover {
-  background-color: #d07e00;
-}
-
 .modo-oscuro-label {
   text-align: center;
   margin-top: 3vh;
   font-family: "Kode Mono";
   font-weight: 600;
   font-size: 0.9rem;
-  color: #333;
-}
-.modo-oscuro-label-dark {
-  text-align: center;
-  margin-top: 3vh;
-  font-family: 'Kode Mono';
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #cccccc;
+  color: var(--secondary-text);
 }
 
 /* Estilos para el toggle switch */
@@ -172,7 +139,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--secondary-text);
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -184,17 +151,17 @@
   width: 17px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--third-color);
   transition: 0.4s;
   border-radius: 50%;
 }
 
 .switch input:checked + .slider {
-  background-color: #ec9c00;
+  background-color: var(--primary-orange);
 }
 
 .switch input:focus + .slider {
-  box-shadow: 0 0 1px #ec9c00;
+  box-shadow: 0 0 1px var(--primary-orange);
 }
 
 .switch input:checked + .slider:before {

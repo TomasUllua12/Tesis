@@ -28,7 +28,7 @@ export function Navbar(props) {
   };
 
   return (
-    <div className={darkMode ? "navbar-bg-dark" : "navbar-bg"}>
+    <nav className="navbar-bg">
       <div className="navbar-logo">
         <div className="navbar-logo-finverse"></div>
       </div>
@@ -78,7 +78,10 @@ export function Navbar(props) {
         </ul>
       </div>
 
-      <div className={darkMode ? "modo-oscuro-label-dark" : "modo-oscuro-label"}><p>Modo Oscuro</p></div>
+      <div className="modo-oscuro-label">
+        <p>Modo Oscuro</p>
+      </div>
+
       {darkModePurchased && (
         <div className="navbar-darkmode-toggle">
           <label className="switch">
@@ -97,6 +100,6 @@ export function Navbar(props) {
           Cerrar sesión
         </button>
       </div>
-    </div>
+    </nav>
   );
 }
