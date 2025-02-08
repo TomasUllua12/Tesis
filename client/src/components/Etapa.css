@@ -78,8 +78,8 @@
   margin-top: 3vh;
   background-color: var(--primary-orange);
   color: white;
-  border: solid 1px rgb(240 130 0 / 1);
-  box-shadow: 2px 2px 0px 1px rgb(240 130 0 / 1);
+  border: solid 1px var(--secondary-orange);
+  box-shadow: 2px 2px 0px 1px var(--secondary-orange);
   transition: background-color 0.1s, border-radius 0.3s; /* Aquí defines la transición */
 }
 

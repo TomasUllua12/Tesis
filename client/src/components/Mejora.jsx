@@ -1,7 +1,8 @@
 // Client/components/Mejora.jsx
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./mejora.css";
 import { useNavigate } from "react-router-dom";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Mejora(props) {
   // El estado inicial de "purchased" se establece a partir de la prop recibida

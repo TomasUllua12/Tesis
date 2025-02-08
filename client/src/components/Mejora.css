@@ -3,9 +3,9 @@
 .mejora-card {
   width: 98%;
   height: auto;
-  background-color: var(--third-orange);
-  border: solid 1px rgb(230, 230, 230);
-  box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
+  background-color: var(--primary-color);
+  border: solid 1px var(--secondary-color);
+  box-shadow: 2px 2px 0px 1px var(--secondary-color);
   transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
   position: relative;
   display: flex;
@@ -14,9 +14,9 @@
   justify-content: center;
 }
 .mejora-card:hover {
-    background-color: #fff6e4;
-    border: solid 1px #ec9c00;
-    box-shadow: 2px 2px 0px 1px #ec9c00;
+    background-color: var(--forth-orange);
+    border: solid 1px var(--primary-orange);
+    box-shadow: 2px 2px 0px 1px var(--primary-orange);
   }
 
 .mejora-titulo {
@@ -42,7 +42,7 @@
   height: 3.5vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  background-color: #ec9c00;
+  background-color: var(--primary-orange);
   color: white;
   border: solid 1px rgb(240 130 0 / 1);
   box-shadow: 2px 2px 0px 1px rgb(240 130 0 / 1);
