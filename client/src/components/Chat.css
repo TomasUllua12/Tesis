@@ -46,7 +46,7 @@
 
 .cs-main-container {
   background-color: var(--primary-orange) !important;
-  border: var(--secondary-color) 1px solid !important;
+  border: var(--primary-color) 1px solid !important;
 }
 
 .cs-message-input__content-editor-wrapper {

@@ -35,7 +35,7 @@
 .general-main {
   width: 37vw;
   height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--third-color);
   padding-left: 10vw;
   padding-right: 10vw;
   overflow-y: auto;
@@ -47,52 +47,17 @@
   border-radius: 10px; /* Bordes redondeados */
 }
 .general-main::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Color del track (fondo del scrollbar) */
+  background: var(--primary-color); /* Color del track (fondo del scrollbar) */
 }
 
 .general-main::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color); /* Color de la barra */
-  border: 2px solid #f0f0f0; /* Espacio entre la barra y el track */
+  background-color: var(--primary-orange); /* Color de la barra */
+  border: 2px solid var(--primary-color); /* Espacio entre la barra y el track */
 }
 
 .general-main::-webkit-scrollbar-thumb:hover {
   background-color: #ec8e00;
 }
-
-
-.general-main-dark {
-  width: 37vw;
-  height: 100vh;
-  background-color: #333; /* Fondo oscuro */
-  color: white; /* Texto blanco */
-  padding-left: 10vw;
-  padding-right: 10vw;
-  overflow-y: auto;
-  margin-left: 13vw;
-}
-
-.general-main-dark::-webkit-scrollbar {
-  width: 15px; /* Ancho de la scrollbar */
-  border-radius: 10px; /* Bordes redondeados */
-}
-/* Estilos para el scrollbar en modo oscuro */
-.general-main-dark::-webkit-scrollbar-track {
-  background: #585858;
-}
-
-.general-main-dark::-webkit-scrollbar-thumb {
-  background-color: #ec8e00;
-  border: 2px solid #585858;
-}
-
-.general-main-dark::-webkit-scrollbar-thumb:hover {
-  background-color: #f5a623;
-}
-
-
-
-
-
 
 .general-main-pie {
   margin-top: 2vh;
@@ -109,27 +74,7 @@
 .general-main-pie p {
   padding: 3vh 0 2vh 0;
   color: black;
-  font-family: 'Kode Mono';
-  font-size: 0.7rem;
-  font-weight: 500;
-}
-
-.general-main-pie-dark {
-  margin-top: 2vh;
-  width: 100%;
-  height: auto;
-  border-top: solid 2px rgb(75, 75, 75);
-  padding-top: 3vh;
-  text-align: center;
-}
-.general-main-pie-dark img {
-  width: 5vw;
-  height: auto;
-}
-.general-main-pie-dark p {
-  padding: 3vh 0 2vh 0;
-  color: rgb(153, 153, 153);
-  font-family: 'Kode Mono';
+  font-family: "Kode Mono";
   font-size: 0.7rem;
   font-weight: 500;
 }
@@ -144,7 +89,7 @@
 .links-container a {
   text-decoration: none;
   color: #777;
-  font-family: 'Kode Mono';
+  font-family: "Kode Mono";
   font-size: 0.9rem;
   text-align: center;
   padding: 2px 10px;

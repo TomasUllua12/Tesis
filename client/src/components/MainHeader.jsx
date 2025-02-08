@@ -15,7 +15,7 @@ export function MainHeader({ title }) {
   }, []);
 
   return (
-    <div className={darkMode ? "general-main-encabezado-dark" : "general-main-encabezado"}>
+    <div className="general-main-encabezado">
       <h2>{title}</h2>
       <div className="perfil-expmon-header">
         <p>

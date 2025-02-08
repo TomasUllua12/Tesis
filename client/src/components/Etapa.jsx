@@ -19,7 +19,7 @@ export function Etapa(props) {
 
   return (
     <>
-      <div className={darkMode ? "etapa-card-dark" : "etapa-card"} onClick={handleBlockedClick}>
+      <div className="etapa-card" onClick={handleBlockedClick}>
         {/* Si la etapa está bloqueada, se renderiza el overlay */}
         {isBlocked && (
           <div className="etapa-overlay">

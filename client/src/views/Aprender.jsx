@@ -16,7 +16,7 @@ export function Aprender(props) {
       <div className="color-line"></div>
       <div className="general-view">
         <Navbar />
-        <div className={darkMode ? "general-main-dark" : "general-main"}>
+        <div className="general-main">
           <MainHeader title="Aprender" />
 
           <Etapa
@@ -46,7 +46,7 @@ export function Aprender(props) {
             state="Block"
             image="/public/..png"
           />
-          <div className={darkMode ? "general-main-pie-dark" : "general-main-pie"}>
+          <div className="general-main-pie">
             <img src="/Finverse logo.png" alt="Finverse Logo" />
             <div className="links-container">
               <Link to="/Aprender">Aprender</Link>

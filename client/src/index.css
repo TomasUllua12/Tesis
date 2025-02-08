@@ -2,7 +2,7 @@
   --primary-orange: rgba(236, 156, 0, 1);
   --secondary-orange: rgba(236, 127, 0, 1);
   --third-orange: rgba(236, 142, 0, 0.23);
-  --forth-orange: rgb(255, 221, 175);
+  --forth-orange: rgb(255, 236, 209);
   --primary-color: rgba(243, 243, 243, 1);
   --secondary-color: rgba(217, 217, 217, 1);
   --third-color: rgba(255, 255, 255, 1);
@@ -14,7 +14,8 @@
 .dark-mode {
   --primary-orange: rgba(236, 156, 0, 1);
   --secondary-orange: rgba(236, 127, 0, 1);
-  --third-orange: rgba(236, 142, 0, 0.43);
+  --third-orange: rgba(236, 142, 0, 0.23);
+  --forth-orange: rgb(121, 94, 58);
   --primary-color: rgb(100, 100, 100);
   --secondary-color: rgb(68, 68, 68);
   --third-color: #333;
