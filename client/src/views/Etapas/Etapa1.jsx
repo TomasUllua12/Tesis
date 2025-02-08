@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Etapa1.css";
 import { Navbar } from "../../components/Navbar";
 import { Chat } from "../../components/Chat";
 import { ImageButton } from "../../components/ImageButton";
 import { Link } from "react-router-dom";
 import { MainHeader } from "../../components/MainHeader";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 export function Etapa1(props) {
+  const { darkMode } = useContext(DarkModeContext);
+
   // Definimos los capítulos con su estado
   const capitulos = [
     {
@@ -101,7 +104,14 @@ export function Etapa1(props) {
             ))}
           </div>
           <div className="general-main-pie">
-            <img src="/Finverse logo.png" alt="Finverse Logo" />
+            <img
+              src={
+                darkMode
+                  ? "../../public/FinverseLogoDark.png"
+                  : "../../public/FinverseLogoLight.png"
+              }
+              alt="Finverse Logo"
+            />
             <div className="links-container">
               <Link to="/Aprender">Aprender</Link>
               <Link to="/Desafios">Desafíos</Link>

@@ -1,13 +1,16 @@
 // Client/views/Login.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Si tienes estilos para el login
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Login() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isRegistering, setIsRegistering] = useState(true); // Alterna entre registro y login
+
+  const { darkMode } = useContext(DarkModeContext);
 
   const navigate = useNavigate();
 

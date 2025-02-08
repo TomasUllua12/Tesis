@@ -47,7 +47,7 @@ export function Aprender(props) {
             image="/public/..png"
           />
           <div className="general-main-pie">
-            <img src="/Finverse logo.png" alt="Finverse Logo" />
+            <img src={darkMode ? "../../public/FinverseLogoDark.png" : "../../public/FinverseLogoLight.png"} alt="Finverse Logo" />
             <div className="links-container">
               <Link to="/Aprender">Aprender</Link>
               <Link to="/Desafios">Desafíos</Link>

@@ -63,7 +63,7 @@
   margin-top: 2vh;
   width: 100%;
   height: auto;
-  border-top: solid 2px rgb(241, 241, 241);
+  border-top: solid 2px var(--secondary-color);
   padding-top: 3vh;
   text-align: center;
 }
@@ -73,7 +73,7 @@
 }
 .general-main-pie p {
   padding: 3vh 0 2vh 0;
-  color: black;
+  color: var(--primary-text);
   font-family: "Kode Mono";
   font-size: 0.7rem;
   font-weight: 500;
@@ -88,7 +88,7 @@
 }
 .links-container a {
   text-decoration: none;
-  color: #777;
+  color: var(--secondary-text);
   font-family: "Kode Mono";
   font-size: 0.9rem;
   text-align: center;
@@ -98,7 +98,7 @@
 }
 .links-container a:hover,
 .links-container a:focus {
-  border-color: #ec9c00;
-  color: #ec9c00;
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
   outline: none;
 }

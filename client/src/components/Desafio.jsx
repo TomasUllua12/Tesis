@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Desafio.css";
 import { useNavigate } from "react-router-dom";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Desafio(props) {
+
+  const { darkMode } = useContext(DarkModeContext);
+
   const isBlocked = props.progress !== 100;
   const [showMessage, setShowMessage] = useState(false);
   const navigate = useNavigate();

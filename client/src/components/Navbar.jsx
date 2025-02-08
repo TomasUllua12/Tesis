@@ -78,21 +78,22 @@ export function Navbar(props) {
         </ul>
       </div>
 
-      <div className="modo-oscuro-label">
-        <p>Modo Oscuro</p>
-      </div>
-
       {darkModePurchased && (
-        <div className="navbar-darkmode-toggle">
-          <label className="switch">
-            <input
-              type="checkbox"
-              checked={darkMode}
-              onChange={toggleDarkMode}
-            />
-            <span className="slider round"></span>
-          </label>
-        </div>
+        <>
+          <div className="modo-oscuro-label">
+            <p>Modo Oscuro</p>
+          </div>
+          <div className="navbar-darkmode-toggle">
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={darkMode}
+                onChange={toggleDarkMode}
+              />
+              <span className="slider round"></span>
+            </label>
+          </div>
+        </>
       )}
 
       <div className="navbar-logout">

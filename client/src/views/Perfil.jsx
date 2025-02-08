@@ -1,13 +1,16 @@
 // Client/views/Perfil.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Perfil.css";
 import { Chat } from "../components/Chat";
 import { Etapa } from "../components/Etapa";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Perfil() {
   const [user, setUser] = useState(null);
+
+  const { darkMode } = useContext(DarkModeContext);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -68,7 +71,7 @@ export function Perfil() {
             </div>
           </div>
           <div className="general-main-pie">
-            <img src="/Finverse logo.png" alt="Finverse Logo" />
+          <img src={darkMode ? "../../public/FinverseLogoDark.png" : "../../public/FinverseLogoLight.png"} alt="Finverse Logo" />
             <div className="links-container">
               <Link to="/Aprender">Aprender</Link>
               <Link to="/Desafios">Desafíos</Link>

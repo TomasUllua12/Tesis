@@ -4,12 +4,13 @@
   width: calc(100% - 2px);
   height: calc(25vh - 35px);
   margin-top: 2vh;
-  background-color: var(--third-orange);
-  border: solid 1px rgb(230, 230, 230);
-  box-shadow: 2px 2px 0px 1px rgb(230 230 230 / 1);
+  background-color: var(--primary-color);
+  border: solid 1px var(--secondary-color);
+  box-shadow: 2px 2px 0px 1px var(--secondary-color);
   transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
   position: relative;
   display: flex;
+  color: var(--primary-text);
 }
 
 .desafio-card-izq {

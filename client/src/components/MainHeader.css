@@ -15,9 +15,11 @@
   margin: 0;
   padding: 10px; /* Ajusta el padding según sea necesario */
 }
+
 .exp-text {
   color: var(--primary-orange);
 }
+
 .perfil-expmon-header p {
   position: absolute;
   font-family: "Kode Mono";
