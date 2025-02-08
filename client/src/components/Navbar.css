@@ -97,9 +97,8 @@
 }
 
 .logout-button:hover {
-  color: black;
   border: solid 1px #c62828;
-  background-color: #ffd4d4;
+  background-color: var(--cerrar-sesion);
   box-shadow: 2px 2px 0px 1px #c62828;
 }
 

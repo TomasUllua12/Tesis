@@ -9,6 +9,7 @@
   --primary-text: rgba(0, 0, 0, 1);
   --secondary-text: rgba(100, 100, 100, 1);
   --logo: url("../../public/FinverseLogoLight.png");
+  --cerrar-sesion: rgb(255, 196, 196);
 }
 
 .dark-mode {
@@ -22,6 +23,7 @@
   --primary-text: rgb(255, 255, 255);
   --secondary-text: rgb(196, 196, 196);
   --logo: url("../../public/FinverseLogoDark.png");
+  --cerrar-sesion: rgb(255, 116, 116);
 }
 
 * {
