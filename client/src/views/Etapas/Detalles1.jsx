@@ -27,7 +27,7 @@ export function Detalles1() {
       <div className="color-line"></div>
       <div className="general-view">
         <Navbar />
-        <div className={darkMode ? "general-main-dark" : "general-main"}>
+        <div className="general-main">
           <MainHeader title="Detalles del Módulo 1" />
 
           <div className="details-1" ref={detailsRef}>
@@ -111,7 +111,7 @@ export function Detalles1() {
             </p>
 
             {/* Botón para volver a la pantalla de "Aprender" */}
-            <button className={darkMode ? "btn-regresar-dark" : "btn-regresar"} onClick={handleVolverAprender}>
+            <button className="btn-regresar" onClick={handleVolverAprender}>
               Volver
             </button>
           </div>

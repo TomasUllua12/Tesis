@@ -9,7 +9,7 @@
 .details-1 h1 {
   margin: 1vh 0 3vh 0;
   text-align: center;
-  color: #ff8800;
+  color: var(--primary-orange);
 }
 
 .imagen-detail {
@@ -17,27 +17,32 @@
 }
 
 .details-1 p {
-  font-family: "Montserrat";
+  font-family: "Kode Mono";
   letter-spacing: 0.2cap;
   text-align: center;
   margin: 3vh 0 3vh 0;
+  color: var(--primary-text);
 }
 
 .details-1 h2 {
   margin: 3vh 0 3vh 0;
   text-align: center;
-  color: #ff8800;
+  color: var(--primary-orange);
 }
 
 .details-1 ul {
-  font-family: "Montserrat";
+  font-family: "Kode Mono";
   letter-spacing: 0.2cap;
   text-align: left;
   margin: 3vh 0 3vh 0;
+  color: var(--primary-text);
+}
+.details-1 li {
+  margin: 25px;
 }
 
 .details-1 .p-aux {
-  font-family: "Montserrat";
+  font-family: "Kode Mono";
   letter-spacing: 0.2cap;
   text-align: left;
 }
@@ -46,7 +51,6 @@
 .btn-regresar {
   font-family: "Kode Mono";
   font-weight: 600;
-  background-color: #e53935;
   color: #000000;
   display: block;
   margin: 2rem auto;
@@ -60,28 +64,6 @@
 }
 
 .btn-regresar:hover {
-  color: #464646;
-  border: solid 1px rgb(255, 115, 0);
-  background-color: #ffa43c;
-  box-shadow: 2px 2px 0px 1px rgb(255, 115, 0);
-}
-
-.btn-regresar-dark {
-  font-family: "Kode Mono";
-  font-weight: 600;
-  background-color: #e53935;
-  color: #000000;
-  display: block;
-  margin: 2rem auto;
-  padding: 0.8rem 1.5rem;
-  cursor: pointer;
-  transition: background-color 0.1s ease;
-  font-size: 0.8rem;
-  background-color: #ffd27f;
-  border: solid 1px rgb(255, 136, 0);
-  box-shadow: 2px 2px 0px 1px rgb(255, 136, 0);
-}
-.btn-regresar-dark:hover {
   color: #464646;
   border: solid 1px rgb(255, 115, 0);
   background-color: #ffa43c;
