@@ -66,3 +66,10 @@
 .mejora-card-der-img.blocked {
   filter: grayscale(100%);
 }
+
+
+.adquirido-text {
+  font-family: 'Kode Mono';
+  font-weight: 800;
+  color: var(--primary-orange);
+}

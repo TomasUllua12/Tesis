@@ -1,15 +1,19 @@
 // Client/components/Mejora.jsx
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./mejora.css";
 import { useNavigate } from "react-router-dom";
-import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Mejora(props) {
-  // El estado inicial de "purchased" se establece a partir de la prop recibida
   const [purchased, setPurchased] = useState(props.purchased);
   const [buying, setBuying] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  // Sincronizamos el estado local con la prop para que, al volver a la tienda,
+  // se refleje si la mejora ya fue adquirida.
+  useEffect(() => {
+    setPurchased(props.purchased);
+  }, [props.purchased]);
 
   const handleBuy = async () => {
     setBuying(true);
@@ -31,10 +35,10 @@ export function Mejora(props) {
       if (!response.ok) {
         setError(data.message || "Error al comprar la mejora");
       } else {
-        // Actualizar la información del usuario en localStorage
+        // Actualizamos la información del usuario en localStorage
         localStorage.setItem("user", JSON.stringify(data.user));
         setPurchased(true);
-        // Llamar a updateUser (si fue pasada) para que el padre actualice su estado
+        // Llamamos a updateUser para que el componente padre actualice su estado
         if (props.updateUser) {
           props.updateUser();
         }
@@ -45,8 +49,6 @@ export function Mejora(props) {
     setBuying(false);
   };
 
-  // Para cualquier mejora que no sea dark_mode se muestra el botón Comprar/Comprada.
-  // Para dark_mode, si ya fue comprada, se muestra "Comprada" ya que el toggle se muestra en el Navbar.
   return (
     <div className="mejora-card">
       <div className="mejora-titulo">
@@ -60,26 +62,24 @@ export function Mejora(props) {
         />
       </div>
       <div className="mejora-card-izq">
-        <div className="mejora-precio">
-          <p>
-            <span>
-              <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
-            </span>
-            {props.price}
-          </p>
-        </div>
+        {/* Solo se muestran las monedas y el precio si la mejora no ha sido adquirida */}
+        {!purchased && (
+          <div className="mejora-precio">
+            <p>
+              <span>
+                <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
+              </span>
+              {props.price}
+            </p>
+          </div>
+        )}
         <div className="mejora-boton-container">
           {!purchased ? (
             <button className="mejora-boton" onClick={handleBuy} disabled={buying}>
               {buying ? "Comprando..." : "Comprar"}
             </button>
           ) : (
-            // Para dark_mode, mostramos simplemente "Comprada" ya que el toggle aparece en el Navbar.
-            props.improvementKey === "dark_mode" ? (
-              <span>Comprada</span>
-            ) : (
-              <span>Comprada</span>
-            )
+            <span className="adquirido-text">ADQUIRIDO</span>
           )}
           {error && <p className="error-message">{error}</p>}
         </div>
