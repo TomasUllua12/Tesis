@@ -53,7 +53,7 @@ export function useTextToSpeech(getText) {
 
     // Función que se llama al presionar una tecla
     const handleKeydown = (e) => {
-      if (e.code === "Space") {
+      if (e.code === "ShiftRight") {
         e.preventDefault();
         // Si no estamos leyendo, inicia la lectura
         if (!isReading) {

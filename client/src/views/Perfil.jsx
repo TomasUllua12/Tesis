@@ -2,13 +2,16 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Perfil.css";
 import { Chat } from "../components/Chat";
-import { Etapa } from "../components/Etapa";
 import { Navbar } from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 export function Perfil() {
   const [user, setUser] = useState(null);
+  // Se inicializa el estado 'profileImage' con el valor guardado o con el valor por defecto.
+  const [profileImage, setProfileImage] = useState(() => {
+    return localStorage.getItem("profileImage") || "/Tipo1ojo.gif";
+  });
 
   const { darkMode } = useContext(DarkModeContext);
 
@@ -18,6 +21,14 @@ export function Perfil() {
       setUser(JSON.parse(storedUser));
     }
   }, []);
+
+  // Función que cambia la imagen del perfil y la guarda en localStorage.
+  const toggleProfileImage = () => {
+    // Alternamos entre los dos tipos de imagen.
+    const newImage = profileImage === "/Tipo1ojo.gif" ? "/Tipo2ojo.gif" : "/Tipo1ojo.gif";
+    setProfileImage(newImage);
+    localStorage.setItem("profileImage", newImage);
+  };
 
   return (
     <div>
@@ -29,21 +40,22 @@ export function Perfil() {
             <h2>Perfil</h2>
           </div>
           <div className="content-perfil">
-            <div className="perfil-image">
-              <div className="perfil-image__1"></div>
+            {/* Al hacer click en la imagen se alterna el perfil */}
+            <div className="perfil-image" onClick={toggleProfileImage}>
+              <div
+                className="perfil-image__1"
+                style={{ backgroundImage: `url(${profileImage})` }}
+              ></div>
             </div>
             <div className="perfil-name">
               {user ? user.nombre : "Cargando..."}
             </div>
             <div className="perfil-expmon">
               <p>
-                <span className="exp-text">Exp</span> {user ? user.experience : 0} - <b></b>
+                <span className="exp-text">Exp</span> {user ? user.experience : 0} -{" "}
+                <b></b>
                 <span>
-                  <img
-                    src="/public/Coin.gif"
-                    alt="Coins"
-                    className="gif-span"
-                  />
+                  <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
                 </span>
                 {user ? user.coins : 0}
               </p>
@@ -71,7 +83,14 @@ export function Perfil() {
             </div>
           </div>
           <div className="general-main-pie">
-          <img src={darkMode ? "../../public/FinverseLogoDark.png" : "../../public/FinverseLogoLight.png"} alt="Finverse Logo" />
+            <img
+              src={
+                darkMode
+                  ? "../../public/FinverseLogoDark.png"
+                  : "../../public/FinverseLogoLight.png"
+              }
+              alt="Finverse Logo"
+            />
             <div className="links-container">
               <Link to="/Aprender">Aprender</Link>
               <Link to="/Desafios">Desafíos</Link>
