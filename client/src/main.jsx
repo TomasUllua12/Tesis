@@ -13,6 +13,7 @@ import { Tienda } from "./views/Tienda.jsx";
 import Capitulo1 from "./views/Etapas/Capitulo1.jsx";
 import { Login } from "./views/Login.jsx";
 import { DarkModeProvider } from "./context/DarkModeContext"; // Importa el proveedor
+import Retroalimentacion1 from "./views/Etapas/retroalimentacion1.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
   { path: "Perfil", element: <Perfil /> },
   { path: "Desafios", element: <Desafios /> },
   { path: "Tienda", element: <Tienda /> },
-  { path: "Capitulo1", element: <Capitulo1 /> }
+  { path: "Capitulo1", element: <Capitulo1 /> },
+  { path: "Retroalimentacion1", element: <Retroalimentacion1 /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

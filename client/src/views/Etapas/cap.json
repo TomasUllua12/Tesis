@@ -1,0 +1,70 @@
+{
+    "startId": "nodo1",
+    "nodes": [
+      {
+        "id": "nodo1",
+        "contenido": "Bienvenido al inicio del capítulo. Aquí se presenta la situación inicial.",
+        "opciones": [
+          { 
+            "texto": "Tomar el camino A", 
+            "descripcion": "Esta decisión te lleva a explorar el enfoque conservador.", 
+            "nextNodeId": "nodo2" 
+          },
+          { 
+            "texto": "Tomar el camino B", 
+            "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
+            "nextNodeId": "nodo3" 
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "id": "nodo2",
+        "contenido": "Has optado por un camino seguro. Aquí se profundiza en estrategias conservadoras.",
+        "opciones": [
+          { 
+            "texto": "Invertir en ahorro", 
+            "descripcion": "El ahorro te ayudará a crear una reserva para el futuro.", 
+            "nextNodeId": "final1" 
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "id": "nodo3",
+        "contenido": "Elegiste un camino más arriesgado, explorando inversiones de mayor riesgo.",
+        "opciones": [
+          { 
+            "texto": "Invertir en bolsa", 
+            "descripcion": "Esta opción puede generar altos rendimientos o pérdidas significativas.", 
+            "nextNodeId": "final2" 
+          },
+          { 
+            "texto": "Invertir en emprendimiento", 
+            "descripcion": "Un camino innovador que requiere visión y tolerancia al riesgo.", 
+            "nextNodeId": "final3" 
+          }
+        ],
+        "type": "normal"
+      },
+      {
+        "id": "final1",
+        "contenido": "Fin del capítulo. Retroalimentación sobre la estrategia conservadora.",
+        "opciones": [],
+        "type": "final"
+      },
+      {
+        "id": "final2",
+        "contenido": "Fin del capítulo. Retroalimentación sobre la inversión en bolsa.",
+        "opciones": [],
+        "type": "final"
+      },
+      {
+        "id": "final3",
+        "contenido": "Fin del capítulo. Retroalimentación sobre el emprendimiento.",
+        "opciones": [],
+        "type": "final"
+      }
+    ]
+  }
+  
