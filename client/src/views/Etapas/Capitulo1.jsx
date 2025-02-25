@@ -14,7 +14,13 @@ function Capitulo1() {
         <LoadingScreen setIsLoading={setIsLoading} />
       ) : (
         <div className="cap-content">
-          <h2>Capítulo 1: Historia Interactiva</h2>
+          <h2>María y su Herencia</h2>
+          <div className="cap-loading-desafio-progress-bar">
+            <div
+              className="cap-loading-desafio-progress-fill"
+              style={{ width: `100%` }}
+            ></div>
+          </div>
           <div className="cap-options">
             <InteractiveStory storyData={storyData} />
           </div>

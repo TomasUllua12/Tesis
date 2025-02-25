@@ -17,6 +17,10 @@
   flex-direction: column;
   align-items: center;
 }
+.cap-content h2 {
+  font-family: 'Kode Mono';
+  margin-bottom: 10px;
+}
 
 /* Contenedor para las opciones de la historia */
 .cap-options {
@@ -42,6 +46,7 @@
 
 /* Opcional: estilos para el botón y descripción */
 .opcion button {
+  margin: 30px 0;
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -50,15 +55,16 @@
   letter-spacing: 0.5px;
   width: auto;
   height: auto;
-  background-color: var(--primary-orange);
-  color: white;
-  border: solid 1px var(--secondary-orange);
-  box-shadow: 2px 2px 0px 1px var(--secondary-orange);
+  background-color: var(--secondary-color);
+  color: var(--secondary-text);
+  border: solid 1px var(--secondary-text);
+  box-shadow: 2px 2px 0px 1px var(--secondary-text);
   transition: background-color 0.1s, border-radius 0.3s;
 }
 
 .opcion button:hover {
     cursor: pointer;
+    color: var(--third-color);
     background-color: var(--primary-orange);
     border: solid 1px rgb(200 100 0 / 1);
     box-shadow: 2px 2px 0px 1px rgb(200 100 0 / 1);

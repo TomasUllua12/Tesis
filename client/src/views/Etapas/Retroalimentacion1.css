@@ -15,7 +15,7 @@
 }
 
 .cap-loading-desafio-progress-bar {
-  width: 50%;
+  width: 50vw;
   background-color: #e0e0e0;
   overflow: hidden;
   margin: 0 5vw 5vw 5vw;
