@@ -4,9 +4,7 @@ import React from "react";
 export function StoryNode({ node, onDecision }) {
   return (
     <div className="story-node">
-      <div className="contenido-nodo">
-        {node.contenido}
-      </div>
+      <div className="contenido-nodo">{node.contenido}</div>
       <div className="opciones">
         {node.opciones.map((opcion, index) => (
           <div key={index} className="opcion">

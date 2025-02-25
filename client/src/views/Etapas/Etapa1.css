@@ -75,3 +75,48 @@
   background-color: rgb(29, 29, 29);
   margin: 10px 0; /* Margen izquierdo y derecho de 10px */
 }
+
+/* Estilos para el tooltip */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 500px; /* Ajusta el ancho según necesites */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%; /* Posición arriba del texto */
+  left: 50%;
+  transform: translateX(-40%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+  white-space: pre-line; /* Respeta saltos de línea */
+}
+
+/* Triángulo indicador (opcional) */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Justo debajo del tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+  width: 500px;
+  padding: 15px;
+  visibility: visible;
+  opacity: 1;
+}

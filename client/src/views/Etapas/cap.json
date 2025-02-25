@@ -14,6 +14,11 @@
             "texto": "Tomar el camino B", 
             "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
             "nextNodeId": "nodo3" 
+          },
+          { 
+            "texto": "Tomar el camino C", 
+            "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
+            "nextNodeId": "nodo4" 
           }
         ],
         "type": "normal"

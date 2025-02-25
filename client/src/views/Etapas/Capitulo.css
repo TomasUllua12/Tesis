@@ -1,0 +1,71 @@
+/* Capitulo.css */
+
+/* Fondo que ocupa toda la pantalla y centra el contenido */
+.cap-bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--third-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Contenedor principal del contenido (título e historia) */
+.cap-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor para las opciones de la historia */
+.cap-options {
+  margin-top: 20px;
+  /* Si InteractiveStory usa su propio contenedor para las opciones,
+       asegúrate de que éste tenga un display: flex; en el componente StoryNode.
+       Aquí incluimos estilos para la sección de opciones si se heredan. */
+}
+
+/* Estilos para el componente StoryNode (opciones) */
+/* Asegúrate de que StoryNode.jsx utilice las clases 'opciones' y 'opcion' para sus elementos */
+.opciones {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.opcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Opcional: estilos para el botón y descripción */
+.opcion button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Kode Mono";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  width: auto;
+  height: auto;
+  background-color: var(--primary-orange);
+  color: white;
+  border: solid 1px var(--secondary-orange);
+  box-shadow: 2px 2px 0px 1px var(--secondary-orange);
+  transition: background-color 0.1s, border-radius 0.3s;
+}
+
+.opcion button:hover {
+    cursor: pointer;
+    background-color: var(--primary-orange);
+    border: solid 1px rgb(200 100 0 / 1);
+    box-shadow: 2px 2px 0px 1px rgb(200 100 0 / 1);
+  }
+
+.descripcion-opcion {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
