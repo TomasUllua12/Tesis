@@ -1,0 +1,61 @@
+.app-bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgb(0, 156, 218), #fff);
+  position: relative;
+}
+
+.app-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/FondoFINVERSE.png");
+}
+
+.app-todo {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100px;
+}
+.cuadrado {
+  width: 50%;
+  height: 500px;
+  background-color: rgba(161, 30, 6, 0.333);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-logo {
+  width: 70%;
+}
+.app-p {
+  color: #fff;
+  font-family: "Kode Mono";
+  font-size: 1.2rem;
+  margin: 4vh 0;
+}
+
+.cuadrado a {
+  width: 10vw;
+  padding: 1vh 0;
+  margin: 4vh 0;
+  font-size: 0.7rem;
+  background-color: #f74;
+  border: solid 1px var(--secondary-color);
+  box-shadow: 2px 2px 0px 1px var(--secondary-color);
+  transition: background-color 0.2s, border-color 0.2s, border-radius 0.2s;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Kode Mono';
+  font-weight: 500;
+}
+.cuadrado a:hover {
+    background-color: var(--third-orange);
+    border: solid 1px var(--primary-orange);
+    box-shadow: 2px 2px 0px 1px var(--primary-orange);
+  }
