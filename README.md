@@ -42,10 +42,10 @@ cd ..
 
 
 
-🛠️ Backend - Descripción Técnica
+# 🛠️ Backend - Descripción Técnica
 El backend de esta aplicación fue desarrollado con Node.js y Express, ofreciendo una API REST que permite registrar usuarios, iniciar sesión y gestionar la compra de mejoras dentro de la plataforma.
 
-📁 Estructura del Proyecto
+## 📁 Estructura del Proyecto
 bash
 Copiar
 Editar
@@ -68,14 +68,14 @@ server/
 ├── .env                    # Variables de entorno (credenciales, claves, puerto)
 ├── index.js                # Archivo principal que levanta el servidor
 └── ...
-🔐 Autenticación
+## 🔐 Autenticación
 Se utiliza JWT (JSON Web Tokens) para generar y verificar tokens de autenticación.
 
 Las contraseñas se encriptan con bcryptjs antes de almacenarse en la base de datos.
 
 Las rutas sensibles (como la compra de mejoras) están protegidas mediante un middleware de autenticación.
 
-🧠 Lógica del sistema
+## 🧠 Lógica del sistema
 Los usuarios se registran y obtienen un token al iniciar sesión.
 
 Este token se envía en las cabeceras para acceder a rutas protegidas.
@@ -88,11 +88,11 @@ Se actualizan sus monedas y se registra la mejora en su perfil.
 
 Se guarda todo en la base de datos MySQL.
 
-🧪 Ruta de prueba
+## 🧪 Ruta de prueba
 GET /
 Responde con "Listening..." para verificar que el servidor está activo.
 
-⚙️ Tecnologías utilizadas
+## ⚙️ Tecnologías utilizadas
 Node.js y Express
 
 MySQL (vía mysql2/promise)
