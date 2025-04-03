@@ -42,13 +42,11 @@ cd ..
 
 
 
-# 🛠️ Backend - Descripción Técnica
+# 🛠️ **Backend - Descripción Técnica**
 El backend de esta aplicación fue desarrollado con Node.js y Express, ofreciendo una API REST que permite registrar usuarios, iniciar sesión y gestionar la compra de mejoras dentro de la plataforma.
 
 ## 📁 Estructura del Proyecto
-bash
-Copiar
-Editar
+```bash
 server/
 │
 ├── config/
@@ -68,6 +66,7 @@ server/
 ├── .env                    # Variables de entorno (credenciales, claves, puerto)
 ├── index.js                # Archivo principal que levanta el servidor
 └── ...
+```
 ## 🔐 Autenticación
 Se utiliza JWT (JSON Web Tokens) para generar y verificar tokens de autenticación.
 
@@ -93,16 +92,16 @@ GET /
 Responde con "Listening..." para verificar que el servidor está activo.
 
 ## ⚙️ Tecnologías utilizadas
-Node.js y Express
+. Node.js y Express
 
-MySQL (vía mysql2/promise)
+. MySQL (vía mysql2/promise)
 
-JWT (jsonwebtoken)
+. JWT (jsonwebtoken)
 
-bcryptjs
+. bcryptjs
 
-dotenv
+. dotenv
 
-CORS (cors)
+. CORS (cors)
 
-Postman (para pruebas de endpoints)
+. Postman (para pruebas de endpoints)
