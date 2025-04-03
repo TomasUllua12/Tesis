@@ -92,16 +92,10 @@ GET /
 Responde con "Listening..." para verificar que el servidor está activo.
 
 ## ⚙️ Tecnologías utilizadas
-. Node.js y Express
-
-. MySQL (vía mysql2/promise)
-
-. JWT (jsonwebtoken)
-
-. bcryptjs
-
-. dotenv
-
-. CORS (cors)
-
-. Postman (para pruebas de endpoints)
+- Node.js y Express
+- MySQL (vía mysql2/promise)
+- JWT (jsonwebtoken)
+- bcryptjs
+- dotenv
+- CORS (cors)
+- Postman (para pruebas de endpoints)
