@@ -20,7 +20,7 @@ Asegúrate de tener instalado en tu máquina:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/finverse.git
+   git clone https://github.com/tomasullua12/finverse.git
    cd finverse
 
 Instala las dependencias del proyecto:
