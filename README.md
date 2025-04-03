@@ -26,46 +26,42 @@ Asegúrate de tener instalado en tu máquina:
 Instala las dependencias del proyecto:
 
 ### Para el backend
-cd server
-
-npm install
-
-cd ..
-
+   ```bash
+   cd server
+   npm install
+   cd ..
+   ```
 ### Para el frontend
-cd client
-
-npm install
-
-cd ..
-
-
-
+```bash
+   cd client
+   npm install
+   cd ..
+```
 
 # 🛠️ **Backend - Descripción Técnica**
 El backend de esta aplicación fue desarrollado con Node.js y Express, ofreciendo una API REST que permite registrar usuarios, iniciar sesión y gestionar la compra de mejoras dentro de la plataforma.
 
 ## 📁 Estructura del Proyecto
 ```bash
-server/
-│
-├── config/
-│   └── db.js               # Configuración de la conexión a MySQL
-│
-├── controllers/
-│   ├── authController.js   # Registro y login de usuarios (con bcrypt y JWT)
-│   └── improvementController.js # Compra de mejoras y actualización de monedas
-│
-├── middlewares/
-│   └── authMiddleware.js   # Verificación de tokens JWT para proteger rutas
-│
-├── routes/
-│   ├── authRoutes.js       # Rutas públicas: /register y /login
-│   └── improvementRoutes.js# Ruta protegida: /buy-improvement
-│
-├── .env                    # Variables de entorno (credenciales, claves, puerto)
-├── index.js                # Archivo principal que levanta el servidor
-└── ...
+   server/
+   │
+   ├── config/
+   │   └── db.js               # Configuración de la conexión a MySQL
+   │
+   ├── controllers/
+   │   ├── authController.js   # Registro y login de usuarios (con bcrypt y JWT)
+   │   └── improvementController.js # Compra de mejoras y actualización de monedas
+   │
+   ├── middlewares/
+   │   └── authMiddleware.js   # Verificación de tokens JWT para proteger rutas
+   │
+   ├── routes/
+   │   ├── authRoutes.js       # Rutas públicas: /register y /login
+   │   └── improvementRoutes.js# Ruta protegida: /buy-improvement
+   │
+   ├── .env                    # Variables de entorno (credenciales, claves, puerto)
+   ├── index.js                # Archivo principal que levanta el servidor
+   └── ...
 ```
 ## 🔐 Autenticación
 Se utiliza JWT (JSON Web Tokens) para generar y verificar tokens de autenticación.
