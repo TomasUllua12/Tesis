@@ -15,10 +15,10 @@
   color: var(--primary-text);
 }
 .mejora-card:hover {
-    background-color: var(--forth-orange);
-    border: solid 1px var(--primary-orange);
-    box-shadow: 2px 2px 0px 1px var(--primary-orange);
-  }
+  background-color: var(--forth-orange);
+  border: solid 1px var(--primary-orange);
+  box-shadow: 2px 2px 0px 1px var(--primary-orange);
+}
 
 .mejora-titulo {
   font-family: "Kode Mono";
@@ -67,9 +67,8 @@
   filter: grayscale(100%);
 }
 
-
 .adquirido-text {
-  font-family: 'Kode Mono';
+  font-family: "Kode Mono";
   font-weight: 800;
   color: var(--primary-orange);
 }

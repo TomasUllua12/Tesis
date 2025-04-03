@@ -51,11 +51,11 @@
   text-align: center;
   color: #fff;
   text-decoration: none;
-  font-family: 'Kode Mono';
+  font-family: "Kode Mono";
   font-weight: 500;
 }
 .cuadrado a:hover {
-    background-color: var(--third-orange);
-    border: solid 1px var(--primary-orange);
-    box-shadow: 2px 2px 0px 1px var(--primary-orange);
-  }
+  background-color: var(--third-orange);
+  border: solid 1px var(--primary-orange);
+  box-shadow: 2px 2px 0px 1px var(--primary-orange);
+}

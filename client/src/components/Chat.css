@@ -35,7 +35,7 @@
   color: var(--primary-text) !important;
 }
 
-.cs-message-input__tools .cs-button--attachment{
+.cs-message-input__tools .cs-button--attachment {
   display: none !important;
 }
 
