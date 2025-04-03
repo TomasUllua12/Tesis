@@ -27,15 +27,15 @@ Instala las dependencias del proyecto:
 
 ### Para el backend
    ```bash
-   cd server
-   npm install
-   cd ..
+cd server
+npm install
+cd ..
    ```
 ### Para el frontend
 ```bash
-   cd client
-   npm install
-   cd ..
+cd client
+npm install
+cd ..
 ```
 
 # 🛠️ **Backend - Descripción Técnica**
@@ -56,8 +56,8 @@ El backend de esta aplicación fue desarrollado con Node.js y Express, ofreciend
    │   └── authMiddleware.js   # Verificación de tokens JWT para proteger rutas
    │
    ├── routes/
-   │   ├── authRoutes.js       # Rutas públicas: /register y /login
-   │   └── improvementRoutes.js# Ruta protegida: /buy-improvement
+   │   ├── authRoutes.js        # Rutas públicas: /register y /login
+   │   └── improvementRoutes.js # Ruta protegida: /buy-improvement
    │
    ├── .env                    # Variables de entorno (credenciales, claves, puerto)
    ├── index.js                # Archivo principal que levanta el servidor
