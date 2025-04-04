@@ -57,7 +57,7 @@
   margin-top: 20vh;
   font-size: 2rem;
   font-weight: 700;
-  color: black;
+  color: var(--primary-text);
 }
 
 .loading-screen p {

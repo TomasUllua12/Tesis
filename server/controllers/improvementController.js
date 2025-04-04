@@ -56,7 +56,7 @@ exports.buyImprovement = async (req, res) => {
 
     // Verificar si el usuario tiene suficientes monedas para la compra
     if (user.coins < price) {
-      return res.status(400).json({ message: "No tienes suficientes monedas" });
+      return res.status(400).json({ message: "Monedas insuficientes" });
     }
 
     // Calcular el nuevo saldo de monedas y agregar la mejora al array

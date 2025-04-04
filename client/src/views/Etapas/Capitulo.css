@@ -20,11 +20,14 @@
 .cap-content h2 {
   font-family: 'Kode Mono';
   margin-bottom: 10px;
+  color: var(--primary-text);
 }
 
 /* Contenedor para las opciones de la historia */
 .cap-options {
   margin-top: 20px;
+  color: var(--secondary-text);
+  font-family: 'Kode Mono';
   /* Si InteractiveStory usa su propio contenedor para las opciones,
        asegúrate de que éste tenga un display: flex; en el componente StoryNode.
        Aquí incluimos estilos para la sección de opciones si se heredan. */
@@ -64,7 +67,7 @@
 
 .opcion button:hover {
     cursor: pointer;
-    color: var(--third-color);
+    color: var(--secondary-text);
     background-color: var(--primary-orange);
     border: solid 1px rgb(200 100 0 / 1);
     box-shadow: 2px 2px 0px 1px rgb(200 100 0 / 1);

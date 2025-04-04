@@ -7,6 +7,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: var(--secondary-text);
+  font-family: 'Kode Mono';
 }
 
 .retroalimentacion-view h2 {
@@ -56,7 +58,7 @@
 
 .cap-pieview a:hover {
   cursor: pointer;
-  background-color: var(--primary-orange);
-  border: solid 1px rgb(200 100 0 / 1);
-  box-shadow: 2px 2px 0px 1px rgb(200 100 0 / 1);
+  background-color: var(--secondary-orange);
+  border: solid 1px rgb(146, 73, 0);
+  box-shadow: 2px 2px 0px 1px rgb(153, 77, 0);
 }

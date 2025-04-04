@@ -76,7 +76,7 @@ export function Mejora(props) {
         <div className="mejora-boton-container">
           {!purchased ? (
             <button className="mejora-boton" onClick={handleBuy} disabled={buying}>
-              {buying ? "Comprando..." : "Comprar"}
+              {buying ? "Comprando" : "Comprar"}
             </button>
           ) : (
             <span className="adquirido-text">ADQUIRIDO</span>

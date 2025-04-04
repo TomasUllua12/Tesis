@@ -3,6 +3,7 @@
 .mejora-card {
   width: 98%;
   height: auto;
+  min-height: 350px;
   background-color: var(--primary-color);
   border: solid 1px var(--secondary-color);
   box-shadow: 2px 2px 0px 1px var(--secondary-color);
@@ -39,7 +40,8 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 0.8rem;
-  width: 5vw;
+  min-width: 5vw;
+  width: auto;
   height: 3.5vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -71,4 +73,15 @@
   font-family: "Kode Mono";
   font-weight: 800;
   color: var(--primary-orange);
+}
+
+.mejora-card-izq {
+  font-family: 'Kode Mono';
+  font-size: 0.9rem;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.mejora-card-izq .error-message {
+  color: red;
+  font-weight: 800;
 }
