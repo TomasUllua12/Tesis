@@ -1,3 +1,4 @@
+/* Estilos base */
 .app-bg {
   width: 100%;
   height: 100vh;
@@ -9,6 +10,9 @@
   width: 100%;
   height: 100%;
   background-image: url("../public/FondoFINVERSE.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .app-todo {
@@ -19,6 +23,7 @@
   justify-content: center;
   top: 100px;
 }
+
 .cuadrado {
   backdrop-filter: blur(2px);
   width: 50%;
@@ -28,16 +33,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .app-logo {
   width: 70%;
 }
+
 .app-p {
   color: #fff;
   font-family: "Kode Mono";
   font-size: 1.2rem;
   margin: 4vh 0;
+  text-align: center;
 }
 
 .cuadrado a {
@@ -55,8 +63,54 @@
   font-family: "Kode Mono";
   font-weight: 500;
 }
+
 .cuadrado a:hover {
   background-color: var(--third-orange);
   border: solid 1px var(--primary-orange);
   box-shadow: 2px 2px 0px 1px var(--primary-orange);
+}
+
+/* Media queries para hacerlo responsive */
+
+/* Para tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .cuadrado {
+    width: 80%;
+    height: auto;
+    padding: 30px;
+  }
+  .app-todo {
+    top: 50px;
+  }
+  .app-logo {
+    width: 80%;
+  }
+  .app-p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .cuadrado a {
+    width: 30vw;
+    font-size: 0.8rem;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+  .cuadrado {
+    width: 90%;
+    padding: 20px;
+  }
+  .app-todo {
+    top: 30px;
+  }
+  .app-p {
+    font-size: 0.9rem;
+    margin: 3vh 0;
+    text-align: center;
+  }
+  .cuadrado a {
+    width: 40%;
+    font-size: 0.75rem;
+  }
 }
