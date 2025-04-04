@@ -10,7 +10,7 @@ function App() {
         <div className='cuadrado'>
           <p className='app-p'>Bienvenidos a</p>
           <img className="app-logo" src="../public/FinverseLogoDark.png" alt="" />
-          <p className='app-p'>Lorem, ipsum dolor sit amet te aut impedit molestiae excepturi?</p>
+          <p className='app-p'>Cada decisión cuenta. Empieza a tomar el control de tu vida financiera.</p>
           <Link to="Login"><h2>Ingresar</h2></Link>
         </div>
       </div>
