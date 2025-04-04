@@ -19,7 +19,7 @@ export function Detalles1() {
 
   // Función para volver a la pantalla de "Aprender" (puedes cambiar la ruta)
   const handleVolverAprender = () => {
-    window.location.href = "/aprender";
+    window.location.href = "/Aprender";
   };
 
   return (
