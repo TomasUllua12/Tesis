@@ -72,7 +72,7 @@
 .separator .square {
   width: 15px;
   height: 15px;
-  background-color: rgb(29, 29, 29);
+  background-color: var(--primary-text);
   margin: 10px 0; /* Margen izquierdo y derecho de 10px */
 }
 
