@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--secondary-text);
-  font-family: 'Kode Mono';
+  color: var(--primary-text);
+  font-family: 'Poppins';
 }
 
 .retroalimentacion-view h2 {

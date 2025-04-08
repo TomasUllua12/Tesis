@@ -57,7 +57,7 @@
 .cap-options {
   margin-top: 20px;
   color: var(--secondary-text);
-  font-family: 'Kode Mono';
+  font-family: 'Poppins';
 }
 
 /* Estilos para el componente StoryNode (opciones) */
@@ -113,7 +113,7 @@
 }
 
 .story-narrative .contenido-nodo {
-  font-family: 'Kode Mono';
+  font-family: 'Poppins';
   margin-bottom: 20px;
   color: var(--primary-text);
 }
