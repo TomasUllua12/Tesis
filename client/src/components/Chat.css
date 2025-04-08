@@ -20,7 +20,8 @@
 }
 
 .cs-message--incoming .cs-message__content {
-  font-family: "Kode Mono" !important;
+  font-family: "Poppins" !important;
+  letter-spacing: 0.1cap !important;
   font-weight: 400 !important;
   font-size: 0.8rem !important;
   background-color: var(--primary-orange) !important;
@@ -28,7 +29,8 @@
 }
 
 .cs-message--outgoing .cs-message__content {
-  font-family: "Kode Mono" !important;
+  font-family: "Poppins" !important;
+  letter-spacing: 0.1cap !important;
   font-weight: 400 !important;
   font-size: 0.8rem !important;
   background-color: var(--forth-orange) !important;
@@ -58,7 +60,8 @@
 }
 .cs-message-input__content-editor {
   background-color: var(--forth-orange) !important;
-  font-family: "Kode Mono" !important;
+  font-family: "Poppins" !important;
+  letter-spacing: 0.1cap !important;
   font-weight: 600 !important;
   font-size: 0.8rem !important;
   color: var(--primary-text) !important;
