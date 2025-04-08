@@ -1,6 +1,3 @@
-/* Capitulo.css */
-
-/* Fondo que ocupa toda la pantalla y centra el contenido */
 .cap-bg {
   width: 100vw;
   height: 100vh;
@@ -11,26 +8,56 @@
   text-align: center;
 }
 
-/* Contenedor principal del contenido (título e historia) */
 .cap-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .cap-content h2 {
   font-family: 'Kode Mono';
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--primary-text);
 }
 
-/* Contenedor para las opciones de la historia */
+.cap-loading-desafio-progress-bar {
+  width: 100%;
+}
+
+.cap-loading-desafio-progress-fill {
+  height: 10px;
+  background-color: var(--primary-orange);
+}
+
+.cap-node-image {
+  margin: 0 0 30px 0;
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  height: 400px;
+  overflow: hidden; /* Asegura que no se muestren partes que sobresalgan */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cap-node-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+
 .cap-options {
   margin-top: 20px;
   color: var(--secondary-text);
   font-family: 'Kode Mono';
-  /* Si InteractiveStory usa su propio contenedor para las opciones,
-       asegúrate de que éste tenga un display: flex; en el componente StoryNode.
-       Aquí incluimos estilos para la sección de opciones si se heredan. */
 }
 
 /* Estilos para el componente StoryNode (opciones) */
@@ -77,4 +104,32 @@
   margin-top: 5px;
   font-size: 0.9rem;
   color: #555;
+}
+
+.story-narrative {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-narrative .contenido-nodo {
+  font-family: 'Kode Mono';
+  margin-bottom: 20px;
+  color: var(--primary-text);
+}
+
+.story-narrative button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Kode Mono';
+  background-color: var(--secondary-color);
+  color: var(--secondary-text);
+  border: 1px solid var(--secondary-text);
+  box-shadow: 2px 2px 0 1px var(--secondary-text);
+  cursor: pointer;
+  transition: background-color 0.1s, border-radius 0.3s;
+}
+
+.story-narrative button:hover {
+  background-color: var(--primary-orange);
 }

@@ -1,75 +1,132 @@
 {
-    "startId": "nodo1",
-    "nodes": [
-      {
-        "id": "nodo1",
-        "contenido": "Bienvenido al inicio del capítulo. Aquí se presenta la situación inicial.",
-        "opciones": [
-          { 
-            "texto": "Tomar el camino A", 
-            "descripcion": "Esta decisión te lleva a explorar el enfoque conservador.", 
-            "nextNodeId": "nodo2" 
-          },
-          { 
-            "texto": "Tomar el camino B", 
-            "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
-            "nextNodeId": "nodo3" 
-          },
-          { 
-            "texto": "Tomar el camino C", 
-            "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
-            "nextNodeId": "nodo4" 
-          }
-        ],
-        "type": "normal"
-      },
-      {
-        "id": "nodo2",
-        "contenido": "Has optado por un camino seguro. Aquí se profundiza en estrategias conservadoras.",
-        "opciones": [
-          { 
-            "texto": "Invertir en ahorro", 
-            "descripcion": "El ahorro te ayudará a crear una reserva para el futuro.", 
-            "nextNodeId": "final1" 
-          }
-        ],
-        "type": "normal"
-      },
-      {
-        "id": "nodo3",
-        "contenido": "Elegiste un camino más arriesgado, explorando inversiones de mayor riesgo.",
-        "opciones": [
-          { 
-            "texto": "Invertir en bolsa", 
-            "descripcion": "Esta opción puede generar altos rendimientos o pérdidas significativas.", 
-            "nextNodeId": "final2" 
-          },
-          { 
-            "texto": "Invertir en emprendimiento", 
-            "descripcion": "Un camino innovador que requiere visión y tolerancia al riesgo.", 
-            "nextNodeId": "final3" 
-          }
-        ],
-        "type": "normal"
-      },
-      {
-        "id": "final1",
-        "contenido": "Fin del capítulo. Retroalimentación sobre la estrategia conservadora.",
-        "opciones": [],
-        "type": "final"
-      },
-      {
-        "id": "final2",
-        "contenido": "Fin del capítulo. Retroalimentación sobre la inversión en bolsa.",
-        "opciones": [],
-        "type": "final"
-      },
-      {
-        "id": "final3",
-        "contenido": "Fin del capítulo. Retroalimentación sobre el emprendimiento.",
-        "opciones": [],
-        "type": "final"
-      }
-    ]
-  }
-  
+  "startId": "narrativa1",
+  "nodes": [
+    {
+      "id": "narrativa1",
+      "contenido": "Primer nodo de introducción. Bienvenido a la historia, aquí se establece el contexto inicial.",
+      "nextNodeId": "narrativa2",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m1.jpg"
+    },
+    {
+      "id": "narrativa2",
+      "contenido": "Segundo nodo narrativo. Se te presenta más información sobre el mundo y los personajes.",
+      "nextNodeId": "narrativa3",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m2.jpg"
+    },
+    {
+      "id": "narrativa3",
+      "contenido": "Tercer nodo narrativo. Ahora se prepara al usuario para comenzar a tomar decisiones.",
+      "nextNodeId": "nodo1",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "nodo1",
+      "contenido": "Bienvenido al inicio del capítulo. Aquí se presenta la situación inicial con opciones para elegir tu camino.",
+      "opciones": [
+        { 
+          "texto": "Tomar el camino A", 
+          "descripcion": "Esta decisión te lleva a explorar el enfoque conservador.", 
+          "nextNodeId": "nodo2" 
+        },
+        { 
+          "texto": "Tomar el camino B", 
+          "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
+          "nextNodeId": "nodo3" 
+        },
+        { 
+          "texto": "Tomar el camino C", 
+          "descripcion": "Esta opción es más arriesgada y te empuja a un escenario alternativo.", 
+          "nextNodeId": "nodo4" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen4.jpg"
+    },
+    {
+      "id": "nodo2",
+      "contenido": "Has optado por un camino seguro. Aquí se profundiza en estrategias conservadoras.",
+      "opciones": [
+        { 
+          "texto": "Invertir en ahorro", 
+          "descripcion": "El ahorro te ayudará a crear una reserva para el futuro.", 
+          "nextNodeId": "final1" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen5.jpg"
+    },
+    {
+      "id": "nodo3",
+      "contenido": "Elegiste un camino más arriesgado, explorando inversiones de mayor riesgo.",
+      "opciones": [
+        { 
+          "texto": "Invertir en bolsa", 
+          "descripcion": "Esta opción puede generar altos rendimientos o pérdidas significativas.", 
+          "nextNodeId": "narrativa4" 
+        },
+        { 
+          "texto": "Invertir en emprendimiento", 
+          "descripcion": "Un camino innovador que requiere visión y tolerancia al riesgo.", 
+          "nextNodeId": "final3" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen6.jpg"
+    },
+    {
+      "id": "narrativa4",
+      "contenido": "Primer nodo de introducción. Bienvenido a la historia, aquí se establece el contexto inicial.",
+      "nextNodeId": "nodo4",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m4.jpg"
+    },
+    {
+      "id": "nodo4",
+      "contenido": "Has tomado una ruta alternativa. Aquí se abordan otros aspectos de la historia.",
+      "opciones": [
+        { 
+          "texto": "Explorar una nueva opción", 
+          "descripcion": "Esta decisión abre un camino distinto dentro de la narrativa.", 
+          "nextNodeId": "final4" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen7.jpg"
+    },
+    {
+      "id": "final1",
+      "contenido": "Fin del capítulo. Retroalimentación sobre la estrategia conservadora.",
+      "opciones": [],
+      "type": "final",
+      "imagen": "/ruta/a/imagen8.jpg"
+    },
+    {
+      "id": "final2",
+      "contenido": "Fin del capítulo. Retroalimentación sobre la inversión en bolsa.",
+      "opciones": [],
+      "type": "final",
+      "imagen": "/ruta/a/imagen9.jpg"
+    },
+    {
+      "id": "final3",
+      "contenido": "Fin del capítulo. Retroalimentación sobre el emprendimiento.",
+      "opciones": [],
+      "type": "final",
+      "imagen": "/ruta/a/imagen10.jpg"
+    },
+    {
+      "id": "final4",
+      "contenido": "Fin del capítulo. Retroalimentación sobre la ruta alternativa.",
+      "opciones": [],
+      "type": "final",
+      "imagen": "/ruta/a/imagen11.jpg"
+    }
+  ]
+}
