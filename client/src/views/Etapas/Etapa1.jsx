@@ -17,8 +17,7 @@ export function Etapa1(props) {
       title: "María y su herencia",
       state: "Active",
       path: "/Capitulo1",
-      tooltip: `María recibe una herencia y no sabe qué hacer con el dinero inesperado.
-Se analizan las opciones para administrar un capital repentino, desde ahorrar en cuentas seguras hasta invertir en opciones con distintos niveles de riesgo. También se discuten los peligros de gastar sin planificación.`,
+      tooltip: `María recibe una herencia y no sabe qué hacer con el dinero inesperado. Se analizan las opciones para administrar un capital repentino, desde ahorrar en cuentas seguras hasta invertir en opciones con distintos niveles de riesgo. También se discuten los peligros de gastar sin planificación.`,
     },
     {
       number: 2,
