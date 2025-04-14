@@ -14,7 +14,7 @@ export function Etapa1(props) {
   const capitulos = [
     {
       number: 1,
-      title: "María y su herencia",
+      title: "La familia Torres y sus hábitos financieros",
       state: "Active",
       path: "/Capitulo1",
       tooltip: `María recibe una herencia y no sabe qué hacer con el dinero inesperado. Se analizan las opciones para administrar un capital repentino, desde ahorrar en cuentas seguras hasta invertir en opciones con distintos niveles de riesgo. También se discuten los peligros de gastar sin planificación.`,

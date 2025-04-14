@@ -40,7 +40,7 @@ function Capitulo1() {
         <LoadingScreen setIsLoading={setIsLoading} />
       ) : (
         <div className="cap-content">
-          <h2>María y su Herencia</h2>
+          <h2>La familia Torres y sus hábitos financieros</h2>
           <div className="cap-loading-desafio-progress-bar">
             <div
               className="cap-loading-desafio-progress-fill"

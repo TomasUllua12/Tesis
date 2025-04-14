@@ -30,7 +30,7 @@ function LoadingScreen({ setIsLoading }) {
       <div className="loading-navbar-logo">
         <div className="loading-navbar-logo-finverse"></div>
       </div>
-      <h2>María y su Herencia</h2>
+      <h2>La familia Torres y sus hábitos financieros</h2>
       <p>Cargando...</p>
       <div className="loading-desafio-progress-bar">
         <div

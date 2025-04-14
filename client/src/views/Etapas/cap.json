@@ -3,7 +3,7 @@
   "nodes": [
     {
       "id": "narrativa1",
-      "contenido": "Primer nodo de introducción. Bienvenido a la historia, aquí se establece el contexto inicial.",
+      "contenido": "La familia Torres vive en un barrio tranquilo de las afueras de la ciudad. Su casa es modesta, pero cálida. Está decorada con fotos familiares, dibujos de los niños pegados en la heladera y una pila de papeles desordenados sobre una pequeña mesa del comedor. \nClara, de 39 años, es maestra de primaria. Su trabajo le gusta, aunque siente que el sueldo apenas le alcanza. Martín, su esposo, tiene 42 años y trabaja de manera independiente arreglando celulares y computadoras. Su taller está en el garaje de la casa. A veces tiene mucho trabajo, otras semanas casi nada. Eso hace que sus ingresos sean muy variables y difíciles de prever. \nTienen tres hijos: \n - Valen (15 años), fanático de los videojuegos, que está empezando a salir con amigos y ya pide su “mesada”. \n - Emma (12 años), apasionada por la danza, que toma clases en una academia que no es barata. \n - Tomi (7 años), un torbellino de energía que empieza a traer invitaciones a cumpleaños cada semana.",
       "nextNodeId": "narrativa2",
       "opciones": [],
       "type": "texto",
@@ -11,7 +11,7 @@
     },
     {
       "id": "narrativa2",
-      "contenido": "Segundo nodo narrativo. Se te presenta más información sobre el mundo y los personajes.",
+      "contenido": "Como muchas familias, los Torres viven al ritmo del día a día. Pagan las cuentas cuando llegan, compran lo que hace falta sin mirar mucho precios, y casi nunca planifican a largo plazo. A veces compran cosas por impulso, otras veces dejan pasar oportunidades por falta de organización. Cuando hay algún gasto inesperado —como una visita al médico o una promoción escolar— todo se tambalea. \nÚltimamente, Clara y Martín sienten que algo no está funcionando. Discutieron por dinero más veces de lo normal. Clara se pregunta si están enseñando buenos hábitos a sus hijos. Martín siente que trabajan mucho para seguir igual que siempre.",
       "nextNodeId": "narrativa3",
       "opciones": [],
       "type": "texto",
@@ -20,6 +20,14 @@
     {
       "id": "narrativa3",
       "contenido": "Tercer nodo narrativo. Ahora se prepara al usuario para comenzar a tomar decisiones.",
+      "nextNodeId": "narrativa4",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa4",
+      "contenido": "Un domingo por la tarde, mientras ordenaban los papeles y trataban de entender por qué el sueldo no alcanzó, Clara se detiene un momento, respira hondo y dice:\n\n—“Martín, ¿y si empezamos a mirar cómo estamos usando el dinero? Capaz no es solo cuánto ganamos, sino cómo lo manejamos…” \nEsa frase marca el inicio de un cambio. La familia decide reunirse esa noche para hablar sobre sus finanzas por primera vez. \nAhora te toca a vos. \nVas a acompañar a los Torres en este proceso. Vas a conocer sus costumbres, sus errores y sus posibilidades. \nTus decisiones pueden ayudarlos a crear un sistema familiar más saludable, organizado y con futuro. \n\n ¿Estás listo para entrar en la historia?",
       "nextNodeId": "nodo1",
       "opciones": [],
       "type": "texto",
@@ -27,21 +35,21 @@
     },
     {
       "id": "nodo1",
-      "contenido": "Bienvenido al inicio del capítulo. Aquí se presenta la situación inicial con opciones para elegir tu camino.",
+      "contenido": "La casa está en silencio. Los chicos ya se fueron a sus cuartos. Clara y Martín se quedaron en la mesa del comedor. Entre ellos hay un cuaderno, varias facturas, tickets de supermercado y una calculadora vieja. \n\n— “No puede ser que lleguemos tan justos otra vez...” —dice Clara, frustrada.  — “Encima esta semana se vencen el gas y la tarjeta del súper…” —responde Martín, mirando el celular. \nClara lo mira y suspira. \n\n— “Mirá… no sé si ganamos poco, si gastamos mal o qué, pero esto así no va más. Necesitamos entender qué está pasando con nuestra plata.” \nMartín asiente. Hace un momento parecía cansado, pero ahora se lo ve más receptivo. \n\n— “Tenés razón. ¿Y por dónde empezamos?” \nClara sonríe, como quien se anima a hacer algo nuevo: \n\n— “¿Y si hacemos una lista de todo lo que gastamos en la semana? Aunque sea para saber...”",
       "opciones": [
         { 
-          "texto": "Tomar el camino A", 
-          "descripcion": "Esta decisión te lleva a explorar el enfoque conservador.", 
+          "texto": "“Sí, empiecen por anotar todo lo que gastan durante una semana. Lo importante es tener claridad.”", 
+          "descripcion": "Incentiva el registro de gastos como primer paso para tomar control.", 
           "nextNodeId": "nodo2" 
         },
         { 
-          "texto": "Tomar el camino B", 
-          "descripcion": "Esta opción es más arriesgada y te empuja a un escenario diferente.", 
+          "texto": "“¿Y si primero identifican cuáles son sus gastos fijos y cuáles no lo son? Puede ser más útil para ordenar.”", 
+          "descripcion": "Introduce la distinción entre tipos de gastos como estrategia inicial.", 
           "nextNodeId": "nodo3" 
         },
         { 
-          "texto": "Tomar el camino C", 
-          "descripcion": "Esta opción es más arriesgada y te empuja a un escenario alternativo.", 
+          "texto": "“Reuní a toda la familia y hablen todos juntos. Es importante que los chicos también se involucren.”", 
+          "descripcion": "Apuesta por una solución integral, que incluye la educación financiera familiar.", 
           "nextNodeId": "nodo4" 
         }
       ],
@@ -50,11 +58,16 @@
     },
     {
       "id": "nodo2",
-      "contenido": "Has optado por un camino seguro. Aquí se profundiza en estrategias conservadoras.",
+      "contenido": "📍 Lunes por la mañana – Cocina de los Torres \nClara se levanta temprano, antes de que empiece el ajetreo del día. Prepara el desayuno y deja un cuaderno con una birome sobre la mesa, con un cartelito pegado que dice: \n\n📝 “Anotá cualquier gasto que hagas hoy, por más mínimo que sea. ¡Vamos en equipo!” \nMartín ve el mensaje mientras toma el primer mate del día. Sonríe. Se lo toma en serio. En una hoja nueva del cuaderno escribe: \n\n● Carga SUBE: $800\n ● Panadería: $1200 (llevé medialunas)\nMás tarde, Clara anota: \n● Merienda Emma (clase de danza): $600\n ● Supermercado (cosas para la cena): $4200 \n\nDurante los días siguientes, se suman más gastos: delivery improvisado, útiles escolares, chocolates al pasar por el kiosco, una promo de hamburguesas para los chicos, algo de ropa para Valen.\nEl cuaderno empieza a llenarse de números... y de sorpresas.",
       "opciones": [
         { 
-          "texto": "Invertir en ahorro", 
-          "descripcion": "El ahorro te ayudará a crear una reserva para el futuro.", 
+          "texto": "La mayoría de los gastos son impulsivos o no planificados.", 
+          "descripcion": "Introduce el concepto de gastos hormiga y la importancia de planificar.", 
+          "nextNodeId": "final1" 
+        },
+        { 
+          "texto": "No hay un patrón claro, lo que indica que no tienen control de sus hábitos aún.", 
+          "descripcion": "Motiva la necesidad de agrupar los gastos en categorías para ver mejor la situación.", 
           "nextNodeId": "final1" 
         }
       ],
