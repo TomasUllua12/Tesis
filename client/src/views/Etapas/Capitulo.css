@@ -118,6 +118,7 @@
 }
 
 .story-narrative .contenido-nodo {
+  width: 70%;
   font-family: 'Poppins';
   margin-bottom: 20px;
   color: var(--primary-text);

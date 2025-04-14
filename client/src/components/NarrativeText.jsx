@@ -1,5 +1,6 @@
 // NarrativeText.jsx
 import React from "react";
+import "./nodeText.css";
 
 export function NarrativeText({ node, onNext }) {
   return (

@@ -3,19 +3,19 @@
   "nodes": [
     {
       "id": "narrativa1",
-      "contenido": "La familia Torres vive en un barrio tranquilo de las afueras de la ciudad. Su casa es modesta, pero cálida. Está decorada con fotos familiares, dibujos de los niños pegados en la heladera y una pila de papeles desordenados sobre una pequeña mesa del comedor. \nClara, de 39 años, es maestra de primaria. Su trabajo le gusta, aunque siente que el sueldo apenas le alcanza. Martín, su esposo, tiene 42 años y trabaja de manera independiente arreglando celulares y computadoras. Su taller está en el garaje de la casa. A veces tiene mucho trabajo, otras semanas casi nada. Eso hace que sus ingresos sean muy variables y difíciles de prever. \nTienen tres hijos: \n - Valen (15 años), fanático de los videojuegos, que está empezando a salir con amigos y ya pide su “mesada”. \n - Emma (12 años), apasionada por la danza, que toma clases en una academia que no es barata. \n - Tomi (7 años), un torbellino de energía que empieza a traer invitaciones a cumpleaños cada semana.",
+      "contenido": "La familia Torres vive en un barrio tranquilo de las afueras de la ciudad. Su casa es modesta, pero cálida. \nEstá decorada con fotos familiares, dibujos de los niños pegados en la heladera y una pila de papeles desordenados sobre una pequeña mesa del comedor.",
       "nextNodeId": "narrativa2",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m1.jpg"
+      "imagen": "../../../public/nodosImgs/storyImg1.png"
     },
     {
       "id": "narrativa2",
-      "contenido": "Como muchas familias, los Torres viven al ritmo del día a día. Pagan las cuentas cuando llegan, compran lo que hace falta sin mirar mucho precios, y casi nunca planifican a largo plazo. A veces compran cosas por impulso, otras veces dejan pasar oportunidades por falta de organización. Cuando hay algún gasto inesperado —como una visita al médico o una promoción escolar— todo se tambalea. \nÚltimamente, Clara y Martín sienten que algo no está funcionando. Discutieron por dinero más veces de lo normal. Clara se pregunta si están enseñando buenos hábitos a sus hijos. Martín siente que trabajan mucho para seguir igual que siempre.",
+      "contenido": "Clara, de 39 años, es maestra de primaria. Su trabajo le gusta, aunque siente que el sueldo apenas le alcanza. \n\nMartín, su esposo, tiene 42 años y trabaja de manera independiente arreglando celulares y computadoras. \nSu taller está en el garaje de la casa. A veces tiene mucho trabajo, otras semanas casi nada. Eso hace que sus ingresos sean muy variables y difíciles de prever.",
       "nextNodeId": "narrativa3",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m2.jpg"
+      "imagen": "../../../public/nodosImgs/storyImg2.png"
     },
     {
       "id": "narrativa3",
@@ -23,7 +23,7 @@
       "nextNodeId": "narrativa4",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/storyImg3.png"
     },
     {
       "id": "narrativa4",

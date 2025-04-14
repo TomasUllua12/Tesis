@@ -1,5 +1,6 @@
 // StoryNode.jsx
 import React from "react";
+import "./nodeText.css";
 
 export function StoryNode({ node, onDecision }) {
   return (
