@@ -5,6 +5,8 @@
 // registrar rutas y levantar el servidor.
 // ==============================================
 
+
+
 // Cargar variables de entorno desde el archivo .env
 require('dotenv').config();
 
@@ -15,6 +17,7 @@ const cors = require('cors');
 // Importar rutas definidas en la carpeta 'routes'
 const authRoutes = require('./routes/authRoutes');
 const improvementRoutes = require('./routes/improvementRoutes');
+const feedbackRoutes = require('./routes/feedback');
 
 // Crear instancia de la aplicación Express
 const app = express();
@@ -42,6 +45,9 @@ app.use('/api', authRoutes);
 
 // Maneja compra de mejoras
 app.use('/api', improvementRoutes);
+
+// Monta todas las rutas de feedback bajo /api/feedback
+app.use("/api/feedback", feedbackRoutes);
 
 // ============================
 // Ruta base (para prueba rápida)
