@@ -8,12 +8,12 @@
   justify-content: center;
   text-align: center;
   color: var(--primary-text);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .retroalimentacion-view h2 {
-    font-family: 'Kode Mono';
-    margin-bottom: 10px;
+  font-family: "Kode Mono";
+  margin-bottom: 10px;
 }
 
 .cap-loading-desafio-progress-bar {
@@ -61,4 +61,64 @@
   background-color: var(--secondary-orange);
   border: solid 1px rgb(146, 73, 0);
   box-shadow: 2px 2px 0px 1px rgb(153, 77, 0);
+}
+
+.cap-completado {
+  color: #ec9c00;
+  font-family: "Kode Mono";
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.retro-box {
+  width: 80%;
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.cuadro-desiciones {
+  width: 65%;
+  box-sizing: border-box;
+  background-color: var(--third-orange);
+  border: 1px solid #ec9c00;
+  box-shadow: 2px 2px 0px 1px var(--primary-orange);
+  padding: 20px 80px;
+}
+.historial-decisiones h3 {
+  font-family: "Kode Mono";
+  margin-bottom: 20px;
+}
+.historial-decisiones ul li {
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.cuadro-recompensas {
+  width: 25%;
+  background-color: var(--third-orange);
+  box-sizing: border-box;
+  border: 1px solid #ec9c00;
+  box-shadow: 2px 2px 0px 1px var(--primary-orange);
+  padding: 20px;
+}
+.cuadro-recompensas h3 {
+  font-family: "Kode Mono";
+  margin-bottom: 20px;
+}
+
+.feedback-ai {
+  width: 74%;
+  height: auto;
+  background-color: var(--third-orange);
+  box-sizing: border-box;
+  border: 1px solid #ec9c00;
+  box-shadow: 2px 2px 0px 1px var(--primary-orange);
+  padding: 20px;
+}
+.feedback-ai h3 {
+  font-family: "Kode Mono";
+  margin-bottom: 10px;
 }

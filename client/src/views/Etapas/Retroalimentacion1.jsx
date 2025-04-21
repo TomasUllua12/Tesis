@@ -24,11 +24,11 @@ export default function Retroalimentacion1() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             story: customText,
-            decisions: history.map(d => ({
+            decisions: history.map((d) => ({
               texto: d.texto,
-              descripcion: d.descripcion
-            }))
-          })
+              descripcion: d.descripcion,
+            })),
+          }),
         });
         if (!resp.ok) throw new Error();
         const { feedback } = await resp.json();
@@ -46,23 +46,40 @@ export default function Retroalimentacion1() {
 
   return (
     <div className="retroalimentacion-view">
-      <h2>Feedback personalizado</h2>
+      <h2>La familia Torres y sus hábitos financieros</h2>
 
-      <div className="historial-decisiones">
-        <h3>Tus decisiones:</h3>
-        <ul>
-          {history.map((d, i) => (
-            <li key={i}>
-              <strong>{d.texto}</strong>: {d.descripcion}
-            </li>
-          ))}
-        </ul>
+      <div className="cap-loading-desafio-progress-bar">
+        <div
+          className="cap-loading-desafio-progress-fill"
+          style={{ width: `100%` }}
+        ></div>
+      </div>
+
+      <h3 className="cap-completado">¡Capítulo completado!</h3>
+
+      <div className="retro-box">
+        <div className="cuadro-desiciones">
+          <div className="historial-decisiones">
+            <h3>Desiciones seleccionadas:</h3>
+            <ul>
+              {history.map((d, i) => (
+                <li key={i}>
+                  <strong>{d.texto}</strong>: {d.descripcion}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="cuadro-recompensas">
+          <h3>Recompensas</h3>
+          <p>EXP: </p> {/* Aca va la cantidad de EXP ganada */ }
+          <p>Monedas: </p> {/* Aca va la cantidad de Monedas ganadas */ }
+        </div>
       </div>
 
       <div className="feedback-ai">
-        <hr />
+        <h3>Feedback personalizado</h3>
         {error ? <p className="error">{error}</p> : <p>{feedback}</p>}
-        <hr />
       </div>
 
       <div className="cap-pieview">
