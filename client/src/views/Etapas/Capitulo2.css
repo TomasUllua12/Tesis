@@ -1,0 +1,74 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cap2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--third-color);
+  text-align: center;
+  
+  /* animación de entrada */
+  animation: fadeIn 0.8s ease-out;
+}
+
+  .cap2-bg {
+    background-color: var(--third-color);
+    overflow: hidden;
+  }
+  
+  .cap2-imagen {
+    max-width: 300px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cap2-titulo {
+    font-family: 'Kode Mono';
+    font-size: 2rem;
+    color: var(--secondary-orange);
+    margin-bottom: 1rem;
+  }
+  
+  .cap2-texto {
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .cap2-boton {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: "Kode Mono";
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    width: auto;
+    height: auto;
+    background-color: var(--primary-orange);
+    color: white;
+    border: solid 1px var(--secondary-orange);
+    box-shadow: 2px 2px 0px 1px var(--secondary-orange);
+    transition: background-color 0.1s, border-radius 0.3s;
+  }
+  
+  .cap2-boton:hover {
+    background-color: var(--secondary-orange);
+    border: solid 1px rgb(146, 73, 0);
+    box-shadow: 2px 2px 0px 1px rgb(153, 77, 0);
+  }
+  
