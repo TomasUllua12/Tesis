@@ -1,3 +1,4 @@
+// Client/views/Etapa1.jsx
 import React, { useContext, useState, useEffect } from "react";
 import "./Etapa1.css";
 import { Navbar } from "../../components/Navbar";
@@ -10,23 +11,38 @@ import { DarkModeContext } from "../../context/DarkModeContext";
 export function Etapa1() {
   const { darkMode } = useContext(DarkModeContext);
 
-  // 1) Estado para el usuario y sus capítulos completados
+  // Estado para el usuario y sus capítulos completados
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem("user");
-    if (stored) setUser(JSON.parse(stored));
+    const fetchUser = async () => {
+      const token = localStorage.getItem("token");
+      if (!token) return;
+      try {
+        const resp = await fetch("http://localhost:5000/api/me", {
+          headers: { "Authorization": `Bearer ${token}` }
+        });
+        if (!resp.ok) throw new Error("No autorizado");
+        const { user } = await resp.json();
+        setUser(user);
+        // Sincronizar también el localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+      } catch (err) {
+        console.error("Error cargando perfil:", err);
+      }
+    };
+    fetchUser();
   }, []);
 
   const completed = user?.completed_chapters || [];
 
-  // Definimos los capítulos con su estado
+  // Lista base de capítulos
   const baseCapitulos = [
     {
       number: 1,
       key: "capitulo1",
       title: "La familia Torres y sus hábitos financieros",
-      path: "/aprender/etapa1/capitulo1",
+      path: "/Aprender/Etapa1/Capitulo1",
       tooltip: `María recibe una herencia…`
     },
     {
@@ -36,10 +52,31 @@ export function Etapa1() {
       path: "/Aprender/Etapa1/Capitulo2",
       tooltip: `Julio desea comprarse una moto…`
     },
-    // … resto de capítulos con sus number y key
+    {
+      number: 3,
+      key: "capitulo3",
+      title: "Lucía y su presupuesto familiar",
+      path: "/Aprender/Etapa1/Capitulo3",
+      tooltip: `Lucía intenta organizar los gastos…`
+    },
+    {
+      number: 4,
+      key: "capitulo4",
+      title: "Ramón y su reto de ahorrar cada mes",
+      path: "/Aprender/Etapa1/Capitulo4",
+      tooltip: `Ramón lucha por mantener el hábito…`
+    },
+    {
+      number: 5,
+      key: "capitulo5",
+      title: "Paola y su primera tarjeta de crédito",
+      path: "/Aprender/Etapa1/Capitulo5",
+      tooltip: `Paola obtiene su primera tarjeta…`
+    },
+    // …otros capítulos si aplican
   ];
 
-  // 3) Derivamos el estado de cada uno: Completed, Active o Block
+  // Derivar estado: Completed, Active o Block
   const capitulos = baseCapitulos.map((c) => {
     let state;
     if (completed.includes(c.key)) {
@@ -76,7 +113,11 @@ export function Etapa1() {
                   )}
                   <div
                     className={`titulo-capitulo ${
-                      cap.state === "Block" ? "blocked" : cap.state === "Completed" ? "completed" : ""
+                      cap.state === "Block"
+                        ? "blocked"
+                        : cap.state === "Completed"
+                        ? "completed"
+                        : ""
                     }`}
                   >
                     <p className="capitulo-number">

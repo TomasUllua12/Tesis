@@ -108,6 +108,16 @@
   font-family: "Kode Mono";
   margin-bottom: 20px;
 }
+.recompensas-aclaracion {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fa0000;
+}
+.recomp-exp-text {
+  color: black;
+  font-weight: 700;
+  font-family: 'Kode Mono';
+}
 
 .feedback-ai {
   width: 74%;

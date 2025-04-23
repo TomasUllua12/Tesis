@@ -10,8 +10,12 @@ export default function Retroalimentacion1() {
   const navigate = useNavigate();
   const { history = [] } = location.state || {};
 
+  // Las recompensas deben coincidir con las definidas en el backend
+  const rewardCoins = 350;
+  const rewardExp   = 800;
+
   const [customText] = useState(
-    "Este es el texto personalizado que quiero que use la IA para generar el feedback. COmienza tus respuestas con HOLA LOCO!"
+    "Este es el texto personalizado que quiero que use la IA para generar el feedback. Comienza tus respuestas con HOLA LOCO!"
   );
   const [isLoading, setIsLoading] = useState(true);
   const [feedback, setFeedback] = useState("");
@@ -47,15 +51,13 @@ export default function Retroalimentacion1() {
 
   if (isLoading) return <LoadingScreen setIsLoading={setIsLoading} />;
 
-  // 2) Marcamos capítulo y navegamos siempre de vuelta
+  // 2) Al pulsar "Entendido", marcamos capítulo y esperamos antes de navegar
   const handleEntendido = async () => {
     setSaving(true);
     setError(null);
-
     try {
       await completeChapter("capitulo1");
     } catch (err) {
-      // Si hay error de red u otro, lo logueamos pero igual navegamos
       console.warn("No se pudo completar capítulo:", err);
     } finally {
       navigate("/Aprender/Etapa1");
@@ -88,8 +90,12 @@ export default function Retroalimentacion1() {
         </div>
         <div className="cuadro-recompensas">
           <h3>Recompensas</h3>
-          <p>EXP: {/* Aquí va la cantidad de EXP ganada */}</p>
-          <p>Monedas: {/* Aquí va la cantidad de Monedas ganadas */}</p>
+          <p><span className="recomp-exp-text">Exp</span> {rewardExp}</p>
+          <p><span>
+            <img src="/public/Coin.gif" alt="Coins" className="gif-span" />
+          </span>{rewardCoins}</p>
+          <br />
+          <p className="recompensas-aclaracion">Estas recompensas solo se reciben 1 vez</p>
         </div>
       </div>
 

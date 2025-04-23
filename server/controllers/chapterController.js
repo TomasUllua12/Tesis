@@ -2,11 +2,15 @@
 const pool = require('../config/db');
 
 exports.completeChapter = async (req, res) => {
-  const userId = req.userId;                       // viene de authMiddleware
-  const { chapterKey } = req.body;                 // p.ej. "capitulo1"
+  const userId = req.userId;
+  const { chapterKey } = req.body;
   if (!chapterKey) {
     return res.status(400).json({ message: "chapterKey es requerido" });
   }
+
+  // Estas constantes definen la recompensa por capítulo
+  const rewardCoins = 350;
+  const rewardExp   = 800;
 
   try {
     // 1) Leer el JSON actual de completed_chapters
@@ -23,29 +27,32 @@ exports.completeChapter = async (req, res) => {
       ? (typeof current === "string" ? JSON.parse(current) : current)
       : [];
 
-    // 2) Si ya está completado, devolvemos error
+    // 2) Si ya está completado, devolvemos éxito inmediato (sin repetir la recompensa)
     if (completed.includes(chapterKey)) {
-        // Leer user actualizado (opcional, para mantener consistencia con la respuesta normal)
-        const [updatedRows] = await pool.query(
-          "SELECT * FROM users WHERE id = ?",
-          [userId]
-        );
-        const updatedUser = updatedRows[0];
-        updatedUser.completed_chapters = typeof updatedUser.completed_chapters === "string"
-          ? JSON.parse(updatedUser.completed_chapters)
-          : updatedUser.completed_chapters || [];
-  
-        return res.json({
-          message: "Capítulo ya completado",
-          user: updatedUser
-        });
-      }
+      const [updatedRows] = await pool.query(
+        "SELECT * FROM users WHERE id = ?",
+        [userId]
+      );
+      const updatedUser = updatedRows[0];
+      updatedUser.completed_chapters = typeof updatedUser.completed_chapters === "string"
+        ? JSON.parse(updatedUser.completed_chapters)
+        : updatedUser.completed_chapters || [];
 
-    // 3) Agregarlo al array y actualizar
+      return res.json({
+        message: "Capítulo ya completado",
+        user: updatedUser
+      });
+    }
+
+    // 3) Agregar el capítulo al array, y actualizar capítulo + monedas + experiencia
     completed.push(chapterKey);
     await pool.query(
-      "UPDATE users SET completed_chapters = ? WHERE id = ?",
-      [JSON.stringify(completed), userId]
+      `UPDATE users 
+         SET completed_chapters = ?, 
+             coins = coins + ?, 
+             experience = experience + ? 
+       WHERE id = ?`,
+      [JSON.stringify(completed), rewardCoins, rewardExp, userId]
     );
 
     // 4) Leer de nuevo el usuario actualizado
@@ -58,7 +65,7 @@ exports.completeChapter = async (req, res) => {
       ? JSON.parse(updatedUser.completed_chapters)
       : updatedUser.completed_chapters || [];
 
-    // 5) Responder con el user actualizado
+    // 5) Responder con el user actualizado (incluye nuevas monedas y experiencia)
     return res.json({
       message: "Capítulo marcado como completado",
       user: updatedUser

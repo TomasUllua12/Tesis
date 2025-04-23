@@ -1,28 +1,20 @@
+// server/routes/authRoutes.js
 // ===================================================
 // Archivo: server/routes/authRoutes.js
 // Descripción: Define las rutas relacionadas a la autenticación de usuarios,
-// incluyendo el registro y el inicio de sesión.
+// incluyendo registro, login y perfil.
 // ===================================================
 
 const express = require('express');
 const router = express.Router();
-
-// Importar el controlador que maneja la lógica de autenticación
 const authController = require('../controllers/authController');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-// =============================
-// Rutas públicas de autenticación
-// =============================
-
-// Ruta para registrar un nuevo usuario
-// Método: POST
-// Endpoint: /api/register
+// Rutas públicas
 router.post('/register', authController.register);
+router.post('/login',    authController.login);
 
-// Ruta para iniciar sesión
-// Método: POST
-// Endpoint: /api/login
-router.post('/login', authController.login);
+// Ruta protegida: obtener perfil del usuario autenticado
+router.get('/me', authMiddleware, authController.me);
 
-// Exportar el router para usarlo en el archivo principal del servidor
 module.exports = router;
