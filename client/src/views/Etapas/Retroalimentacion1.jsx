@@ -1,21 +1,24 @@
+// Client/views/Retroalimentacion1.jsx
 import React, { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import LoadingScreen from "../../components/LoadingScreen";
+import { completeChapter } from "../../../services/chapterService";
 import "./Retroalimentacion1.css";
 
 export default function Retroalimentacion1() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { history = [] } = location.state || {};
 
-  // 1) Estado para tu texto personalizado:
   const [customText] = useState(
-    "Este es el texto personalizado que quiero que use la IA para generar el feedback."
+    "Este es el texto personalizado que quiero que use la IA para generar el feedback. COmienza tus respuestas con HOLA LOCO!"
   );
-
   const [isLoading, setIsLoading] = useState(true);
   const [feedback, setFeedback] = useState("");
   const [error, setError] = useState(null);
+  const [saving, setSaving] = useState(false);
 
+  // 1) Pedir feedback a la IA
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
@@ -44,6 +47,21 @@ export default function Retroalimentacion1() {
 
   if (isLoading) return <LoadingScreen setIsLoading={setIsLoading} />;
 
+  // 2) Marcamos capítulo y navegamos siempre de vuelta
+  const handleEntendido = async () => {
+    setSaving(true);
+    setError(null);
+
+    try {
+      await completeChapter("capitulo1");
+    } catch (err) {
+      // Si hay error de red u otro, lo logueamos pero igual navegamos
+      console.warn("No se pudo completar capítulo:", err);
+    } finally {
+      navigate("/Aprender/Etapa1");
+    }
+  };
+
   return (
     <div className="retroalimentacion-view">
       <h2>La familia Torres y sus hábitos financieros</h2>
@@ -51,29 +69,27 @@ export default function Retroalimentacion1() {
       <div className="cap-loading-desafio-progress-bar">
         <div
           className="cap-loading-desafio-progress-fill"
-          style={{ width: `100%` }}
-        ></div>
+          style={{ width: "100%" }}
+        />
       </div>
 
       <h3 className="cap-completado">¡Capítulo completado!</h3>
 
       <div className="retro-box">
         <div className="cuadro-desiciones">
-          <div className="historial-decisiones">
-            <h3>Desiciones seleccionadas:</h3>
-            <ul>
-              {history.map((d, i) => (
-                <li key={i}>
-                  <strong>{d.texto}</strong>: {d.descripcion}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h3>Decisiones seleccionadas:</h3>
+          <ul>
+            {history.map((d, i) => (
+              <li key={i}>
+                <strong>{d.texto}</strong>: {d.descripcion}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="cuadro-recompensas">
           <h3>Recompensas</h3>
-          <p>EXP: </p> {/* Aca va la cantidad de EXP ganada */ }
-          <p>Monedas: </p> {/* Aca va la cantidad de Monedas ganadas */ }
+          <p>EXP: {/* Aquí va la cantidad de EXP ganada */}</p>
+          <p>Monedas: {/* Aquí va la cantidad de Monedas ganadas */}</p>
         </div>
       </div>
 
@@ -83,7 +99,13 @@ export default function Retroalimentacion1() {
       </div>
 
       <div className="cap-pieview">
-        <Link to="/Aprender/Etapa1">Entendido</Link>
+        <button
+          className="btn-entendido"
+          onClick={handleEntendido}
+          disabled={saving}
+        >
+          {saving ? "Guardando..." : "Entendido"}
+        </button>
       </div>
     </div>
   );

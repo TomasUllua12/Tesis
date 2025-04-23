@@ -19,7 +19,7 @@ function Capitulo1() {
   // Si el nodo actual es final, redirigimos a la página de retroalimentación
   useEffect(() => {
     if (currentNode && currentNode.type === "final") {
-      navigate("/retroalimentacion1", { state: { history, node: currentNode } });
+      navigate("/aprender/etapa1/retroalimentacion1", { state: { history, node: currentNode } });
     }
   }, [currentNode, history, navigate]);
 

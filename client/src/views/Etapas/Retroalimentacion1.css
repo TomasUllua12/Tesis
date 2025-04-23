@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.cap-pieview a {
+.cap-pieview .btn-entendido {
   padding: 10px 20px;
   text-decoration: none;
   font-size: 0.8rem;
@@ -56,7 +56,7 @@
   transition: background-color 0.1s, border-radius 0.3s;
 }
 
-.cap-pieview a:hover {
+.cap-pieview .btn-entendido:hover {
   cursor: pointer;
   background-color: var(--secondary-orange);
   border: solid 1px rgb(146, 73, 0);

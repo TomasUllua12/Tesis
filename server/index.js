@@ -18,6 +18,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const improvementRoutes = require('./routes/improvementRoutes');
 const feedbackRoutes = require('./routes/feedback');
+const chapterRoutes = require('./routes/chapterRoutes');
 
 // Crear instancia de la aplicación Express
 const app = express();
@@ -48,6 +49,8 @@ app.use('/api', improvementRoutes);
 
 // Monta todas las rutas de feedback bajo /api/feedback
 app.use("/api/feedback", feedbackRoutes);
+
+app.use('/api', chapterRoutes);
 
 // ============================
 // Ruta base (para prueba rápida)

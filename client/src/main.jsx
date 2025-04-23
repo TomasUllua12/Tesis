@@ -27,7 +27,7 @@ import { Desafios } from "./views/Desafios.jsx";
 import { Tienda } from "./views/Tienda.jsx";
 import Capitulo1 from "./views/Etapas/Capitulo1.jsx";
 import { Login } from "./views/Login.jsx";
-import Retroalimentacion1 from "./views/Etapas/retroalimentacion1.jsx";
+import Retroalimentacion1 from "./views/Etapas/Retroalimentacion1.jsx";
 
 // Proveedor de estado global para tema oscuro
 import { DarkModeProvider } from "./context/DarkModeContext";
@@ -52,8 +52,8 @@ const router = createBrowserRouter([
   { path: "perfil", element: <Perfil /> },
   { path: "desafios", element: <Desafios /> },
   { path: "tienda", element: <Tienda /> },
-  { path: "capitulo1", element: <Capitulo1 /> },
-  { path: "retroalimentacion1", element: <Retroalimentacion1 /> },
+  { path: "aprender/etapa1/capitulo1", element: <Capitulo1 /> },
+  { path: "aprender/etapa1/retroalimentacion1", element: <Retroalimentacion1 /> },
 ]);
 
 /*******************************
