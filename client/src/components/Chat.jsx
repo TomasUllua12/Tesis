@@ -12,7 +12,7 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import { DarkModeContext } from "../context/DarkModeContext";
 
-const API_KEY = "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";
+const API_KEY = "";
 
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
