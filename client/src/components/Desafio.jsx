@@ -2,10 +2,14 @@ import React, { useState, useContext } from "react";
 import "./Desafio.css";
 import { useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../context/DarkModeContext";
+import { claimMedal } from "../../services/medalService";
 
 export function Desafio(props) {
-
   const { darkMode } = useContext(DarkModeContext);
+
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const earned = user.earned_medals || [];
+  const isClaimed = earned.includes(props.medalKey);
 
   const isBlocked = props.progress !== 100;
   const [showMessage, setShowMessage] = useState(false);
@@ -39,10 +43,30 @@ export function Desafio(props) {
           </div>
           <div className="desafio-boton-container">
             <button
-              className={`desafio-boton ${isBlocked ? "blocked" : ""}`}
-              onClick={handleButtonClick}
+              className={`desafio-boton ${
+                isBlocked || isClaimed ? "blocked" : ""
+              }`}
+              onClick={async () => {
+                if (isBlocked) {
+                  setShowMessage(true);
+                  setTimeout(() => setShowMessage(false), 3000);
+                } else if (!isClaimed) {
+                  try {
+                    await claimMedal(props.medalKey);
+                    // actualizar localStorage
+                    user.earned_medals = [...earned, props.medalKey];
+                    localStorage.setItem("user", JSON.stringify(user));
+                    setShowMessage("¡Medalla reclamada!");
+                    setTimeout(() => setShowMessage(false), 3000);
+                  } catch {
+                    setShowMessage("Error al reclamar medalla");
+                    setTimeout(() => setShowMessage(false), 3000);
+                  }
+                }
+              }}
+              disabled={isBlocked || isClaimed}
             >
-              Reclamar
+              {isClaimed ? "Reclamada" : "Reclamar"}
             </button>
           </div>
         </div>

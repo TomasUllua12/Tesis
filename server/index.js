@@ -19,6 +19,7 @@ const authRoutes = require('./routes/authRoutes');
 const improvementRoutes = require('./routes/improvementRoutes');
 const feedbackRoutes = require('./routes/feedback');
 const chapterRoutes = require('./routes/chapterRoutes');
+const medalRoutes = require('./routes/medalRoutes');
 
 // Crear instancia de la aplicación Express
 const app = express();
@@ -51,6 +52,8 @@ app.use('/api', improvementRoutes);
 app.use("/api/feedback", feedbackRoutes);
 
 app.use('/api', chapterRoutes);
+
+app.use('/api', medalRoutes);
 
 // ============================
 // Ruta base (para prueba rápida)
