@@ -29,6 +29,7 @@ import Capitulo1 from "./views/Etapas/Capitulo1.jsx";
 import Capitulo2 from "./views/Etapas/Capitulo2.jsx";
 import { Login } from "./views/Login.jsx";
 import Retroalimentacion1 from "./views/Etapas/Retroalimentacion1.jsx";
+import ResumenCapitulo from "./views/Etapas/ResumenCapitulo.jsx";
 
 // Proveedor de estado global para tema oscuro
 import { DarkModeProvider } from "./context/DarkModeContext";
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
   { path: "aprender/etapa1/capitulo1", element: <Capitulo1 /> },
   { path: "aprender/etapa1/retroalimentacion1", element: <Retroalimentacion1 /> },
   { path: "aprender/etapa1/capitulo2", element: <Capitulo2 /> },
+  { path: "aprender/etapa1/:capKey/resumen", element: <ResumenCapitulo /> },
 ]);
 
 /*******************************

@@ -1,0 +1,20 @@
+/* Client/views/ResumenCapitulo.css */
+.resumen-view {
+    padding: 2rem;
+  }
+  .resumen-content {
+    margin: 1rem 0;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  .btn-volver {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  .btn-volver:hover {
+    text-decoration: underline;
+  }
+  

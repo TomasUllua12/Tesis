@@ -20,7 +20,7 @@ export function Etapa1() {
       if (!token) return;
       try {
         const resp = await fetch("http://localhost:5000/api/me", {
-          headers: { "Authorization": `Bearer ${token}` }
+          headers: { Authorization: `Bearer ${token}` },
         });
         if (!resp.ok) throw new Error("No autorizado");
         const { user } = await resp.json();
@@ -43,35 +43,35 @@ export function Etapa1() {
       key: "capitulo1",
       title: "La familia Torres y sus hábitos financieros",
       path: "/Aprender/Etapa1/Capitulo1",
-      tooltip: `María recibe una herencia…`
+      tooltip: `María recibe una herencia…`,
     },
     {
       number: 2,
       key: "capitulo2",
       title: "Julio y su objetivo de comprar una moto",
       path: "/Aprender/Etapa1/Capitulo2",
-      tooltip: `Julio desea comprarse una moto…`
+      tooltip: `Julio desea comprarse una moto…`,
     },
     {
       number: 3,
       key: "capitulo3",
       title: "Lucía y su presupuesto familiar",
       path: "/Aprender/Etapa1/Capitulo3",
-      tooltip: `Lucía intenta organizar los gastos…`
+      tooltip: `Lucía intenta organizar los gastos…`,
     },
     {
       number: 4,
       key: "capitulo4",
       title: "Ramón y su reto de ahorrar cada mes",
       path: "/Aprender/Etapa1/Capitulo4",
-      tooltip: `Ramón lucha por mantener el hábito…`
+      tooltip: `Ramón lucha por mantener el hábito…`,
     },
     {
       number: 5,
       key: "capitulo5",
       title: "Paola y su primera tarjeta de crédito",
       path: "/Aprender/Etapa1/Capitulo5",
-      tooltip: `Paola obtiene su primera tarjeta…`
+      tooltip: `Paola obtiene su primera tarjeta…`,
     },
     // …otros capítulos si aplican
   ];
@@ -104,7 +104,15 @@ export function Etapa1() {
             {capitulos.map((cap, idx) => (
               <React.Fragment key={cap.key}>
                 <div className="capitulo">
-                  {(cap.state === "Active" || cap.state === "Completed") ? (
+                  {cap.state === "Completed" && (
+                    <Link
+                      to={`/Aprender/Etapa1/${cap.key}/resumen`}
+                      className="btn-resumen"
+                    >
+                      Ver Resumen
+                    </Link>
+                  )}
+                  {cap.state === "Active" || cap.state === "Completed" ? (
                     <Link to={cap.path}>
                       <ImageButton state={cap.state} />
                     </Link>
@@ -120,9 +128,7 @@ export function Etapa1() {
                         : ""
                     }`}
                   >
-                    <p className="capitulo-number">
-                      Capítulo {cap.number}
-                    </p>
+                    <p className="capitulo-number">Capítulo {cap.number}</p>
                     <div className="tooltip-container">
                       <p className="capitulo-titulo">{cap.title}</p>
                       {cap.tooltip && (

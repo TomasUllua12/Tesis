@@ -120,3 +120,17 @@
   visibility: visible;
   opacity: 1;
 }
+
+.btn-resumen {
+  display: inline-block;
+  margin-right: 1rem;       /* separa del ImageButton */
+  padding: 0.5rem 1rem;
+  background-color: #ff8a00;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.btn-resumen:hover {
+  background-color: #e67700;
+}
