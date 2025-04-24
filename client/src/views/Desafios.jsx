@@ -40,6 +40,12 @@ export function Desafios() {
   const doneM1  = completed.filter((c) => c.startsWith("capitulo")).length;
   const progM1  = Math.round((doneM1 / totalM1) * 100);
 
+  // 2) Define los retos 🌟
+  // - Módulo 1: 8 capítulos (capitulo1…capitulo8)
+  const totalC1 = 1;
+  const doneC1  = completed.filter((c) => c.startsWith("capitulo")).length;
+  const progC1  = Math.round((doneC1 / totalC1) * 100);
+
   // Por ejemplo, otro reto podría basarse en experiencia:
   const neededExp = 2000;
   const currExp   = user?.experience || 0;
@@ -55,26 +61,37 @@ export function Desafios() {
 
           <div className="content-desafio">
 
+            {/* Reto: completar Capítulo 1 */}
+            <Desafio
+              titulo="Completa el Capítulo 1 del Módulo 1"
+              url="Aprender/Etapa1"
+              image="/public/insignias/modulo1.png"
+              currentStep={doneC1}
+              totalSteps={totalC1}
+              progress={progC1}
+              medalKey="modulo1"
+            />
+
             {/* Reto: completar Módulo 1 */}
             <Desafio
               titulo="Completa el Módulo 1 de Aprendizaje"
               url="Aprender/Etapa1"
-              image="/public/insignias/Insignia1.png"
+              image="/public/insignias/Modulo2.png"
               currentStep={doneM1}
               totalSteps={totalM1}
               progress={progM1}
-              medalKey="modulo1"
+              medalKey="modulo2"
             />
 
             {/* Reto: llegar a cierta EXP */}
             <Desafio
               titulo={`Alcanza ${neededExp} de experiencia`}
               url="Perfil"
-              image="/public/insignias/InsigniaExp.png"
+              image="/public/insignias/experiencia.png"
               currentStep={currExp}
               totalSteps={neededExp}
               progress={progExp}
-              medalKey="exp2000"
+              medalKey="experiencia"
             />
 
             {/* Y así puedes añadir más */}

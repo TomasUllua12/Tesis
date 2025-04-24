@@ -89,7 +89,7 @@ export function Perfil() {
                   ))
                 ) : (
                   <p className="sin-medallas">
-                    Aún no has reclamado ninguna medalla.
+                    Sin medallas reclamadas.
                   </p>
                 )}
               </div>
