@@ -109,7 +109,11 @@ export function Etapa1() {
                       to={`/Aprender/Etapa1/${cap.key}/resumen`}
                       className="btn-resumen"
                     >
-                      Ver Resumen
+                      <img
+                        src="../../../public/iconos/resumen.png"
+                        alt="Resumen"
+                        className="icon-resumen"
+                      />
                     </Link>
                   )}
                   {cap.state === "Active" || cap.state === "Completed" ? (

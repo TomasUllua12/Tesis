@@ -1,39 +1,47 @@
-import React, { useState } from "react";
+// Client/components/ImageButton.jsx
+import React, { useState, useEffect } from "react";
 
 export function ImageButton({ state }) {
-  // Estado para manejar el cambio de imagen
-  const [imageSrc, setImageSrc] = useState("/Buttons/ButtonPlay.png"); // Imagen inicial
+  // Selecciona la imagen según el estado
+  const defaultImg =
+    state === "Completed"
+      ? "/Buttons/ButtonPurplePlay.png"
+      : "/Buttons/ButtonPlay.png";
+  const pressedImg =
+    state === "Completed"
+      ? "/Buttons/ButtonPurplePlayPress.png"
+      : "/Buttons/ButtonPlayPress.png";
 
-  // Funciones para cambiar la imagen al pasar el mouse
-  const handleMouseEnter = () => {
-    setImageSrc("/Buttons/ButtonPlayPress.png"); // Imagen al pasar el mouse
-  };
+  // Estado interno para la src del <img>
+  const [imageSrc, setImageSrc] = useState(defaultImg);
 
-  const handleMouseLeave = () => {
-    setImageSrc("/Buttons/ButtonPlay.png"); // Imagen cuando se quita el mouse
-  };
+  // Cada vez que cambie defaultImg (o sea, cambie `state`), resetea la imagen
+  useEffect(() => {
+    setImageSrc(defaultImg);
+  }, [defaultImg]);
+
+  const handleMouseDown = () => setImageSrc(pressedImg);
+  const handleMouseUp   = () => setImageSrc(defaultImg);
 
   return (
     <button
-      className=""
-      onMouseDown={handleMouseEnter}
-      onMouseUp={handleMouseLeave}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
       style={{
         background: "none",
         border: "none",
-        padding: "0",
-        width: "auto",
-        height: "auto",
+        padding: 0,
+        cursor: state === "Block" ? "not-allowed" : "pointer",
       }}
+      disabled={state === "Block"}
     >
       <img
         src={imageSrc}
         alt="Botón"
         style={{
-          width: "100px",
+          width: 100,
           height: "auto",
           filter: state === "Block" ? "grayscale(100%)" : "none",
-          cursor: state === "Block" ? "not-allowed" : "pointer"
         }}
       />
     </button>
