@@ -114,7 +114,7 @@
   color: #fa0000;
 }
 .recomp-exp-text {
-  color: black;
+  color: var(--primary-text);
   font-weight: 700;
   font-family: 'Kode Mono';
 }

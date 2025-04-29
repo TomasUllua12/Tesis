@@ -56,6 +56,16 @@ export function Desafios() {
   const currExp2   = user?.experience || 0;
   const progExp2   = Math.min(Math.round((currExp2 / neededExp2) * 100), 100);
 
+  // Por ejemplo, otro reto podría basarse en experiencia:
+  const neededExp3 = 10000;
+  const currExp3   = user?.experience || 0;
+  const progExp3   = Math.min(Math.round((currExp3 / neededExp3) * 100), 100);
+
+  // Por ejemplo, otro reto podría basarse en experiencia:
+  const neededExp4 = 20000;
+  const currExp4   = user?.experience || 0;
+  const progExp4   = Math.min(Math.round((currExp4 / neededExp4) * 100), 100);
+
   return (
     <div>
       <div className="color-line"></div>
@@ -101,13 +111,35 @@ export function Desafios() {
 
             {/* Y así puedes añadir más */}
             <Desafio
-              titulo={`Alcanza ${neededExp} de experiencia`}
+              titulo={`Alcanza ${neededExp2} de experiencia`}
               url="Perfil"
               image="/public/insignias/experiencia5000.png"
               currentStep={currExp2}
               totalSteps={neededExp2}
               progress={progExp2}
               medalKey="experiencia5000"
+            />
+
+            {/* Y así puedes añadir más */}
+            <Desafio
+              titulo={`Alcanza ${neededExp3} de experiencia`}
+              url="Perfil"
+              image="/public/insignias/experiencia10k.png"
+              currentStep={currExp3}
+              totalSteps={neededExp3}
+              progress={progExp3}
+              medalKey="experiencia10000"
+            />
+
+            {/* Y así puedes añadir más */}
+            <Desafio
+              titulo={`Alcanza ${neededExp4} de experiencia`}
+              url="Perfil"
+              image="/public/insignias/experiencia20k.png"
+              currentStep={currExp4}
+              totalSteps={neededExp4}
+              progress={progExp4}
+              medalKey="experiencia20000"
             />
           </div>
 
