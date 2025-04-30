@@ -48,46 +48,70 @@ export function Tienda() {
               improvementKey="dark_mode"
               purchased={hasPurchased("dark_mode")}
               updateUser={updateUser}
+              info="Cambia la interfaz a un diseño más amigable para la vista en ambientes oscuros."
             />
             <Mejora
-              titulo="Mejora 1"
-              image="/public/Mejoras/MejoraAux.png"
+              titulo="Voz Premium"
+              image="/public/Mejoras/MejoraVoz.png"
               price={350}
               improvementKey="mejora_1"
               purchased={hasPurchased("mejora_1")}
               updateUser={updateUser}
+              info="Activa narraciones con voces más naturales y expresivas en los escenarios."
             />
             <Mejora
-              titulo="Mejora 2"
-              image="/public/Mejoras/MejoraAux.png"
+              titulo="Estadísticas Plus"
+              image="/public/Mejoras/MejoraStats.png"
               price={100}
               improvementKey="mejora_2"
               purchased={hasPurchased("mejora_2")}
               updateUser={updateUser}
+              info="Acceso a un panel de estadísticas más detalladas sobre tu progreso, decisiones y logros."
             />
             <Mejora
-              titulo="Mejora 3"
-              image="/public/Mejoras/MejoraAux.png"
+              titulo="Multiplicador XP"
+              image="/public/Mejoras/MejoraXP.png"
               price={450}
               improvementKey="mejora_3"
               purchased={hasPurchased("mejora_3")}
               updateUser={updateUser}
+              info="Duplica la experiencia obtenida por un tiempo limitado."
             />
             <Mejora
-              titulo="Mejora 4"
-              image="/public/Mejoras/MejoraAux.png"
+              titulo="Nivel Secreto"
+              image="/public/Mejoras/MejoraNivel.png"
               price={700}
               improvementKey="mejora_4"
               purchased={hasPurchased("mejora_4")}
               updateUser={updateUser}
+              info="Desbloquea un capítulo oculto con un desafío especial o historia exclusiva."
             />
             <Mejora
-              titulo="Mejora 5"
-              image="/public/Mejoras/MejoraAux.png"
+              titulo="Desbloqueo Anticipado"
+              image="/public/Mejoras/MejoraAcceso.png"
               price={150}
               improvementKey="mejora_5"
               purchased={hasPurchased("mejora_5")}
               updateUser={updateUser}
+              info="Abre módulos o capítulos sin necesidad de haber completado los anteriores."
+            />
+            <Mejora
+              titulo="Consejo Dorado"
+              image="/public/Mejoras/MejoraConsejo.png"
+              price={150}
+              improvementKey="mejora_5"
+              purchased={hasPurchased("mejora_5")}
+              updateUser={updateUser}
+              info="Obtén una recomendación personalizada basada en tu perfil y decisiones pasadas."
+            />
+            <Mejora
+              titulo="Spoiler Financiero"
+              image="/public/Mejoras/MejoraSpoiler.png"
+              price={150}
+              improvementKey="mejora_5"
+              purchased={hasPurchased("mejora_5")}
+              updateUser={updateUser}
+              info="Vista previa de posibles consecuencias futuras antes de tomar una decisión clave."
             />
           </div>
           <div className="general-main-pie">

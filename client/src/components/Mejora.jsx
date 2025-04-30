@@ -50,16 +50,19 @@ export function Mejora(props) {
   };
 
   return (
-    <div className="mejora-card">
+    <div className="mejora-card tooltip">
       <div className="mejora-titulo">
         <p>{props.titulo}</p>
       </div>
       <div className="mejora-card-der">
-        <img
-          src={props.image}
-          alt="Imagen Mejora"
-          className={`mejora-card-der-img ${!purchased ? "blocked" : ""}`}
-        />
+        <div className="tooltip">
+          <img
+            src={props.image}
+            alt="Imagen Mejora"
+            className={`mejora-card-der-img ${!purchased ? "blocked" : ""}`}
+          />
+          <span className="tooltiptext">{props.info}</span>
+        </div>
       </div>
       <div className="mejora-card-izq">
         {/* Solo se muestran las monedas y el precio si la mejora no ha sido adquirida */}

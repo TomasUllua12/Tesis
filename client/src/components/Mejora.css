@@ -23,6 +23,7 @@
 
 .mejora-titulo {
   font-family: "Kode Mono";
+  text-align: center;
   font-size: 1.15rem;
   font-weight: 700;
   margin-top: 2vh;
@@ -84,4 +85,39 @@
 .mejora-card-izq .error-message {
   color: red;
   font-weight: 800;
+}
+
+/* Contenedor relativo para el tooltip */
+/* 1. el contenedor debe ser relative */
+.mejora-card.tooltip {
+  position: relative;
+}
+
+/* 2. texto del tooltip centrado */
+.tooltiptext {
+  font-family: 'Kode Mono';
+  visibility: hidden;
+  width: 250px;               /* ajústalo a tu contenido */
+  background-color: rgba(255, 157, 29, 0.8);
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 30px 10px;
+
+  /* posición exacta al centro */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* mostrar al hover de la card */
+.mejora-card.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
