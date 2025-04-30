@@ -53,7 +53,7 @@ export function Tienda() {
             <Mejora
               titulo="Voz Premium"
               image="/public/Mejoras/MejoraVoz.png"
-              price={350}
+              price={3500}
               improvementKey="mejora_1"
               purchased={hasPurchased("mejora_1")}
               updateUser={updateUser}
@@ -62,7 +62,7 @@ export function Tienda() {
             <Mejora
               titulo="Estadísticas Plus"
               image="/public/Mejoras/MejoraStats.png"
-              price={100}
+              price={4300}
               improvementKey="mejora_2"
               purchased={hasPurchased("mejora_2")}
               updateUser={updateUser}
@@ -71,7 +71,7 @@ export function Tienda() {
             <Mejora
               titulo="Multiplicador XP"
               image="/public/Mejoras/MejoraXP.png"
-              price={450}
+              price={1150}
               improvementKey="mejora_3"
               purchased={hasPurchased("mejora_3")}
               updateUser={updateUser}
@@ -80,7 +80,7 @@ export function Tienda() {
             <Mejora
               titulo="Nivel Secreto"
               image="/public/Mejoras/MejoraNivel.png"
-              price={700}
+              price={1850}
               improvementKey="mejora_4"
               purchased={hasPurchased("mejora_4")}
               updateUser={updateUser}
@@ -89,7 +89,7 @@ export function Tienda() {
             <Mejora
               titulo="Desbloqueo Anticipado"
               image="/public/Mejoras/MejoraAcceso.png"
-              price={150}
+              price={2150}
               improvementKey="mejora_5"
               purchased={hasPurchased("mejora_5")}
               updateUser={updateUser}
@@ -98,18 +98,18 @@ export function Tienda() {
             <Mejora
               titulo="Consejo Dorado"
               image="/public/Mejoras/MejoraConsejo.png"
-              price={150}
-              improvementKey="mejora_5"
-              purchased={hasPurchased("mejora_5")}
+              price={5000}
+              improvementKey="mejora_6"
+              purchased={hasPurchased("mejora_6")}
               updateUser={updateUser}
               info="Obtén una recomendación personalizada basada en tu perfil y decisiones pasadas."
             />
             <Mejora
               titulo="Spoiler Financiero"
               image="/public/Mejoras/MejoraSpoiler.png"
-              price={150}
-              improvementKey="mejora_5"
-              purchased={hasPurchased("mejora_5")}
+              price={1650}
+              improvementKey="mejora_7"
+              purchased={hasPurchased("mejora_7")}
               updateUser={updateUser}
               info="Vista previa de posibles consecuencias futuras antes de tomar una decisión clave."
             />
