@@ -30,21 +30,21 @@ export function Aprender(props) {
             url="Etapa2"
             details="Detalles2"
             state="Block"
-            image="/public/..png"
+            image="/public/Etapa2.png"
           />
           <Etapa
             titulo="Estrategias Avanzadas y Protección Financiera"
             url="Etapa3"
             details="Detalles3"
             state="Block"
-            image="/public/..png"
+            image="/public/Etapa3.png"
           />
           <Etapa
             titulo="Innovación, Emprendimiento y Visión a Futuro"
             url="Etapa4"
             details="Detalles4"
             state="Block"
-            image="/public/..png"
+            image="/public/Etapa4.png"
           />
           <div className="general-main-pie">
             <img src={darkMode ? "../../public/FinverseLogoDark.png" : "../../public/FinverseLogoLight.png"} alt="Finverse Logo" />
