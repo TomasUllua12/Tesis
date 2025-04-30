@@ -72,7 +72,7 @@ export function Perfil() {
             </div>
 
             <div className="perfil-insignias">
-              <h2>Insignias Obtenidas</h2>
+              <h2>Medallas Obtenidas</h2>
               <div className="perfil-insignias-obtenidas">
                 {earned.length > 0 ? (
                   earned.map((medalKey) => (

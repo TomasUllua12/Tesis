@@ -89,12 +89,78 @@ export function Desafios() {
 
             {/* Reto: completar Módulo 1 */}
             <Desafio
-              titulo="Completa el Módulo 1 de Aprendizaje"
+              titulo="Completa el Módulo 1"
               url="Aprender/Etapa1"
               image="/public/insignias/Modulo2.png"
               currentStep={doneM1}
               totalSteps={totalM1}
               progress={progM1}
+              medalKey="modulo2"
+            />
+
+            {/* Reto: completar Capítulo 1 */}
+            <Desafio
+              titulo="Completa el Capítulo 1 del Módulo 2"
+              url="Aprender/Etapa1"
+              image="/public/insignias/modulo1.png"
+              currentStep={0}
+              totalSteps={1}
+              progress={0}
+              medalKey="modulo1"
+            />
+
+            {/* Reto: completar Módulo 1 */}
+            <Desafio
+              titulo="Completa el Módulo 2"
+              url="Aprender/Etapa1"
+              image="/public/insignias/Modulo2.png"
+              currentStep={0}
+              totalSteps={8}
+              progress={0}
+              medalKey="modulo2"
+            />
+
+            {/* Reto: completar Capítulo 1 */}
+            <Desafio
+              titulo="Completa el Capítulo 1 del Módulo 3"
+              url="Aprender/Etapa1"
+              image="/public/insignias/modulo1.png"
+              currentStep={0}
+              totalSteps={1}
+              progress={0}
+              medalKey="modulo1"
+            />
+
+            {/* Reto: completar Módulo 1 */}
+            <Desafio
+              titulo="Completa el Módulo 3"
+              url="Aprender/Etapa1"
+              image="/public/insignias/Modulo2.png"
+              currentStep={0}
+              totalSteps={8}
+              progress={0}
+              medalKey="modulo2"
+            />
+
+            {/* Reto: completar Capítulo 1 */}
+            <Desafio
+              titulo="Completa el Capítulo 1 del Módulo 4"
+              url="Aprender/Etapa1"
+              image="/public/insignias/modulo1.png"
+              currentStep={0}
+              totalSteps={1}
+              progress={0}
+              medalKey="modulo1"
+            />
+
+            {/* Reto: completar Módulo 1 */}
+            <Desafio
+              titulo="Completa el Módulo 4"
+              url="Aprender/Etapa1"
+              image="/public/insignias/Modulo2.png"
+              currentStep={0}
+              totalSteps={8}
+              progress={0}
               medalKey="modulo2"
             />
 
