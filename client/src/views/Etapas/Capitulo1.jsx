@@ -1,11 +1,12 @@
 // Capitulo1.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";                // ←–– agregamos useRef
 import { useNavigate } from "react-router-dom";
 import LoadingScreen from "../../components/LoadingScreen";
 import { StoryNode } from "../../components/StoryNode";
 import { NarrativeText } from "../../components/NarrativeText";
 import storyData from "./cap.json";
 import "./Capitulo.css";
+import { useTextToSpeech } from "../../hooks/useTextToSpeech";              // ←–– importamos el hook
 
 function Capitulo1() {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,25 +14,38 @@ function Capitulo1() {
   const [history, setHistory] = useState([]);
   const navigate = useNavigate();
 
-  // Obtenemos el nodo actual en base al id
+  // Obtenemos el nodo actual
   const currentNode = storyData.nodes.find((node) => node.id === currentNodeId);
 
-  // Si el nodo actual es final, redirigimos a la página de retroalimentación
+  // ←–– START: Configuración de lectura por voz
+  const containerRef = useRef(null);                                       // ←–– referencia al contenedor
+  useTextToSpeech(() => {
+    const text = containerRef.current?.innerText || "";
+    // Eliminamos la línea exacta del título antes de devolver el texto
+    return text
+      .split('\n')
+      .filter(line => line.trim() !== "La familia Torres y sus hábitos financieros")
+      .join('\n');
+  });
+  
+  // ←–– END: Configuración de lectura por voz
+
+  // Si es nodo final, redirigimos a retroalimentación
   useEffect(() => {
     if (currentNode && currentNode.type === "final") {
-      navigate("/aprender/etapa1/retroalimentacion1", { state: { history, node: currentNode } });
+      navigate(
+        "/aprender/etapa1/retroalimentacion1",
+        { state: { history, node: currentNode } }
+      );
     }
   }, [currentNode, history, navigate]);
 
-  // Función para avanzar en la historia. Puede recibir o no una decisión
+  // Función para avanzar en la historia
   const handleNext = (nextNodeId, decision = null) => {
-    if (decision) {
-      setHistory([...history, decision]);
-    }
+    if (decision) setHistory([...history, decision]);
     setCurrentNodeId(nextNodeId);
   };
 
-  // Mientras no se encuentre el nodo o sea final, no renderizamos nada adicional.
   if (!currentNode || currentNode.type === "final") return null;
 
   return (
@@ -39,7 +53,8 @@ function Capitulo1() {
       {isLoading ? (
         <LoadingScreen setIsLoading={setIsLoading} />
       ) : (
-        <div className="cap-content">
+        // ←–– Aquí añadimos la ref al DIV que engloba TODO el contenido
+        <div className="cap-content" ref={containerRef}>
           <h2>La familia Torres y sus hábitos financieros</h2>
           <div className="cap-loading-desafio-progress-bar">
             <div
@@ -47,10 +62,13 @@ function Capitulo1() {
               style={{ width: `100%` }}
             ></div>
           </div>
-          {/* Se muestra la imagen correspondiente al nodo actual */}
           <div className="cap-node-image">
             {currentNode.imagen && (
-              <img key={currentNode.imagen} src={currentNode.imagen} alt="Imagen del nodo" />
+              <img
+                key={currentNode.imagen}
+                src={currentNode.imagen}
+                alt="Imagen del nodo"
+              />
             )}
           </div>
           <div className="cap-options">

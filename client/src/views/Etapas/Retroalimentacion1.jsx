@@ -1,16 +1,17 @@
 // Client/views/Retroalimentacion1.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";               // ←–– agregamos useRef
 import { useLocation, useNavigate } from "react-router-dom";
 import LoadingScreen from "../../components/LoadingScreen";
 import { completeChapter } from "../../../services/chapterService";
 import "./Retroalimentacion1.css";
+import { useTextToSpeech } from "../../hooks/useTextToSpeech";             // ←–– importamos el hook
 
 export default function Retroalimentacion1() {
   const location = useLocation();
   const navigate = useNavigate();
   const { history = [] } = location.state || {};
 
-  // Las recompensas deben coincidir con las definidas en el backend
+  // Recompensas
   const rewardCoins = 350;
   const rewardExp   = 800;
 
@@ -21,6 +22,11 @@ export default function Retroalimentacion1() {
   const [feedback, setFeedback] = useState("");
   const [error, setError] = useState(null);
   const [saving, setSaving] = useState(false);
+
+  // ←–– START: Configuración de Text-to-Speech para feedback
+  const feedbackRef = useRef(null);                                       // ←–– referencia al párrafo de feedback
+  useTextToSpeech(() => feedbackRef.current?.innerText || "");            // ←–– solo lee lo que haya en feedbackRef
+  // ←–– END: Configuración de Text-to-Speech
 
   // 1) Pedir feedback a la IA
   useEffect(() => {
@@ -51,7 +57,7 @@ export default function Retroalimentacion1() {
 
   if (isLoading) return <LoadingScreen setIsLoading={setIsLoading} />;
 
-  // 2) Al pulsar "Entendido", marcamos capítulo y esperamos antes de navegar
+  // 2) Al pulsar "Entendido", marcamos capítulo y navegamos
   const handleEntendido = async () => {
     setSaving(true);
     setError(null);
@@ -101,7 +107,11 @@ export default function Retroalimentacion1() {
 
       <div className="feedback-ai">
         <h3>Feedback personalizado</h3>
-        {error ? <p className="error">{error}</p> : <p>{feedback}</p>}
+        {error ? (
+          <p ref={feedbackRef} className="error">{error}</p>              // ←–– ref en el párrafo de error
+        ) : (
+          <p ref={feedbackRef}>{feedback}</p>                             // ←–– ref en el párrafo de feedback
+        )}
       </div>
 
       <div className="cap-pieview">
