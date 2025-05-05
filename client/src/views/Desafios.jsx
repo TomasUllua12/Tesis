@@ -80,7 +80,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Capítulo 1 del Módulo 1"
               url="Aprender/Etapa1"
-              image="/public/insignias/modulo1.png"
+              image="/public/insignias/medal1.png"
               currentStep={doneC1}
               totalSteps={totalC1}
               progress={progC1}
@@ -102,7 +102,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Capítulo 1 del Módulo 2"
               url="Aprender/Etapa1"
-              image="/public/insignias/modulo1.png"
+              image="/public/insignias/insignia3.png"
               currentStep={0}
               totalSteps={1}
               progress={0}
@@ -113,7 +113,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Módulo 2"
               url="Aprender/Etapa1"
-              image="/public/insignias/Modulo2.png"
+              image="/public/insignias/Medal2.png"
               currentStep={0}
               totalSteps={8}
               progress={0}
@@ -124,7 +124,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Capítulo 1 del Módulo 3"
               url="Aprender/Etapa1"
-              image="/public/insignias/modulo1.png"
+              image="/public/insignias/insignia2.png"
               currentStep={0}
               totalSteps={1}
               progress={0}
@@ -135,7 +135,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Módulo 3"
               url="Aprender/Etapa1"
-              image="/public/insignias/Modulo2.png"
+              image="/public/insignias/Medal3.png"
               currentStep={0}
               totalSteps={8}
               progress={0}
@@ -146,7 +146,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Capítulo 1 del Módulo 4"
               url="Aprender/Etapa1"
-              image="/public/insignias/modulo1.png"
+              image="/public/insignias/insignia4.png"
               currentStep={0}
               totalSteps={1}
               progress={0}
@@ -157,7 +157,7 @@ export function Desafios() {
             <Desafio
               titulo="Completa el Módulo 4"
               url="Aprender/Etapa1"
-              image="/public/insignias/Modulo2.png"
+              image="/public/insignias/Medal4.png"
               currentStep={0}
               totalSteps={8}
               progress={0}
