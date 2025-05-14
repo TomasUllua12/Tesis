@@ -12,8 +12,8 @@ export default function Retroalimentacion1() {
   const { history = [] } = location.state || {};
 
   // Recompensas
-  const rewardCoins = 350;
-  const rewardExp   = 800;
+  const rewardCoins = 1050;
+  const rewardExp   = 850;
 
   const [customText] = useState(
     "Este es el texto personalizado que quiero que use la IA para generar el feedback. Comienza tus respuestas con HOLA LOCO!"

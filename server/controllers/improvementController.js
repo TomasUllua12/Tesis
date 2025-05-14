@@ -1,93 +1,92 @@
-// =====================================================
-// Archivo: server/controllers/improvementController.js
-// Descripción: Controlador encargado de gestionar la compra de mejoras por parte del usuario.
-// =====================================================
+// server/controllers/improvementController.js
+// ==============================================
+// Controlador encargado de gestionar la compra de mejoras por parte del usuario.
+// ==============================================
 
-// Importar la conexión a la base de datos
 const pool = require('../config/db');
 
-// =====================================================
-// Función: buyImprovement
-// Descripción: Permite al usuario comprar una mejora si tiene suficientes monedas
-// y aún no la ha adquirido. Actualiza los datos en la base de datos y devuelve
-// la información del usuario actualizada.
-// =====================================================
-
 exports.buyImprovement = async (req, res) => {
-  // ID del usuario autenticado (inyectado por el middleware)
   const userId = req.userId;
-
-  // Datos enviados en el cuerpo de la petición
   const { improvementKey, price } = req.body;
 
-  // Validación: asegurarse de que se enviaron los datos requeridos
-  if (!improvementKey || !price) {
+  // Validación: asegurarse de que vengan los datos
+  if (!improvementKey || typeof price !== 'number') {
     return res.status(400).json({ message: "Datos incompletos" });
   }
 
   try {
-    // Obtener monedas y mejoras compradas del usuario actual
-    const [rows] = await pool.query(
-      "SELECT coins, purchased_improvements FROM users WHERE id = ?",
+    // 1) Leer monedas del usuario
+    const [[userRow]] = await pool.query(
+      'SELECT coins FROM users WHERE id = ?',
       [userId]
     );
-
-    // Verificar si el usuario existe
-    if (rows.length === 0) {
+    if (!userRow) {
       return res.status(404).json({ message: "Usuario no encontrado" });
     }
+    const currentCoins = userRow.coins;
 
-    const user = rows[0];
+    // 2) Leer mejoras ya compradas
+    const [impRows] = await pool.query(
+      'SELECT improvement_key FROM user_purchased_improvements WHERE user_id = ?',
+      [userId]
+    );
+    const purchasedImprovements = impRows.map(r => r.improvement_key);
 
-    // Procesar el campo de mejoras compradas (convertir de string a array si es necesario)
-    let purchasedImprovements;
-    if (!user.purchased_improvements) {
-      purchasedImprovements = [];
-    } else {
-      purchasedImprovements = typeof user.purchased_improvements === "string"
-        ? JSON.parse(user.purchased_improvements)
-        : user.purchased_improvements;
-    }
-
-    // Verificar si la mejora ya fue comprada
+    // 3) Validar duplicado y saldo
     if (purchasedImprovements.includes(improvementKey)) {
       return res.status(400).json({ message: "Mejora ya adquirida" });
     }
-
-    // Verificar si el usuario tiene suficientes monedas para la compra
-    if (user.coins < price) {
+    if (currentCoins < price) {
       return res.status(400).json({ message: "Monedas insuficientes" });
     }
 
-    // Calcular el nuevo saldo de monedas y agregar la mejora al array
-    const newCoins = user.coins - price;
-    purchasedImprovements.push(improvementKey);
-    const purchasedImprovementsStr = JSON.stringify(purchasedImprovements); // Guardar como string
-
-    // Actualizar los datos del usuario en la base de datos
+    // 4) Insertar la relación y descontar monedas
     await pool.query(
-      "UPDATE users SET coins = ?, purchased_improvements = ? WHERE id = ?",
-      [newCoins, purchasedImprovementsStr, userId]
+      'INSERT INTO user_purchased_improvements (user_id, improvement_key) VALUES (?, ?)',
+      [userId, improvementKey]
+    );
+    await pool.query(
+      'UPDATE users SET coins = coins - ? WHERE id = ?',
+      [price, userId]
     );
 
-    // Obtener los datos actualizados del usuario para devolverlos en la respuesta
-    const [updatedRows] = await pool.query("SELECT * FROM users WHERE id = ?", [userId]);
-    let updatedUser = updatedRows[0];
+    // 5) Leer usuario actualizado
+    const [[baseUser]] = await pool.query(
+      'SELECT id, nombre, email, coins, experience FROM users WHERE id = ?',
+      [userId]
+    );
+    const user = { ...baseUser };
 
-    // Asegurar que las mejoras compradas estén en formato array
-    if (updatedUser.purchased_improvements) {
-      updatedUser.purchased_improvements = typeof updatedUser.purchased_improvements === "string"
-        ? JSON.parse(updatedUser.purchased_improvements)
-        : updatedUser.purchased_improvements;
-    } else {
-      updatedUser.purchased_improvements = [];
-    }
+    // 6) Rellenar arrays de relaciones
 
-    // Devolver respuesta exitosa con los datos del usuario actualizado
-    return res.json({ message: "Mejora adquirida", user: updatedUser });
+    // 6.1 Mejoras compradas
+    const [newImpRows] = await pool.query(
+      'SELECT improvement_key FROM user_purchased_improvements WHERE user_id = ?',
+      [userId]
+    );
+    user.purchased_improvements = newImpRows.map(r => r.improvement_key);
+
+    // 6.2 Capítulos completados
+    const [chapRows] = await pool.query(
+      'SELECT chapter_key FROM user_completed_chapters WHERE user_id = ?',
+      [userId]
+    );
+    user.completed_chapters = chapRows.map(r => r.chapter_key);
+
+    // 6.3 Medallas obtenidas
+    const [medRows] = await pool.query(
+      'SELECT medal_key FROM user_earned_medals WHERE user_id = ?',
+      [userId]
+    );
+    user.earned_medals = medRows.map(r => r.medal_key);
+
+    // 7) Responder con mensaje y usuario actualizado
+    return res.json({
+      message: "Mejora adquirida",
+      user
+    });
 
   } catch (error) {
-    // Manejo de errores inesperados
     console.error("Error en buyImprovement:", error);
     return res.status(500).json({ message: "Error en el servidor" });
   }
