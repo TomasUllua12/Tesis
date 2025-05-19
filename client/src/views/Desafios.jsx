@@ -84,7 +84,7 @@ export function Desafios() {
               currentStep={doneC1}
               totalSteps={totalC1}
               progress={progC1}
-              medalKey="modulo1"
+              medalKey="medal1"
             />
 
             {/* Reto: completar Módulo 1 */}

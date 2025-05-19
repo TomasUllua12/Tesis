@@ -1,15 +1,18 @@
 .cap-bg {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: var(--third-color);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
 }
 
 .cap-content {
   width: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,11 +23,9 @@
   margin-bottom: 20px;
   color: var(--primary-text);
 }
-
 .cap-loading-desafio-progress-bar {
   width: 100%;
 }
-
 .cap-loading-desafio-progress-fill {
   height: 10px;
   background-color: var(--primary-orange);
@@ -36,7 +37,6 @@
   justify-content: center;
   width: 900px;
   height: 400px;
-  overflow: hidden; /* Asegura que no se muestren partes que sobresalgan */
 }
 
 @keyframes fadeIn {
@@ -134,8 +134,12 @@
   box-shadow: 2px 2px 0 1px var(--secondary-text);
   cursor: pointer;
   transition: background-color 0.1s, border-radius 0.3s;
+  margin-bottom: 20px;
 }
 
 .story-narrative button:hover {
+  color: var(--primary-text);
   background-color: var(--primary-orange);
+  border: 1px solid var(--secondary-orange);
+  box-shadow: 2px 2px 0 1px var(--secondary-orange);
 }

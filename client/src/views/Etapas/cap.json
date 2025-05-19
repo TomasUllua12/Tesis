@@ -7,7 +7,7 @@
       "nextNodeId": "narrativa2",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/storyImg1.png"
+      "imagen": "../../../public/nodosImgs/Imagen1.png"
     },
     {
       "id": "narrativa2",
@@ -15,83 +15,395 @@
       "nextNodeId": "narrativa3",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/storyImg2.png"
+      "imagen": "../../../public/nodosImgs/Imagen2.png"
     },
     {
       "id": "narrativa3",
-      "contenido": "Tercer nodo narrativo. Ahora se prepara al usuario para comenzar a tomar decisiones.",
+      "contenido": "Tienen tres hijos: \n\nValen (15 años), fanático de los videojuegos, que está empezando a salir con amigos y ya pide algo de dinero todos los meses.\n\nEmma (12 años), apasionada por la danza, que toma clases en una academia que no es barata.\n\nTomi (7 años), un torbellino de energía que empieza a traer invitaciones a cumpleaños cada semana.",
       "nextNodeId": "narrativa4",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/storyImg3.png"
+      "imagen": "../../../public/nodosImgs/Imagen3.png"
     },
     {
       "id": "narrativa4",
-      "contenido": "Un domingo por la tarde, mientras ordenaban los papeles y trataban de entender por qué el sueldo no alcanzó, Clara se detiene un momento, respira hondo y dice:\n\n—“Martín, ¿y si empezamos a mirar cómo estamos usando el dinero? Capaz no es solo cuánto ganamos, sino cómo lo manejamos…” \nEsa frase marca el inicio de un cambio. La familia decide reunirse esa noche para hablar sobre sus finanzas por primera vez. \nAhora te toca a vos. \nVas a acompañar a los Torres en este proceso. Vas a conocer sus costumbres, sus errores y sus posibilidades. \nTus decisiones pueden ayudarlos a crear un sistema familiar más saludable, organizado y con futuro. \n\n ¿Estás listo para entrar en la historia?",
+      "contenido": "Como muchas familias, los Torres viven al ritmo del día a día. Pagan las cuentas cuando llegan, compran lo que hace falta sin mirar mucho precios, y casi nunca planifican a largo plazo. A veces compran cosas por impulso, otras veces dejan pasar oportunidades por falta de organización. Cuando hay algún gasto inesperado —como una visita al médico o una promoción escolar— todo se tambalea.",
+      "nextNodeId": "narrativa5",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/Imagen4.png"
+    },
+    {
+      "id": "narrativa5",
+      "contenido": "Últimamente, Clara y Martín sienten que algo no está funcionando. Discutieron por dinero más veces de lo normal. Clara se pregunta si están enseñando buenos hábitos a sus hijos. Martín siente que trabajan mucho para seguir igual que siempre.",
+      "nextNodeId": "narrativa6",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/Imagen5.png"
+    },
+    {
+      "id": "narrativa6",
+      "contenido": "Un domingo por la tarde, mientras ordenaban los papeles y trataban de entender por qué el sueldo no alcanzó, Clara se detiene un momento, respira hondo y dice:\n\n—“Martín, ¿y si empezamos a mirar cómo estamos usando el dinero? Capaz no es solo cuánto ganamos, sino cómo lo manejamos…”\n\nEsa frase marca el inicio de un cambio. Deciden reunirse esa noche para hablar sobre sus finanzas por primera vez.",
+      "nextNodeId": "narrativa7",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/Imagen6.png"
+    },
+    {
+      "id": "narrativa7",
+      "contenido": "La casa está en silencio. Los chicos ya se fueron a sus cuartos.\n\n Clara y Martín se quedaron en la mesa del comedor. Entre ellos hay un cuaderno, varias facturas, tickets de supermercado y una calculadora vieja.",
+      "nextNodeId": "narrativa8",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/Imagen7.png"
+    },
+    {
+      "id": "narrativa8",
+      "contenido": "— “No puede ser que lleguemos tan justos otra vez...” —dice Clara, frustrada.\n— “Encima esta semana se vencen el gas y la tarjeta del súper…” —responde Martín, mirando el celular. \n\nClara lo mira y suspira.\n— “Mirá… no sé si ganamos poco, si gastamos mal o qué, pero esto así no va más. Necesitamos entender qué está pasando con nuestra plata.” \n\nMartín asiente. Hace un momento parecía cansado, pero ahora se lo ve más receptivo.\n— “Tenés razón. ¿Y por dónde empezamos?” \nClara sonríe, como quien se anima a hacer algo nuevo: \n\n— “¿Y si hacemos una lista de todo lo que gastamos en la semana? Aunque sea para saber...”",
       "nextNodeId": "nodo1",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/Imagen8.png"
+    },
+    {
+      "id": "nodo1",
+      "contenido": "¿Qué le propones a Clara y Martín?",
+      "opciones": [
+        { 
+          "texto": "Opción A: “Sí, empiecen por anotar todo lo que gastan durante una semana. Lo importante es tener claridad.”", 
+          "descripcion": "-> Incentiva el registro de gastos como primer paso para tomar control.", 
+          "nextNodeId": "narrativa10" 
+        },
+        { 
+          "texto": "Opción B: “¿Y si primero identifican cuáles son sus gastos fijos y cuáles no lo son? Puede ser más útil para ordenar.”", 
+          "descripcion": "-> Introduce la distinción entre tipos de gastos como estrategia inicial.", 
+          "nextNodeId": "narrativa20" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
+    },
+    {
+      "id": "narrativa10",
+      "contenido": "Lunes por la mañana – Cocina de los Torres\n\nClara se levanta temprano, antes de que empiece el ajetreo del día. Prepara el desayuno y deja un cuaderno con una birome sobre la mesa, con un cartelito pegado que dice:\n\n“Anotá cualquier gasto que hagas hoy, por más mínimo que sea. ¡Vamos en equipo!”\n\nMartín ve el mensaje mientras toma el primer mate del día. Sonríe. Se lo toma en serio.",
+      "nextNodeId": "narrativa11",
       "opciones": [],
       "type": "texto",
       "imagen": "../../../public/nodosImgs/m3.jpg"
     },
     {
-      "id": "nodo1",
-      "contenido": "La casa está en silencio. Los chicos ya se fueron a sus cuartos. Clara y Martín se quedaron en la mesa del comedor. Entre ellos hay un cuaderno, varias facturas, tickets de supermercado y una calculadora vieja. \n\n— “No puede ser que lleguemos tan justos otra vez...” —dice Clara, frustrada. — “Encima esta semana se vencen el gas y la tarjeta del súper…” —responde Martín, mirando el celular. \nClara lo mira y suspira. \n\n— “Mirá… no sé si ganamos poco, si gastamos mal o qué, pero esto así no va más. Necesitamos entender qué está pasando con nuestra plata.” \nMartín asiente. Hace un momento parecía cansado, pero ahora se lo ve más receptivo. \n\n— “Tenés razón. ¿Y por dónde empezamos?” \nClara sonríe, como quien se anima a hacer algo nuevo: \n\n— “¿Y si hacemos una lista de todo lo que gastamos en la semana? Aunque sea para saber...”",
-      "opciones": [
-        { 
-          "texto": "“Sí, empiecen por anotar todo lo que gastan durante una semana. Lo importante es tener claridad.”", 
-          "descripcion": "Incentiva el registro de gastos como primer paso para tomar control.", 
-          "nextNodeId": "nodo2" 
-        },
-        { 
-          "texto": "“¿Y si primero identifican cuáles son sus gastos fijos y cuáles no lo son? Puede ser más útil para ordenar.”", 
-          "descripcion": "Introduce la distinción entre tipos de gastos como estrategia inicial.", 
-          "nextNodeId": "nodo3" 
-        },
-        { 
-          "texto": "“Reuní a toda la familia y hablen todos juntos. Es importante que los chicos también se involucren.”", 
-          "descripcion": "Apuesta por una solución integral, que incluye la educación financiera familiar.", 
-          "nextNodeId": "nodo4" 
-        }
-      ],
-      "type": "normal",
-      "imagen": "/ruta/a/imagen4.jpg"
+      "id": "narrativa11",
+      "contenido": "En una hoja nueva del cuaderno escribe: \n\n● Carga SUBE: 800 pesos\n● Panadería: 1200 pesos (llevé medialunas)\n\nMás tarde, Clara anota:\n\n● Merienda Emma (clase de danza): 600 pesos\n● Supermercado (cosas para la cena): 4200 pesos\n\nDurante los días siguientes, se suman más gastos: delivery improvisado, útiles escolares, chocolates al pasar por el kiosco, una promo de hamburguesas para los chicos, algo de ropa para Valen. El cuaderno empieza a llenarse de números... y de sorpresas.",
+      "nextNodeId": "nodo2",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
     },
     {
       "id": "nodo2",
-      "contenido": "📍 Lunes por la mañana – Cocina de los Torres \nClara se levanta temprano, antes de que empiece el ajetreo del día. Prepara el desayuno y deja un cuaderno con una birome sobre la mesa, con un cartelito pegado que dice: \n\n📝 “Anotá cualquier gasto que hagas hoy, por más mínimo que sea. ¡Vamos en equipo!” \nMartín ve el mensaje mientras toma el primer mate del día. Sonríe. Se lo toma en serio. En una hoja nueva del cuaderno escribe: \n\n● Carga SUBE: $800\n ● Panadería: $1200 (llevé medialunas)\nMás tarde, Clara anota: \n● Merienda Emma (clase de danza): $600\n ● Supermercado (cosas para la cena): $4200 \n\nDurante los días siguientes, se suman más gastos: delivery improvisado, útiles escolares, chocolates al pasar por el kiosco, una promo de hamburguesas para los chicos, algo de ropa para Valen.\nEl cuaderno empieza a llenarse de números... y de sorpresas.",
+      "contenido": "Qué ves en los registros?",
       "opciones": [
         { 
-          "texto": "La mayoría de los gastos son impulsivos o no planificados.", 
-          "descripcion": "Introduce el concepto de gastos hormiga y la importancia de planificar.", 
-          "nextNodeId": "final1" 
+          "texto": "Opción A: La mayoría de los gastos son impulsivos o no planificados.", 
+          "descripcion": "-> Introduce el concepto de gastos hormiga y la importancia de planificar.", 
+          "nextNodeId": "narrativa110" 
         },
         { 
-          "texto": "No hay un patrón claro, lo que indica que no tienen control de sus hábitos aún.", 
-          "descripcion": "Motiva la necesidad de agrupar los gastos en categorías para ver mejor la situación.", 
-          "nextNodeId": "final1" 
+          "texto": "Opción B: No hay un patrón claro, lo que indica que no tienen control de sus hábitos aún.", 
+          "descripcion": "-> Motiva la necesidad de agrupar los gastos en categorías para ver mejor la situación.", 
+          "nextNodeId": "narrativa120" 
         }
       ],
       "type": "normal",
       "imagen": "/ruta/a/imagen5.jpg"
     },
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa120",
+      "contenido": "Domingo siguiente – Mesa del comedor, otra vez\n\nYa pasó una semana desde que comenzaron a registrar sus gastos. En la mesa hay un cuaderno bastante lleno, varias lapiceras, y caras de cansancio... pero también de curiosidad.\nClara hojea las páginas mientras toma mate:\n\n— “Bueno… anotamos un montón, pero así como está no se entiende nada. No sé si esto nos sirve para algo.”",
+      "nextNodeId": "narrativa121",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa121",
+      "contenido": "Martín agarra una hoja suelta y empieza a leer algunos montos:\n\n— “Panadería, supermercado, delivery, la SUBE, ropa, golosinas, snacks, útiles escolares, suscripciones… Sí, está todo mezclado.”\n\nHace una pausa, piensa unos segundos y dice:\n\n— “Pará... ¿y si lo separamos en tipos de gasto? Fijos, variables e innecesarios, por ejemplo.”\n\nClara lo mira con interés:\n\n — “¿Cómo sería eso?”",
+      "nextNodeId": "narrativa122",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa122",
+      "contenido": "Martín empieza a escribir en una hoja nueva:\n\n● Fijos: cosas que sí o sí tenemos que pagar todos los meses (alquiler, servicios, transporte, escuela).\n● Variables: lo que puede cambiar según la semana (comida, salidas, compras).\n● Innecesarios: gastos por impulso o por costumbre que podríamos evitar.",
+      "nextNodeId": "narrativa123",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa123",
+      "contenido": "— “Capaz así entendemos mejor en qué se nos va la plata...” —dice mientras dibuja tres columnas.\n\nClara sonríe. Siente que están haciendo algo concreto.\n\n— “Dale, hagámoslo juntos. Y después comparamos cuánto hay en cada grupo.”",
+      "nextNodeId": "narrativaFINAL10",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+
+
+
+
+
+
+
+
+    
+    {
+      "id": "narrativa110",
+      "contenido": "Viernes por la noche – Mesa del comedor\n\nClara está sentada revisando el cuaderno. Subraya con un marcador algunos gastos en color rojo:\n\n- snacks\n- delivery\n- dos cafés al paso\n - una compra de ropa que no estaba prevista\n\nSuspira.",
+      "nextNodeId": "narrativa111",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa111",
+      "contenido": "Martín llega con una bolsa del supermercado y la deja sobre la mesa.\n\n— “¿Qué estás mirando con tanta atención?” —pregunta él, curioso.\n\n— “Estoy tratando de entender… mirá esto, mirá cuántas veces fuimos comprando ‘cositas’ que no estaban planeadas. Delivery tres veces en la semana, compritas que no eran urgentes...”\n\nMartín hojea el cuaderno con ella. De repente, los dos se quedan en silencio.",
+      "nextNodeId": "narrativa112",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa112",
+      "contenido": "— “¿Te das cuenta?” —dice Clara—.\n“No es que no nos alcanza, es que gastamos sin pensar.”\n\nMartín se recuesta en la silla, pensativo.\n\n— “Es como que no tenemos un plan. Vamos improvisando todo el tiempo. Y después nos sorprendemos de no llegar…”\n\nAmbos se miran. Sienten que están empezando a entender lo que pasa con su dinero.",
+      "nextNodeId": "nodo3",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
     {
       "id": "nodo3",
-      "contenido": "Elegiste un camino más arriesgado, explorando inversiones de mayor riesgo.",
+      "contenido": "Cómo les aconcejas seguir?",
       "opciones": [
         { 
-          "texto": "Invertir en bolsa", 
-          "descripcion": "Esta opción puede generar altos rendimientos o pérdidas significativas.", 
-          "nextNodeId": "narrativa4" 
+          "texto": "Opción A: “Definan juntos cuáles de esos gastos fueron realmente necesarios y cuáles podrían haberse evitado.”", 
+          "descripcion": "-> Fomenta la reflexión sobre prioridades y consumo consciente.", 
+          "nextNodeId": "narrativa1110" 
         },
         { 
-          "texto": "Invertir en emprendimiento", 
-          "descripcion": "Un camino innovador que requiere visión y tolerancia al riesgo.", 
-          "nextNodeId": "final3" 
+          "texto": "Opción B: “Establezcan un límite de gasto semanal para disfrutar, y asi, mantienen un mayor control.”", 
+          "descripcion": "-> Apunta a crear un pequeño sistema de control sin ser demasiado restrictivo.", 
+          "nextNodeId": "narrativa1120" 
         }
       ],
       "type": "normal",
       "imagen": "/ruta/a/imagen6.jpg"
     },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa1110",
+      "contenido": "Sábado a la tarde – Mesa del comedor, otra vez llena de papeles\n\nEsta vez están todos sentados: Clara, Martín y los chicos. En el centro, el cuaderno con todos los gastos anotados de la semana.\n\nClara dibuja una línea en una hoja grande que dividieron en dos columnas:\n\n● Gastos necesarios\n● Gastos que se podrían haber evitado",
+      "nextNodeId": "narrativa1111",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1111",
+      "contenido": "— “Martín empieza a leer en voz alta algunos de los apuntes:\n— “Carga de SUBE, necesario… supermercado, necesario… delivery del martes…”\n— “…mmm, innecesario”, interrumpe Clara con una sonrisa.\n— “Bueno, ¡estábamos cansados!” —dice él, en tono de broma.\n\nSe ríen. La actividad empieza a generar un ambiente distendido, incluso divertido.",
+      "nextNodeId": "narrativa1112",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1112",
+      "contenido": "Emma agrega:\n\n— “Yo pedí esa merienda después de danza… capaz podía llevar algo desde casa.”\n\nValen confiesa que gastó parte de su mesada en una “skin” para un videojuego. Todos lo miran. Él se encoge de hombros.\n\n— “Bueno, ¿qué? Yo la quería.”\n\nClara no lo reta. Solo anota el gasto en la columna de “evitables” y dice:\n\n— “No está mal darte un gusto, Valen. Pero capaz si lo pensás un poco más, lo disfrutás el doble.”",
+      "nextNodeId": "narrativa1113",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1113",
+      "contenido": "Martín cierra el cuaderno con calma.\n\n— “Nunca hicimos esto… y está bueno. Te hace pensar.”\n\nClara se queda mirando los apuntes un rato más, pensativa.\n\n— “Che… ¿y si ahora además de esto, hacemos otra lista?”\n— “¿Otra más?” —pregunta Martín, entre curioso y resignado.\n— “Sí. Una para diferenciar entre los gastos fijos y los variables. Porque no es lo mismo pagar la luz que comprar una pizza. Capaz ahí también está parte del problema: no sabemos cuánto tenemos realmente libre cada mes.”",
+      "nextNodeId": "narrativa1114",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1114",
+      "contenido": "Martín asiente con interés.\n\n— “Entonces los fijos serían cosas como la escuela, la tarjeta, los servicios…”\n— “Y los variables, todo lo que cambia semana a semana. Comida, salidas, cumpleaños, cosas así.”\n\nEmma levanta la mano como si estuviera en clase.\n\n— “¿Y los gustos como el mío o el de Valen?”\n— “También son variables,” dice Clara. “Pero podrían ir en una categoría especial. Así sabemos qué tanto nos estamos permitiendo darnos gustos… y si podemos o no.”\n\nMartín ya fue a buscar marcadores de colores. Clara dibuja otra tabla al lado. Todos se sienten parte.",
+      "nextNodeId": "narrativaFINAL10",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa1120",
+      "contenido": "Sábado por la mañana – Mesa del comedor (otra vez)\n\nLos chicos están jugando en el patio. Clara y Martín se sientan con una hoja en blanco y una calculadora. Esta vez, hay mate de por medio y un clima de equipo. \n\n— “Entonces, si ganamos alrededor de $250.000 al mes, podriamos dejarnos el 25% para darnos gustos. —dice Clara mientras escribe— \n— “…serían unos $62.500 para el resto: comida diaria, salidas, cumpleaños, todo eso.” —completa Martín.",
+      "nextNodeId": "narrativa1121",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1121",
+      "contenido": "Se quedan pensando un momento. Clara rompe el silencio:\n\n— “¿Y si lo dividimos en semanas? Sería poco más de $15.000 por semana para gastos variables. Podemos usarlo como ‘presupuesto flexible’.”\n— “Perfecto. Y si algún día se nos antoja delivery, vemos si estamos dentro del límite. Y si no, cocinamos en casa. No se trata de privarse de todo, sino de elegir.”\n\nMartín propone guardar una parte de ese dinero en efectivo en un sobre. Clara prefiere usar una app. Deciden probar ambos métodos a ver cuál les funciona mejor.",
+      "nextNodeId": "narrativa1122",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1122",
+      "contenido": "Martes por la noche – Casa de los Torres\n\nVan solo dos días desde que Clara y Martín armaron su presupuesto semanal, y ya se sienten desbordados.\nAyer fue el cumpleaños de un compañero de Tomi. Regalo, transporte y una bolsa de golosinas para la merienda: $8.000.\nHoy, Emma olvidó su mochila en la academia y tuvieron que volver en remis: $2.000.\nY esta mañana, Martín no resistió la promo de medialunas + café: $4.500.",
+      "nextNodeId": "narrativa1123",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1123",
+      "contenido": "Clara revisa el cuaderno de gastos y lo cierra con fuerza. Está frustrada.\n\n— “No entiendo. Pensé que nos iba a alcanzar. ¿Qué hacemos mal?”\n\nMartín, desde la cocina, intenta consolarla:\n\n— “Yo también creí que nos iba a funcionar. Pero todo el tiempo aparecen cosas que no teníamos previstas.”\n— “Y lo peor es que ya no quiero seguir anotando nada. Me desmotiva ver que igual no alcanza…” —dice Clara, desanimada.\n\nSe queda mirando el cuaderno unos segundos, luego lo vuelve a abrir con más calma.",
+      "nextNodeId": "narrativa1124",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1124",
+      "contenido": "— “Pará... ¿y si el problema no es cuánto gastamos, sino que estamos metiendo todo en la misma bolsa? Capaz necesitamos separar los gastos fijos de los variables.”\n\nMartín frunce el ceño, pensativo.\n\n— “¿Te referís a distinguir lo que sí o sí tenemos que pagar, como el alquiler o los servicios, de lo que podemos manejar?”\n— “Exacto. Porque no es lo mismo pagar la luz que pedir comida tres veces por semana. Capaz si los separamos, vemos más claro por dónde se nos va la plata.”",
+      "nextNodeId": "narrativa1125",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativa1125",
+      "contenido": "— “Sí, me gusta. Vamos a marcar los fijos con un color y los variables con otro. Y agregamos una tercera categoría: los ‘innecesarios’. Así afinamos el análisis.”\n\nClara sonríe por primera vez en toda la noche.\n\n — “Bueno, tal vez esto recién empieza. Aprender a manejar la plata lleva tiempo… pero ya no estamos a ciegas.”",
+      "nextNodeId": "narrativaFINAL10",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativaFINAL10",
+      "contenido": "Domingo al mediodía – Mesa del comedor, ahora con colores y columnas\n\nClara está con una hoja grande dividida en tres columnas:\n\n● Gastos fijos\n● Gastos variables\n● Gastos innecesarios\n\nUsan marcadores de diferentes colores para identificarlos: azul para fijos, verde para variables, rojo para innecesarios. Cada gasto que anotaron en el cuaderno ahora va siendo clasificado, uno por uno.",
+      "nextNodeId": "narrativaFINAL11",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativaFINAL11",
+      "contenido": "Martín lee en voz alta y Clara anota:\n\n— “Alquiler: fijo.”\n— “Luz, agua, internet: fijo.”\n— “Supermercado: variable.”\n— “Cumpleaños de Tomi: variable.”\n— “Skin de Valen: innecesario…”, dice, mirándolo con una sonrisa.\n\nValen levanta las cejas como en desacuerdo.\nClara piensa en la academia de danza de Emma.\n\n— “Si la academia la pagamos todos los meses y es constante, lo ponemos como fijo. Pero el transporte que usamos para ir, como a veces es colectivo, otras remis, eso sería variable.”",
+      "nextNodeId": "narrativaFINAL12",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativaFINAL12",
+      "contenido": "Martín añade:\n\n— “Y el delivery de comida… ese va derecho al rojo.”\n\nClara, sin dejar de escribir, comenta:\n\n— “¿Se dan cuenta? Hasta ahora sentíamos que no nos alcanzaba porque veíamos todo mezclado. Pero ahora vemos que hay cosas que no podemos evitar, otras que podemos manejar, y algunas que directamente podríamos evitar.”\n\nMartín saca la calculadora y empieza a sumar cada columna.\n\n— “Los fijos son alrededor de $180.000. Los variables… unos $50.000. Y en innecesarios se nos fueron $20.000 esta semana.”",
+      "nextNodeId": "narrativaFINAL13",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "narrativaFINAL13",
+      "contenido": "Todos abren grande los ojos.\n\n— “¡¿Veinte mil?!” — dice Emma.\n— “¿En qué…?” —pregunta Valen.\n\nSilencio.\nClara concluye:\n\n— “Bueno… al menos ahora lo sabemos.”",
+      "nextNodeId": "final1",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    {
+      "id": "final1",
+      "contenido": "Final del Capítulo",
+      "opciones": [],
+      "type": "final",
+      "imagen": "/ruta/a/imagen8.jpg"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa121",
+      "contenido": "En una hoja nueva del cuaderno escribe: \n\n● Carga SUBE: $800\n● Panadería: $1200 (llevé medialunas)\n\nMás tarde, Clara anota:\n\n● Merienda Emma (clase de danza): $600\n● Supermercado (cosas para la cena): $4200\n\nDurante los días siguientes, se suman más gastos: delivery improvisado, útiles escolares, chocolates al pasar por el kiosco, una promo de hamburguesas para los chicos, algo de ropa para Valen. El cuaderno empieza a llenarse de números... y de sorpresas.",
+      "nextNodeId": "nodo2",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/m3.jpg"
+    },
+    
     {
       "id": "narrativa4",
       "contenido": "Primer nodo de introducción. Bienvenido a la historia, aquí se establece el contexto inicial.",
@@ -113,13 +425,7 @@
       "type": "normal",
       "imagen": "/ruta/a/imagen7.jpg"
     },
-    {
-      "id": "final1",
-      "contenido": "Fin del capítulo. Retroalimentación sobre la estrategia conservadora.",
-      "opciones": [],
-      "type": "final",
-      "imagen": "/ruta/a/imagen8.jpg"
-    },
+    
     {
       "id": "final2",
       "contenido": "Fin del capítulo. Retroalimentación sobre la inversión en bolsa.",
