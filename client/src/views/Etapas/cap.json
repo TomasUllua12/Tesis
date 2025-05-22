@@ -170,7 +170,7 @@
         }
       ],
       "type": "normal",
-      "imagen": "/ruta/a/imagen5.jpg"
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
 
 
@@ -244,7 +244,7 @@
         }
       ],
       "type": "normal",
-      "imagen": "/ruta/a/imagen5.jpg"
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
 
 
@@ -342,7 +342,7 @@
         }
       ],
       "type": "normal",
-      "imagen": "/ruta/a/imagen5.jpg"
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
 
 
@@ -529,7 +529,7 @@
         }
       ],
       "type": "normal",
-      "imagen": "/ruta/a/imagen5.jpg"
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
 
 
@@ -622,7 +622,7 @@
         }
       ],
       "type": "normal",
-      "imagen": "/ruta/a/imagen6.jpg"
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
 
 
@@ -837,7 +837,7 @@
         }
       ],
       "type": "normal",
-      "imagen": "/ruta/a/imagen7.jpg"
+      "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
     
     {
