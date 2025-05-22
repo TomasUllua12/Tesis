@@ -16,7 +16,7 @@ export default function Retroalimentacion1() {
   const rewardExp   = 850;
 
   const [customText] = useState(
-    "Este es el texto personalizado que quiero que use la IA para generar el feedback. Comienza tus respuestas con HOLA LOCO!"
+    "Tené en cuenta que sos un feedback personalizado de una plataforma de aprendizaje en finanzas personales. Tenes que dar un feedback y evaluacion basada en las opciones elegidas por el usuario a lo largo de la historia. En ese Feedback no personifiques"
   );
   const [isLoading, setIsLoading] = useState(true);
   const [feedback, setFeedback] = useState("");

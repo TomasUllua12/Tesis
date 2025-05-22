@@ -83,13 +83,36 @@
       "type": "normal",
       "imagen": "../../../public/nodosImgs/Imagen9.png"
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       "id": "narrativa10",
       "contenido": "Lunes por la mañana – Cocina de los Torres\n\nClara se levanta temprano, antes de que empiece el ajetreo del día. Prepara el desayuno y deja un cuaderno con una birome sobre la mesa, con un cartelito pegado que dice:\n\n“Anotá cualquier gasto que hagas hoy, por más mínimo que sea. ¡Vamos en equipo!”\n\nMartín ve el mensaje mientras toma el primer mate del día. Sonríe. Se lo toma en serio.",
       "nextNodeId": "narrativa11",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa11",
@@ -97,8 +120,399 @@
       "nextNodeId": "nodo2",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
+
+
+    {
+      "id": "narrativa20",
+      "contenido": "Clara se detiene un momento y mira el cuaderno vacío frente a ella.\n\n— “Ok… gastos fijos y no fijos. ¿Cómo hacemos eso?”\n\nMartín agarra un bolígrafo y dibuja dos columnas. En la de la izquierda escribe “Fijos” y en la derecha “Variables”.\n\n— “A ver… fijo sería el alquiler, la escuela de los chicos, el gas, la luz…”\n — “También internet” —agrega Clara.\n\nDurante unos minutos, repasan mentalmente sus rutinas. Se van acordando de gastos que hacen cada mes sin falta, y los anotan.",
+      "nextNodeId": "narrativa21",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa21",
+      "contenido": "Luego pasan a la columna de variables:\n\n— “La comida, las salidas, los regalos, el delivery, la ropa…”\n — “¡Y las compras chicas! Tipo lo que gasta Valen en jueguitos o el cafecito que me compro camino a la escuela…”\n\nSe ríen nerviosamente. En el fondo, los dos saben que ahí está parte del problema.",
+      "nextNodeId": "narrativa22",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa22",
+      "contenido": "— “O sea que hay gastos que no vemos, pero suman.” —reflexiona Martín.\n\nClara se queda mirando la hoja y propone algo:\n\n - “¿Y si seguimos con esto? Clasificamos TODO lo que gastamos en los últimos 7 días. Aunque nos duela.”\n\nMartín la mira.\n\n — “Va a doler… pero bueno, empecemos.",
+      "nextNodeId": "nodo20",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+
+
+
+
+
+
+    {
+      "id": "nodo20",
+      "contenido": "Qué le recomendarías a Clara y Martín?",
+      "opciones": [
+        { 
+          "texto": "Opción A: separen el dinero en categorías generales como ‘necesidades’, ‘gustos’ y ‘ahorro’, y fijen un tope para cada una.", 
+          "descripcion": "-> Esta opción les da una estructura más flexible y práctica, ideal si no tienen tiempo o herramientas para llevar registros exactos.", 
+          "nextNodeId": "narrativa210" 
+        },
+        { 
+          "texto": "Opción B: Armen un presupuesto que incluya todos los ingresos y egresos, con montos aproximados.", 
+          "descripcion": "-> Esta opción impulsa a la familia a hacer un análisis profundo.", 
+          "nextNodeId": "narrativa220" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen5.jpg"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa220",
+      "contenido": "Clara y Martín se miran. La lista de gastos ya está bastante completa, y aunque es un poco caótica, sienten que es el momento de poner todo en orden.\n\n— “Bueno… ¿lo escribimos así nomás o lo hacemos bien?” —pregunta Martín.\n— “Hagámoslo bien. Veamos cuánto entra, cuánto sale, y si hay algún margen o estamos al horno.” —responde Clara decidida.\n\nAbren una hoja nueva en el cuaderno y, en la parte superior, anotan sus ingresos mensuales...",
+      "nextNodeId": "narrativa221",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa221",
+      "contenido": "Clara: $400.000 (sueldo docente)\nMartín: $200.000 a $350.000 (varía según el mes)\n\nDespués, Clara propone estimar el promedio de Martín:\n\n“Pongamos $275.000 como referencia para tener una base.”\n\nIngresos estimados: $675.000\n\nLuego, comienzan a anotar todos los gastos mensuales, con montos aproximados...",
+      "nextNodeId": "narrativa222",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa222",
+      "contenido": "Alquiler $160.000 | Supermercado $130.000\nEscuela (cuotas + útiles) $50.000 | Servicios (luz, gas, agua) $35.000\nInternet + celulares $25.000 | Transporte $30.000 \nDelivery / salidas $45.000 | Ropa, calzado, etc. $30.000\nCuotas de tarjetas $40.000 | Clases de danza (Emma) $20.000\n“Gastos hormiga”: aproximados $20.000 | Otros $15.000",
+      "nextNodeId": "narrativa223",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa223",
+      "contenido": "Total de gastos estimados: $600.000\n\n - “Nos queda un margen de $75.000... pero claro, eso es si todo sale perfecto y no pasa nada raro.” - Comenta Martín\n\nClara anota en rojo:\n\n ➤ “No estamos mal, pero estamos en el límite. Si hay un imprevisto, se nos cae todo.”",
+      "nextNodeId": "nodo200",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "nodo200",
+      "contenido": "Qué le recomendarías a Clara y Martín?",
+      "opciones": [
+        { 
+          "texto": "Opción A: Destinen un porcentaje fijo del ingreso a un fondo de emergencia antes de gastar en todo lo demás.", 
+          "descripcion": "", 
+          "nextNodeId": "narrativa22100" 
+        },
+        { 
+          "texto": "Opción B: Analicen los gastos variables uno por uno y eliminen o reduzcan los que no sean esenciales.", 
+          "descripcion": "", 
+          "nextNodeId": "narrativa22200" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen5.jpg"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa22100",
+      "contenido": "Clara observa la hoja con los ingresos y gastos estimados.\n\n— “¿Y si el mes que viene nos comprometemos a ahorrar una parte apenas cobremos? Aunque sea poco.”\n\nMartín duda.\n\n — “¿Y si después no nos alcanza?”\n— “Pero si esperamos a ver si sobra... nunca va a sobrar.” —le responde Clara, convencida.",
+      "nextNodeId": "narrativa2211",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa2211",
+      "contenido": "Clara hace una cuenta rápida:\n\n — “Si cobramos $675.000 en total, el 10% serían $67.500. ¿Te animás?”\n— “Probemos. Pero pongámoslo en otra cuenta o en una caja, así no lo tocamos.”\n\nClara asiente.\n\n — “Este va a ser nuestro fondo de emergencia. Para cuando pase algo inesperado.”\n\nY entonces, por primera vez, anotan en el presupuesto un nuevo renglón arriba de todo:\n\n🟢 Ahorro mensual fijo → $67.500",
+      "nextNodeId": "narrativa2212",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa2212",
+      "contenido": "Esa noche, Clara y Martín se fueron a dormir con una sensación distinta. No habían ganado más dinero ni eliminado todos sus problemas, pero por primera vez, sintieron que el dinero no los manejaba a ellos. \nEl solo hecho de separar un porcentaje fijo como ahorro les dio una pequeña victoria. Una señal de que se puede cambiar, si hay compromiso y organización. \nPero como todo cambio, la verdadera prueba llegó más adelante…",
+      "nextNodeId": "narrativaFINAL20",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+
+
+
+
+    {
+      "id": "narrativa22200",
+      "contenido": "Clara y Martín se quedan mirando la hoja con el total de gastos. Si bien no están en rojo, la tensión viene del margen tan ajustado que tienen.\n\n— “¿Qué hacemos con esto? Porque si pasa algo, no tenemos colchón…” —dice Martín.\n\nClara se toma un momento, respira, y propone:\n\n- “A ver, ¿y si revisamos uno por uno los gastos variables y vemos cuáles podemos ajustar sin volvernos locos?”\n\nEmpiezan por la comida:\nSupermercado: $130.000",
+      "nextNodeId": "narrativa2221",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa2221",
+      "contenido": " — “¿No podríamos hacer compras más grandes una vez por mes y evitar los gastos chicos de todos los días?”\n — “Y usar más precios cuidados…”, dice Martín.\n\nLuego miran el gasto en delivery y salidas: $45.000\n\n — “Eso es una locura, Martín.”\n — “Sí… hagamos una salida especial al mes y el resto cocinamos. Podemos turnarnos.”\n\nTambién aparece el gasto en ropa: $30.000\n\n — “¿Realmente compramos ropa todos los meses?”\n — “No, capaz fue por el invierno. Podemos dejar eso como gasto estacional.”",
+      "nextNodeId": "narrativa2222",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa2222",
+      "contenido": "Finalmente, se detienen en los “gastos hormiga”: $20.000\n\n — “Cafecitos, snacks, jueguitos… suma más de lo que parece.”\n\nClara anota todo en una nueva hoja...",
+      "nextNodeId": "narrativa2223",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa2223",
+      "contenido": "Total ajustado: Ahorro de $57.000 mensuales \n\nMartín sonríe:\n\n — “Ey… esto ya se siente más manejable.”\n\nClara agrega:\n\n — “Si mantenemos esto, en un par de meses podríamos tener un fondo de emergencia. Y no fue tan terrible.”",
+      "nextNodeId": "nodo5000",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+
+    {
+      "id": "nodo5000",
+      "contenido": "Qué le recomendarías a Clara y Martín?",
+      "opciones": [
+        { 
+          "texto": "Opción A: Crear un fondo de emergencia.", 
+          "descripcion": "", 
+          "nextNodeId": "narrativa22210" 
+        },
+        { 
+          "texto": "Opción B: Involucrar a los hijos en el nuevo plan financiero.", 
+          "descripcion": "", 
+          "nextNodeId": "narrativa22220" 
+        }
+      ],
+      "type": "normal",
+      "imagen": "/ruta/a/imagen5.jpg"
+    },
+
+
+
+    {
+      "id": "narrativa22210",
+      "contenido": "Con los nuevos ajustes mensuales, Clara y Martín ven que podrían empezar a ahorrar alrededor de $60.000 por mes.\n Esa noche, después de cenar, Clara vuelve sobre el tema:\n\n— “¿Y si en vez de usar esto para darnos un gusto, lo guardamos por si pasa algo?”\n — “¿Te referís a un fondo de emergencia?” —pregunta Martín, intrigado.\n— “Exacto. Si se rompe la heladera, si alguien se enferma, si en tu taller un mes no entra nada... ya no dependeríamos de la tarjeta o de hacer malabares.”",
+      "nextNodeId": "narrativa22211",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa22211",
+      "contenido": "Martín asiente. No suena emocionante, pero suena liberador.\nAl día siguiente, abren una cuenta digital gratuita que les permite separar ese dinero del resto. \nClara incluso le pone un nombre al alias: torres.emergencias.\nDeciden que cada mes, apenas entra el dinero, van a separar los $60.000 y no tocarlos salvo necesidad real.",
+      "nextNodeId": "narrativaFINAL20",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+
+    {
+      "id": "narrativa22220",
+      "contenido": "Es domingo a la tarde. La mesa del comedor vuelve a estar ocupada, pero esta vez no hay papeles caóticos ni discusiones. Clara y Martín están listando los cambios que hicieron en su presupuesto y cuánto lograron ahorrar en el primer mes.\nEntran los chicos, y Clara los llama:\n\n — “Chicos, queremos contarles algo. Papá y yo estuvimos reorganizando el dinero de casa para que estemos más tranquilos. Y queremos que ustedes también sean parte.”\n\nValen, Emma y Tomi se sientan con curiosidad. Martín abre una hoja y dibuja tres columnas grandes: Necesidades, Gustos y Ahorro.",
+      "nextNodeId": "narrativa22221",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa22221",
+      "contenido": "— “Vamos a probar algo nuevo. Cada mes vamos a dividir la plata en tres partes: lo que necesitamos, lo que queremos, y lo que guardamos para más adelante.”\n— “¿Como una alcancía?” —pregunta Tomi.\n — “Exacto. Pero no solo para vos. Esto es para toda la familia.”\n\nClara reparte tres sobres y les da una pequeña mesada simbólica. Les proponen que también ellos empiecen a usar ese sistema.",
+      "nextNodeId": "narrativa22222",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa22222",
+      "contenido": "— “Y si a fin de mes sobra algo del sobre de ‘gustos’, lo pueden pasar a ‘ahorro’ o guardarlo para algo más grande.”\n\nEmma propone anotar todo lo que gasta en una hoja. Valen se entusiasma y pide hacer un Excel.\nMartín, sorprendido, les dice:\n\n — “Mirá vos, capaz aprendemos más nosotros que ustedes.”\n\nDurante las semanas siguientes, la familia sostiene esta dinámica. Ya no hay sorpresas con el dinero. Las decisiones se conversan, y todos saben qué parte del presupuesto pueden usar libremente y cuál deben cuidar.",
+      "nextNodeId": "narrativaFINAL20",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativa210",
+      "contenido": "Pasaron dos meses desde aquella noche en la que Clara y Martín decidieron organizar sus gastos en tres grandes bloques. Desde entonces, las reuniones familiares de los domingos se volvieron una costumbre.\nCon una hoja en blanco, algo de mate y los chicos cerca (aunque con más interés en sus celulares que en los números), repasaban juntos qué se había gastado esa semana y cómo venían con su nuevo sistema.\nAl principio fue liberador. Separar en necesidades, gustos y ahorro les dio estructura y control. Se dieron cuenta de que podían prescindir de algunos gastos sin tanto drama. Redujeron las comidas por delivery, empezaron a hacer compras más planificadas, y lograron dejar una pequeña parte para el ahorro, incluso en semanas difíciles.\n\nPero con el tiempo empezaron a aparecer sorpresas que les abrieron los ojos.",
+      "nextNodeId": "narrativa211",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa211",
+      "contenido": " Algunas semanas notaban que habían asignado mal ciertas cosas: creían que algunos gastos eran fijos, pero en realidad eran variables, y eso desbalanceaba todo. Por ejemplo, confundían el gasto del supermercado —que varía cada mes— con un gasto fijo, o incluían el servicio de luz como si siempre tuviera el mismo valor, cuando en realidad el consumo cambiaba mucho según la época del año.\nTambién surgían situaciones inesperadas que no sabían bien dónde ubicar, como una consulta médica fuera de obra social o el arreglo urgente de la heladera.\nCon el paso de las semanas, se dieron cuenta de que su sistema del 60/30/10 no siempre se ajustaba bien a su realidad. Había meses en que lo que clasificaban como “necesidades” no llegaba al 60%, y otros en los que lo superaba, pero más por errores de clasificación que por un aumento real de necesidades.",
+      "nextNodeId": "narrativa212",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa212",
+      "contenido": "Eso les hizo pensar que tal vez podían ahorrar más de lo que creían. Simplemente no estaban diferenciando correctamente sus gastos, y eso les estaba impidiendo tener una visión más real y equilibrada.\n Un domingo, mientras revisaban los números del mes, Martín frunció el ceño.\n\n — “Che, siento que nos estamos desordenando otra vez. La semana pasada casi no ahorramos nada, y en salidas nos pasamos por bastante.”\n\nClara asintió, pero esta vez no lo vio como un retroceso, sino como una oportunidad para aprender algo nuevo.\n\n — “Estuve leyendo sobre un método que mucha gente usa: el 50/30/20. Parece que ayuda a balancear mejor los gastos, y da más claridad. ¿Lo conocés?”\n— “No, ¿cómo es?”",
+      "nextNodeId": "narrativa213",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativa213",
+      "contenido": "— “Es parecido a lo que hicimos, pero con un equilibrio más realista. Lo propuso una economista —Elizabeth Warren— y la idea es usar el 50% para necesidades, 30% para gustos y 20% para ahorro. Está pensado justamente para evitar este tipo de desajustes.”\n\nMartín hace cálculos mentales.\n\n — “¿20% al ahorro? Es mucho…”\n\nClara sonríe.\n\n— “Sí, pero podríamos empezar con 15%. Lo importante es tener un marco más sólido para tomar decisiones.”\n\nMiran la tabla que tenían pegada en la heladera. Sabían que había que cambiarla.",
+      "nextNodeId": "narrativaFINAL20",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id": "narrativaFINAL20",
+      "contenido": "Una tarde de sábado, Clara pasa por una tienda del centro mientras hace trámites. En la vidriera ve algo que le llama la atención:\nuna promoción por tiempo limitado para comprar una notebook en 12 cuotas sin interés.\nJusto esa semana, Valen le había pedido una para la escuela, porque su computadora ya no aguantaba más. Clara saca el celular y le manda una foto a Martín.",
+      "nextNodeId": "narrativaFINAL21",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativaFINAL21",
+      "contenido": "— “¿Y si la compramos ahora? Está en oferta. Después capaz sube.”\n\nMartín duda. En otros tiempos, la habrían comprado sin pensarlo, ajustando el resto del mes como pudieran. Pero ahora tenían otra forma de mirar las cosas. Esa noche se sientan con los chicos y repasan su presupuesto 50/30/20.\n\n— “¿Esto entra dentro de necesidades, gustos o ahorro?” —pregunta Clara.\n— “No es una necesidad urgente, pero tampoco es un simple gusto…” —dice Martín.\n— “¿Y si la ponemos como un gasto planificado, pero usamos parte del ahorro y parte del presupuesto de gustos de este mes?” —propone Valen, que sorprende a todos.",
+      "nextNodeId": "narrativaFINAL22",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativaFINAL22",
+      "contenido": "Se miran y sonríen. Deciden ajustar un poco el plan del mes y comprar la notebook, pero también anotar bien esa decisión y compensar el mes siguiente bajando un poco en salidas.\n\nFue una compra pensada, consensuada, y coherente con el nuevo enfoque familiar.",
+      "nextNodeId": "narrativaFINAL23",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "narrativaFINAL23",
+      "contenido": "Dos meses atrás, la familia Torres tomaba decisiones financieras sin rumbo. Hoy, cada gasto se analiza, se conversa y se equilibra.\nNo siempre se trata de decir que no. Se trata de entender el impacto que tiene cada elección en el equilibrio familiar.\nAdoptar el sistema 50/30/20 no solo les permitió ahorrar más, sino también sentirse en control. Descubrieron que el orden financiero no es una meta rígida, sino un proceso vivo, que se ajusta a sus valores y prioridades.",
+      "nextNodeId": "final2",
+      "opciones": [],
+      "type": "texto",
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
+    },
+    {
+      "id": "final2",
+      "contenido": "Final del Capítulo",
+      "opciones": [],
+      "type": "final",
+      "imagen": "/ruta/a/imagen8.jpg"
+    },
+
+
+
+
+
+
+
+
+
     {
       "id": "nodo2",
       "contenido": "Qué ves en los registros?",
@@ -133,7 +547,7 @@
       "nextNodeId": "narrativa121",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa121",
@@ -141,7 +555,7 @@
       "nextNodeId": "narrativa122",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa122",
@@ -149,7 +563,7 @@
       "nextNodeId": "narrativa123",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa123",
@@ -157,7 +571,7 @@
       "nextNodeId": "narrativaFINAL10",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
 
 
@@ -174,7 +588,7 @@
       "nextNodeId": "narrativa111",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa111",
@@ -182,7 +596,7 @@
       "nextNodeId": "narrativa112",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa112",
@@ -190,7 +604,7 @@
       "nextNodeId": "nodo3",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "nodo3",
@@ -227,7 +641,7 @@
       "nextNodeId": "narrativa1111",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1111",
@@ -235,7 +649,7 @@
       "nextNodeId": "narrativa1112",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1112",
@@ -243,7 +657,7 @@
       "nextNodeId": "narrativa1113",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1113",
@@ -251,7 +665,7 @@
       "nextNodeId": "narrativa1114",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1114",
@@ -259,7 +673,7 @@
       "nextNodeId": "narrativaFINAL10",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
 
 
@@ -279,7 +693,7 @@
       "nextNodeId": "narrativa1121",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1121",
@@ -287,7 +701,7 @@
       "nextNodeId": "narrativa1122",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1122",
@@ -295,7 +709,7 @@
       "nextNodeId": "narrativa1123",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1123",
@@ -303,7 +717,7 @@
       "nextNodeId": "narrativa1124",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1124",
@@ -311,7 +725,7 @@
       "nextNodeId": "narrativa1125",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativa1125",
@@ -319,7 +733,7 @@
       "nextNodeId": "narrativaFINAL10",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
 
 
@@ -338,7 +752,7 @@
       "nextNodeId": "narrativaFINAL11",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativaFINAL11",
@@ -346,7 +760,7 @@
       "nextNodeId": "narrativaFINAL12",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativaFINAL12",
@@ -354,7 +768,7 @@
       "nextNodeId": "narrativaFINAL13",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "narrativaFINAL13",
@@ -362,7 +776,7 @@
       "nextNodeId": "final1",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     {
       "id": "final1",
@@ -401,7 +815,7 @@
       "nextNodeId": "nodo2",
       "opciones": [],
       "type": "texto",
-      "imagen": "../../../public/nodosImgs/m3.jpg"
+      "imagen": "../../../public/nodosImgs/imgFalta.png"
     },
     
     {

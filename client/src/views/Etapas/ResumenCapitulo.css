@@ -1,20 +1,96 @@
-/* Client/views/ResumenCapitulo.css */
+.btn-volver {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-orange);
+  text-decoration: none;
+}
+.btn-volver:hover {
+  text-decoration: underline;
+}
+
 .resumen-view {
-    padding: 2rem;
-  }
-  .resumen-content {
-    margin: 1rem 0;
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 4px;
-  }
-  .btn-volver {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #007bff;
-    text-decoration: none;
-  }
-  .btn-volver:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: "Kode Mono";
+  background-color: var(--third-color);
+  color: #333;
+  padding: 30px;
+  max-width: 100%;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.resumen-h1,
+.resumen-h2,
+.resumen-h3 {
+  color: var(--primary-orange);
+}
+
+.resumen-h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resumen-h2 {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--third-orange);
+  padding-bottom: 8px;
+}
+
+.resumen-p {
+  color: var(--primary-text);
+  font-family: "Poppins", sans-serif;
+  margin: 15px 0;
+}
+
+.resumen-ul {
+  color: var(--primary-text);
+  font-family: "Poppins", sans-serif;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.resumen-li {
+  color: var(--primary-text);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 8px;
+}
+
+.consejo {
+  color: var(--primary-text);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--third-orange);
+  border-left: 4px solid var(--secondary-orange);
+  padding: 10px 15px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.resumen-table {
+  color: var(--primary-text);
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.resumen-table,
+.resumen-th,
+.resumen-td {
+  color: var(--primary-text);
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #ddd;
+}
+
+.resumen-th,
+.resumen-td {
+  color: var(--primary-text);
+  padding: 10px;
+  text-align: left;
+}
+
+.resumen-final {
+  color: var(--primary-text);
+  background-color: var(--third-orange);
+  padding: 20px;
+  border-left: 4px solid var(--secondary-orange);
+  margin-top: 40px;
+}
